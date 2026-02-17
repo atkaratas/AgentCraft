@@ -5,38 +5,84 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AgentCraft | Elite 100 Agent Factory</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
     <style>
-        body { background-color: #0f172a; color: #f8fafc; font-family: 'Inter', sans-serif; }
-        .hero { padding: 60px 0; background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%); border-bottom: 1px solid #334155; }
-        .agent-card { background: #1e293b; border: 1px solid #334155; border-radius: 12px; transition: transform 0.2s; height: 100%; }
-        .agent-card:hover { transform: translateY(-5px); border-color: #38bdf8; }
-        .badge-tool { background: #0369a1; color: #f0f9ff; margin-right: 5px; font-size: 0.75rem; }
-        .btn-primary { background: #38bdf8; border: none; color: #0f172a; font-weight: 600; }
-        .btn-primary:hover { background: #7dd3fc; }
-        footer { padding: 40px 0; border-top: 1px solid #334155; margin-top: 60px; }
+        body { 
+            background-color: #0f172a; 
+            color: #f8fafc; 
+            font-family: 'Inter', sans-serif; 
+            background-image: radial-gradient(circle at 50% 50%, #1e293b 0%, #0f172a 100%);
+            background-attachment: fixed;
+        }
+        .navbar { background-color: rgba(15, 23, 42, 0.9) !important; backdrop-filter: blur(10px); border-bottom: 1px solid #1e293b; }
+        .hero { 
+            padding: 80px 0; 
+            border-bottom: 1px solid #1e293b;
+        }
+        .agent-card { 
+            background: rgba(30, 41, 59, 0.5); 
+            border: 1px solid #1e293b; 
+            border-radius: 16px; 
+            transition: all 0.3s ease; 
+            height: 100%;
+            backdrop-filter: blur(5px);
+        }
+        .agent-card:hover { 
+            transform: translateY(-8px); 
+            border-color: #38bdf8; 
+            box-shadow: 0 10px 30px -10px rgba(56, 189, 248, 0.3);
+            background: rgba(30, 41, 59, 0.8);
+        }
+        .badge-tool { background: #0369a1; color: #f0f9ff; margin-right: 5px; font-size: 0.75rem; border-radius: 4px; }
+        .btn-primary { 
+            background: #38bdf8; 
+            border: none; 
+            color: #0f172a; 
+            font-weight: 700; 
+            border-radius: 8px;
+            transition: all 0.2s;
+        }
+        .btn-primary:hover { background: #7dd3fc; transform: scale(1.02); }
+        .btn-outline-info { border-radius: 8px; border-color: #38bdf8; color: #38bdf8; }
+        .btn-outline-info:hover { background: #38bdf8; color: #0f172a; }
+        h1, h2, h3 { font-weight: 800; letter-spacing: -0.02em; }
+        .text-glow { text-shadow: 0 0 20px rgba(56, 189, 248, 0.5); }
+        footer { padding: 60px 0; border-top: 1px solid #1e293b; margin-top: 80px; background: #0b1120; }
     </style>
 </head>
 <body>
-<nav class="navbar navbar-dark bg-slate-900 border-bottom border-slate-800">
-    <div class="container"><a class="navbar-brand fw-bold" href="#">🧙‍♂️ AgentCraft Factory</a></div>
+<nav class="navbar navbar-dark sticky-top">
+    <div class="container">
+        <a class="navbar-brand fw-bold d-flex align-items-center" href="#">
+            <span class="me-2 fs-3">🧙‍♂️</span> AGENTCRAFT
+        </a>
+        <div class="d-none d-md-block">
+            <span class="badge border border-info text-info p-2">MULTIVERSE ACTIVE</span>
+        </div>
+    </div>
 </nav>
+
 <header class="hero text-center">
     <div class="container">
-        <h1 class="display-4 fw-bold mb-3">Elite 100 Agent Fleet</h1>
-        <p class="lead text-secondary mb-4">Click a card to download the operational logic. Fully compatible with local Ollama LLMs.</p>
+        <h1 class="display-3 fw-bold mb-3 text-glow">AgentCraft Factory</h1>
+        <p class="lead text-secondary mb-5 mx-auto" style="max-width: 700px;">
+            The next generation of autonomous agent templates. Matching the <strong>FreeClaw Multiverse</strong> aesthetic. 
+            0 Token Cost. Powered by Ollama.
+        </p>
         <div class="d-flex justify-content-center gap-3">
-            <a href="https://github.com/atkaratas/AgentCraft" class="btn btn-primary btn-lg">GitHub Repository</a>
-            <a href="https://glucose-halloween-milton-state.trycloudflare.com" class="btn btn-outline-light btn-lg">Live Sandbox</a>
+            <a href="https://github.com/atkaratas/AgentCraft" class="btn btn-primary btn-lg px-4">GitHub Repository</a>
+            <a href="https://glucose-halloween-milton-state.trycloudflare.com" class="btn btn-outline-info btn-lg px-4">Live Sandbox</a>
         </div>
     </div>
 </header>
+
 <main class="container my-5">
-    <div class="row">
+    <div class="row g-4">
         
         <div class="col-md-4 mb-4">
             <div class="agent-card p-4">
                 <div class="d-flex justify-content-between align-items-start mb-3">
-                    <h3 class="h5 mb-0">Leonardo</h3>
+                    <h3 class="h5 mb-0" style="color: #38bdf8;">Leonardo</h3>
                     <span class="fs-4">🧠</span>
                 </div>
                 <p class="text-secondary small">Expertise: Architecture/Logic</p>
@@ -45,11 +91,11 @@
                     <span class="badge badge-tool">read</span>
                     <span class="badge badge-tool">sessions_send</span>
                 </div>
-                <div class="bg-black p-2 rounded small mb-3" style="font-family: monospace; font-size: 0.7rem; color: #10b981; min-height: 40px;">
+                <div class="bg-black p-2 rounded small mb-3" style="font-family: monospace; font-size: 0.7rem; color: #10b981; min-height: 40px; border: 1px solid #1e293b;">
                     Logic: Execute specialized microservice logic via sessions_send...
                 </div>
                 <div class="d-grid gap-2">
-                    <button class="btn btn-sm btn-primary" onclick="window.open('https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Leonardo')">Download Agent Files</button>
+                    <button class="btn btn-sm btn-primary" onclick="window.open('https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Leonardo')">Download Logic</button>
                     <button class="btn btn-sm btn-outline-info" onclick="alert('Connecting to Local Sandbox via Cloudflare... Please ensure your local OpenClaw is running with Ollama.')">Test in Sandbox</button>
                 </div>
             </div>
@@ -58,7 +104,7 @@
         <div class="col-md-4 mb-4">
             <div class="agent-card p-4">
                 <div class="d-flex justify-content-between align-items-start mb-3">
-                    <h3 class="h5 mb-0">Brunelleschi</h3>
+                    <h3 class="h5 mb-0" style="color: #38bdf8;">Brunelleschi</h3>
                     <span class="fs-4">🧠</span>
                 </div>
                 <p class="text-secondary small">Expertise: Architecture/Logic</p>
@@ -67,11 +113,11 @@
                     <span class="badge badge-tool">read</span>
                     <span class="badge badge-tool">sessions_send</span>
                 </div>
-                <div class="bg-black p-2 rounded small mb-3" style="font-family: monospace; font-size: 0.7rem; color: #10b981; min-height: 40px;">
+                <div class="bg-black p-2 rounded small mb-3" style="font-family: monospace; font-size: 0.7rem; color: #10b981; min-height: 40px; border: 1px solid #1e293b;">
                     Logic: Execute specialized microservice logic via sessions_send...
                 </div>
                 <div class="d-grid gap-2">
-                    <button class="btn btn-sm btn-primary" onclick="window.open('https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Brunelleschi')">Download Agent Files</button>
+                    <button class="btn btn-sm btn-primary" onclick="window.open('https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Brunelleschi')">Download Logic</button>
                     <button class="btn btn-sm btn-outline-info" onclick="alert('Connecting to Local Sandbox via Cloudflare... Please ensure your local OpenClaw is running with Ollama.')">Test in Sandbox</button>
                 </div>
             </div>
@@ -80,7 +126,7 @@
         <div class="col-md-4 mb-4">
             <div class="agent-card p-4">
                 <div class="d-flex justify-content-between align-items-start mb-3">
-                    <h3 class="h5 mb-0">Pascal</h3>
+                    <h3 class="h5 mb-0" style="color: #38bdf8;">Pascal</h3>
                     <span class="fs-4">🧠</span>
                 </div>
                 <p class="text-secondary small">Expertise: Architecture/Logic</p>
@@ -89,11 +135,11 @@
                     <span class="badge badge-tool">read</span>
                     <span class="badge badge-tool">sessions_send</span>
                 </div>
-                <div class="bg-black p-2 rounded small mb-3" style="font-family: monospace; font-size: 0.7rem; color: #10b981; min-height: 40px;">
+                <div class="bg-black p-2 rounded small mb-3" style="font-family: monospace; font-size: 0.7rem; color: #10b981; min-height: 40px; border: 1px solid #1e293b;">
                     Logic: Execute specialized microservice logic via sessions_send...
                 </div>
                 <div class="d-grid gap-2">
-                    <button class="btn btn-sm btn-primary" onclick="window.open('https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Pascal')">Download Agent Files</button>
+                    <button class="btn btn-sm btn-primary" onclick="window.open('https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Pascal')">Download Logic</button>
                     <button class="btn btn-sm btn-outline-info" onclick="alert('Connecting to Local Sandbox via Cloudflare... Please ensure your local OpenClaw is running with Ollama.')">Test in Sandbox</button>
                 </div>
             </div>
@@ -102,7 +148,7 @@
         <div class="col-md-4 mb-4">
             <div class="agent-card p-4">
                 <div class="d-flex justify-content-between align-items-start mb-3">
-                    <h3 class="h5 mb-0">Leibniz</h3>
+                    <h3 class="h5 mb-0" style="color: #38bdf8;">Leibniz</h3>
                     <span class="fs-4">🧠</span>
                 </div>
                 <p class="text-secondary small">Expertise: Architecture/Logic</p>
@@ -111,11 +157,11 @@
                     <span class="badge badge-tool">read</span>
                     <span class="badge badge-tool">sessions_send</span>
                 </div>
-                <div class="bg-black p-2 rounded small mb-3" style="font-family: monospace; font-size: 0.7rem; color: #10b981; min-height: 40px;">
+                <div class="bg-black p-2 rounded small mb-3" style="font-family: monospace; font-size: 0.7rem; color: #10b981; min-height: 40px; border: 1px solid #1e293b;">
                     Logic: Execute specialized microservice logic via sessions_send...
                 </div>
                 <div class="d-grid gap-2">
-                    <button class="btn btn-sm btn-primary" onclick="window.open('https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Leibniz')">Download Agent Files</button>
+                    <button class="btn btn-sm btn-primary" onclick="window.open('https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Leibniz')">Download Logic</button>
                     <button class="btn btn-sm btn-outline-info" onclick="alert('Connecting to Local Sandbox via Cloudflare... Please ensure your local OpenClaw is running with Ollama.')">Test in Sandbox</button>
                 </div>
             </div>
@@ -124,7 +170,7 @@
         <div class="col-md-4 mb-4">
             <div class="agent-card p-4">
                 <div class="d-flex justify-content-between align-items-start mb-3">
-                    <h3 class="h5 mb-0">Euclid</h3>
+                    <h3 class="h5 mb-0" style="color: #38bdf8;">Euclid</h3>
                     <span class="fs-4">🧠</span>
                 </div>
                 <p class="text-secondary small">Expertise: Architecture/Logic</p>
@@ -133,11 +179,11 @@
                     <span class="badge badge-tool">read</span>
                     <span class="badge badge-tool">sessions_send</span>
                 </div>
-                <div class="bg-black p-2 rounded small mb-3" style="font-family: monospace; font-size: 0.7rem; color: #10b981; min-height: 40px;">
+                <div class="bg-black p-2 rounded small mb-3" style="font-family: monospace; font-size: 0.7rem; color: #10b981; min-height: 40px; border: 1px solid #1e293b;">
                     Logic: Execute specialized microservice logic via sessions_send...
                 </div>
                 <div class="d-grid gap-2">
-                    <button class="btn btn-sm btn-primary" onclick="window.open('https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Euclid')">Download Agent Files</button>
+                    <button class="btn btn-sm btn-primary" onclick="window.open('https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Euclid')">Download Logic</button>
                     <button class="btn btn-sm btn-outline-info" onclick="alert('Connecting to Local Sandbox via Cloudflare... Please ensure your local OpenClaw is running with Ollama.')">Test in Sandbox</button>
                 </div>
             </div>
@@ -146,7 +192,7 @@
         <div class="col-md-4 mb-4">
             <div class="agent-card p-4">
                 <div class="d-flex justify-content-between align-items-start mb-3">
-                    <h3 class="h5 mb-0">Pythagoras</h3>
+                    <h3 class="h5 mb-0" style="color: #38bdf8;">Pythagoras</h3>
                     <span class="fs-4">🧠</span>
                 </div>
                 <p class="text-secondary small">Expertise: Architecture/Logic</p>
@@ -155,11 +201,11 @@
                     <span class="badge badge-tool">read</span>
                     <span class="badge badge-tool">sessions_send</span>
                 </div>
-                <div class="bg-black p-2 rounded small mb-3" style="font-family: monospace; font-size: 0.7rem; color: #10b981; min-height: 40px;">
+                <div class="bg-black p-2 rounded small mb-3" style="font-family: monospace; font-size: 0.7rem; color: #10b981; min-height: 40px; border: 1px solid #1e293b;">
                     Logic: Execute specialized microservice logic via sessions_send...
                 </div>
                 <div class="d-grid gap-2">
-                    <button class="btn btn-sm btn-primary" onclick="window.open('https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Pythagoras')">Download Agent Files</button>
+                    <button class="btn btn-sm btn-primary" onclick="window.open('https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Pythagoras')">Download Logic</button>
                     <button class="btn btn-sm btn-outline-info" onclick="alert('Connecting to Local Sandbox via Cloudflare... Please ensure your local OpenClaw is running with Ollama.')">Test in Sandbox</button>
                 </div>
             </div>
@@ -168,7 +214,7 @@
         <div class="col-md-4 mb-4">
             <div class="agent-card p-4">
                 <div class="d-flex justify-content-between align-items-start mb-3">
-                    <h3 class="h5 mb-0">Archimedes</h3>
+                    <h3 class="h5 mb-0" style="color: #38bdf8;">Archimedes</h3>
                     <span class="fs-4">🧠</span>
                 </div>
                 <p class="text-secondary small">Expertise: Architecture/Logic</p>
@@ -177,11 +223,11 @@
                     <span class="badge badge-tool">read</span>
                     <span class="badge badge-tool">sessions_send</span>
                 </div>
-                <div class="bg-black p-2 rounded small mb-3" style="font-family: monospace; font-size: 0.7rem; color: #10b981; min-height: 40px;">
+                <div class="bg-black p-2 rounded small mb-3" style="font-family: monospace; font-size: 0.7rem; color: #10b981; min-height: 40px; border: 1px solid #1e293b;">
                     Logic: Execute specialized microservice logic via sessions_send...
                 </div>
                 <div class="d-grid gap-2">
-                    <button class="btn btn-sm btn-primary" onclick="window.open('https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Archimedes')">Download Agent Files</button>
+                    <button class="btn btn-sm btn-primary" onclick="window.open('https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Archimedes')">Download Logic</button>
                     <button class="btn btn-sm btn-outline-info" onclick="alert('Connecting to Local Sandbox via Cloudflare... Please ensure your local OpenClaw is running with Ollama.')">Test in Sandbox</button>
                 </div>
             </div>
@@ -190,7 +236,7 @@
         <div class="col-md-4 mb-4">
             <div class="agent-card p-4">
                 <div class="d-flex justify-content-between align-items-start mb-3">
-                    <h3 class="h5 mb-0">Khwarizmi</h3>
+                    <h3 class="h5 mb-0" style="color: #38bdf8;">Khwarizmi</h3>
                     <span class="fs-4">🧠</span>
                 </div>
                 <p class="text-secondary small">Expertise: Architecture/Logic</p>
@@ -199,11 +245,11 @@
                     <span class="badge badge-tool">read</span>
                     <span class="badge badge-tool">sessions_send</span>
                 </div>
-                <div class="bg-black p-2 rounded small mb-3" style="font-family: monospace; font-size: 0.7rem; color: #10b981; min-height: 40px;">
+                <div class="bg-black p-2 rounded small mb-3" style="font-family: monospace; font-size: 0.7rem; color: #10b981; min-height: 40px; border: 1px solid #1e293b;">
                     Logic: Execute specialized microservice logic via sessions_send...
                 </div>
                 <div class="d-grid gap-2">
-                    <button class="btn btn-sm btn-primary" onclick="window.open('https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Khwarizmi')">Download Agent Files</button>
+                    <button class="btn btn-sm btn-primary" onclick="window.open('https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Khwarizmi')">Download Logic</button>
                     <button class="btn btn-sm btn-outline-info" onclick="alert('Connecting to Local Sandbox via Cloudflare... Please ensure your local OpenClaw is running with Ollama.')">Test in Sandbox</button>
                 </div>
             </div>
@@ -212,7 +258,7 @@
         <div class="col-md-4 mb-4">
             <div class="agent-card p-4">
                 <div class="d-flex justify-content-between align-items-start mb-3">
-                    <h3 class="h5 mb-0">Fibonacci</h3>
+                    <h3 class="h5 mb-0" style="color: #38bdf8;">Fibonacci</h3>
                     <span class="fs-4">🧠</span>
                 </div>
                 <p class="text-secondary small">Expertise: Architecture/Logic</p>
@@ -221,11 +267,11 @@
                     <span class="badge badge-tool">read</span>
                     <span class="badge badge-tool">sessions_send</span>
                 </div>
-                <div class="bg-black p-2 rounded small mb-3" style="font-family: monospace; font-size: 0.7rem; color: #10b981; min-height: 40px;">
+                <div class="bg-black p-2 rounded small mb-3" style="font-family: monospace; font-size: 0.7rem; color: #10b981; min-height: 40px; border: 1px solid #1e293b;">
                     Logic: Execute specialized microservice logic via sessions_send...
                 </div>
                 <div class="d-grid gap-2">
-                    <button class="btn btn-sm btn-primary" onclick="window.open('https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Fibonacci')">Download Agent Files</button>
+                    <button class="btn btn-sm btn-primary" onclick="window.open('https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Fibonacci')">Download Logic</button>
                     <button class="btn btn-sm btn-outline-info" onclick="alert('Connecting to Local Sandbox via Cloudflare... Please ensure your local OpenClaw is running with Ollama.')">Test in Sandbox</button>
                 </div>
             </div>
@@ -234,7 +280,7 @@
         <div class="col-md-4 mb-4">
             <div class="agent-card p-4">
                 <div class="d-flex justify-content-between align-items-start mb-3">
-                    <h3 class="h5 mb-0">Turing</h3>
+                    <h3 class="h5 mb-0" style="color: #38bdf8;">Turing</h3>
                     <span class="fs-4">🔐</span>
                 </div>
                 <p class="text-secondary small">Expertise: Security/Cryptography</p>
@@ -243,11 +289,11 @@
                     <span class="badge badge-tool">read</span>
                     <span class="badge badge-tool">sessions_send</span>
                 </div>
-                <div class="bg-black p-2 rounded small mb-3" style="font-family: monospace; font-size: 0.7rem; color: #10b981; min-height: 40px;">
+                <div class="bg-black p-2 rounded small mb-3" style="font-family: monospace; font-size: 0.7rem; color: #10b981; min-height: 40px; border: 1px solid #1e293b;">
                     Logic: Validate SHA-256 hashes of all incoming files...
                 </div>
                 <div class="d-grid gap-2">
-                    <button class="btn btn-sm btn-primary" onclick="window.open('https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Turing')">Download Agent Files</button>
+                    <button class="btn btn-sm btn-primary" onclick="window.open('https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Turing')">Download Logic</button>
                     <button class="btn btn-sm btn-outline-info" onclick="alert('Connecting to Local Sandbox via Cloudflare... Please ensure your local OpenClaw is running with Ollama.')">Test in Sandbox</button>
                 </div>
             </div>
@@ -256,7 +302,7 @@
         <div class="col-md-4 mb-4">
             <div class="agent-card p-4">
                 <div class="d-flex justify-content-between align-items-start mb-3">
-                    <h3 class="h5 mb-0">Security Sentinel</h3>
+                    <h3 class="h5 mb-0" style="color: #38bdf8;">Security Sentinel</h3>
                     <span class="fs-4">🔐</span>
                 </div>
                 <p class="text-secondary small">Expertise: Security/Cryptography</p>
@@ -265,11 +311,11 @@
                     <span class="badge badge-tool">read</span>
                     <span class="badge badge-tool">sessions_send</span>
                 </div>
-                <div class="bg-black p-2 rounded small mb-3" style="font-family: monospace; font-size: 0.7rem; color: #10b981; min-height: 40px;">
+                <div class="bg-black p-2 rounded small mb-3" style="font-family: monospace; font-size: 0.7rem; color: #10b981; min-height: 40px; border: 1px solid #1e293b;">
                     Logic: Execute specialized microservice logic via sessions_send...
                 </div>
                 <div class="d-grid gap-2">
-                    <button class="btn btn-sm btn-primary" onclick="window.open('https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Security%20Sentinel')">Download Agent Files</button>
+                    <button class="btn btn-sm btn-primary" onclick="window.open('https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Security%20Sentinel')">Download Logic</button>
                     <button class="btn btn-sm btn-outline-info" onclick="alert('Connecting to Local Sandbox via Cloudflare... Please ensure your local OpenClaw is running with Ollama.')">Test in Sandbox</button>
                 </div>
             </div>
@@ -278,7 +324,7 @@
         <div class="col-md-4 mb-4">
             <div class="agent-card p-4">
                 <div class="d-flex justify-content-between align-items-start mb-3">
-                    <h3 class="h5 mb-0">Machiavelli</h3>
+                    <h3 class="h5 mb-0" style="color: #38bdf8;">Machiavelli</h3>
                     <span class="fs-4">🔐</span>
                 </div>
                 <p class="text-secondary small">Expertise: Security/Cryptography</p>
@@ -287,11 +333,11 @@
                     <span class="badge badge-tool">read</span>
                     <span class="badge badge-tool">sessions_send</span>
                 </div>
-                <div class="bg-black p-2 rounded small mb-3" style="font-family: monospace; font-size: 0.7rem; color: #10b981; min-height: 40px;">
+                <div class="bg-black p-2 rounded small mb-3" style="font-family: monospace; font-size: 0.7rem; color: #10b981; min-height: 40px; border: 1px solid #1e293b;">
                     Logic: Execute specialized microservice logic via sessions_send...
                 </div>
                 <div class="d-grid gap-2">
-                    <button class="btn btn-sm btn-primary" onclick="window.open('https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Machiavelli')">Download Agent Files</button>
+                    <button class="btn btn-sm btn-primary" onclick="window.open('https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Machiavelli')">Download Logic</button>
                     <button class="btn btn-sm btn-outline-info" onclick="alert('Connecting to Local Sandbox via Cloudflare... Please ensure your local OpenClaw is running with Ollama.')">Test in Sandbox</button>
                 </div>
             </div>
@@ -300,7 +346,7 @@
         <div class="col-md-4 mb-4">
             <div class="agent-card p-4">
                 <div class="d-flex justify-content-between align-items-start mb-3">
-                    <h3 class="h5 mb-0">Hopper</h3>
+                    <h3 class="h5 mb-0" style="color: #38bdf8;">Hopper</h3>
                     <span class="fs-4">🔐</span>
                 </div>
                 <p class="text-secondary small">Expertise: Security/Cryptography</p>
@@ -309,11 +355,11 @@
                     <span class="badge badge-tool">read</span>
                     <span class="badge badge-tool">sessions_send</span>
                 </div>
-                <div class="bg-black p-2 rounded small mb-3" style="font-family: monospace; font-size: 0.7rem; color: #10b981; min-height: 40px;">
+                <div class="bg-black p-2 rounded small mb-3" style="font-family: monospace; font-size: 0.7rem; color: #10b981; min-height: 40px; border: 1px solid #1e293b;">
                     Logic: Execute specialized microservice logic via sessions_send...
                 </div>
                 <div class="d-grid gap-2">
-                    <button class="btn btn-sm btn-primary" onclick="window.open('https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Hopper')">Download Agent Files</button>
+                    <button class="btn btn-sm btn-primary" onclick="window.open('https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Hopper')">Download Logic</button>
                     <button class="btn btn-sm btn-outline-info" onclick="alert('Connecting to Local Sandbox via Cloudflare... Please ensure your local OpenClaw is running with Ollama.')">Test in Sandbox</button>
                 </div>
             </div>
@@ -322,7 +368,7 @@
         <div class="col-md-4 mb-4">
             <div class="agent-card p-4">
                 <div class="d-flex justify-content-between align-items-start mb-3">
-                    <h3 class="h5 mb-0">Shannon</h3>
+                    <h3 class="h5 mb-0" style="color: #38bdf8;">Shannon</h3>
                     <span class="fs-4">🔐</span>
                 </div>
                 <p class="text-secondary small">Expertise: Security/Cryptography</p>
@@ -331,11 +377,11 @@
                     <span class="badge badge-tool">read</span>
                     <span class="badge badge-tool">sessions_send</span>
                 </div>
-                <div class="bg-black p-2 rounded small mb-3" style="font-family: monospace; font-size: 0.7rem; color: #10b981; min-height: 40px;">
+                <div class="bg-black p-2 rounded small mb-3" style="font-family: monospace; font-size: 0.7rem; color: #10b981; min-height: 40px; border: 1px solid #1e293b;">
                     Logic: Execute specialized microservice logic via sessions_send...
                 </div>
                 <div class="d-grid gap-2">
-                    <button class="btn btn-sm btn-primary" onclick="window.open('https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Shannon')">Download Agent Files</button>
+                    <button class="btn btn-sm btn-primary" onclick="window.open('https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Shannon')">Download Logic</button>
                     <button class="btn btn-sm btn-outline-info" onclick="alert('Connecting to Local Sandbox via Cloudflare... Please ensure your local OpenClaw is running with Ollama.')">Test in Sandbox</button>
                 </div>
             </div>
@@ -344,7 +390,7 @@
         <div class="col-md-4 mb-4">
             <div class="agent-card p-4">
                 <div class="d-flex justify-content-between align-items-start mb-3">
-                    <h3 class="h5 mb-0">Altman</h3>
+                    <h3 class="h5 mb-0" style="color: #38bdf8;">Altman</h3>
                     <span class="fs-4">🔐</span>
                 </div>
                 <p class="text-secondary small">Expertise: Security/Cryptography</p>
@@ -353,11 +399,11 @@
                     <span class="badge badge-tool">read</span>
                     <span class="badge badge-tool">sessions_send</span>
                 </div>
-                <div class="bg-black p-2 rounded small mb-3" style="font-family: monospace; font-size: 0.7rem; color: #10b981; min-height: 40px;">
+                <div class="bg-black p-2 rounded small mb-3" style="font-family: monospace; font-size: 0.7rem; color: #10b981; min-height: 40px; border: 1px solid #1e293b;">
                     Logic: Execute specialized microservice logic via sessions_send...
                 </div>
                 <div class="d-grid gap-2">
-                    <button class="btn btn-sm btn-primary" onclick="window.open('https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Altman')">Download Agent Files</button>
+                    <button class="btn btn-sm btn-primary" onclick="window.open('https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Altman')">Download Logic</button>
                     <button class="btn btn-sm btn-outline-info" onclick="alert('Connecting to Local Sandbox via Cloudflare... Please ensure your local OpenClaw is running with Ollama.')">Test in Sandbox</button>
                 </div>
             </div>
@@ -366,7 +412,7 @@
         <div class="col-md-4 mb-4">
             <div class="agent-card p-4">
                 <div class="d-flex justify-content-between align-items-start mb-3">
-                    <h3 class="h5 mb-0">Cerf</h3>
+                    <h3 class="h5 mb-0" style="color: #38bdf8;">Cerf</h3>
                     <span class="fs-4">🔐</span>
                 </div>
                 <p class="text-secondary small">Expertise: Security/Cryptography</p>
@@ -375,11 +421,11 @@
                     <span class="badge badge-tool">read</span>
                     <span class="badge badge-tool">sessions_send</span>
                 </div>
-                <div class="bg-black p-2 rounded small mb-3" style="font-family: monospace; font-size: 0.7rem; color: #10b981; min-height: 40px;">
+                <div class="bg-black p-2 rounded small mb-3" style="font-family: monospace; font-size: 0.7rem; color: #10b981; min-height: 40px; border: 1px solid #1e293b;">
                     Logic: Execute specialized microservice logic via sessions_send...
                 </div>
                 <div class="d-grid gap-2">
-                    <button class="btn btn-sm btn-primary" onclick="window.open('https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Cerf')">Download Agent Files</button>
+                    <button class="btn btn-sm btn-primary" onclick="window.open('https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Cerf')">Download Logic</button>
                     <button class="btn btn-sm btn-outline-info" onclick="alert('Connecting to Local Sandbox via Cloudflare... Please ensure your local OpenClaw is running with Ollama.')">Test in Sandbox</button>
                 </div>
             </div>
@@ -388,7 +434,7 @@
         <div class="col-md-4 mb-4">
             <div class="agent-card p-4">
                 <div class="d-flex justify-content-between align-items-start mb-3">
-                    <h3 class="h5 mb-0">Carmack</h3>
+                    <h3 class="h5 mb-0" style="color: #38bdf8;">Carmack</h3>
                     <span class="fs-4">🔐</span>
                 </div>
                 <p class="text-secondary small">Expertise: Security/Cryptography</p>
@@ -397,11 +443,11 @@
                     <span class="badge badge-tool">read</span>
                     <span class="badge badge-tool">sessions_send</span>
                 </div>
-                <div class="bg-black p-2 rounded small mb-3" style="font-family: monospace; font-size: 0.7rem; color: #10b981; min-height: 40px;">
+                <div class="bg-black p-2 rounded small mb-3" style="font-family: monospace; font-size: 0.7rem; color: #10b981; min-height: 40px; border: 1px solid #1e293b;">
                     Logic: Execute specialized microservice logic via sessions_send...
                 </div>
                 <div class="d-grid gap-2">
-                    <button class="btn btn-sm btn-primary" onclick="window.open('https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Carmack')">Download Agent Files</button>
+                    <button class="btn btn-sm btn-primary" onclick="window.open('https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Carmack')">Download Logic</button>
                     <button class="btn btn-sm btn-outline-info" onclick="alert('Connecting to Local Sandbox via Cloudflare... Please ensure your local OpenClaw is running with Ollama.')">Test in Sandbox</button>
                 </div>
             </div>
@@ -410,7 +456,7 @@
         <div class="col-md-4 mb-4">
             <div class="agent-card p-4">
                 <div class="d-flex justify-content-between align-items-start mb-3">
-                    <h3 class="h5 mb-0">Tesla</h3>
+                    <h3 class="h5 mb-0" style="color: #38bdf8;">Tesla</h3>
                     <span class="fs-4">⚡</span>
                 </div>
                 <p class="text-secondary small">Expertise: Physics/Energy</p>
@@ -419,11 +465,11 @@
                     <span class="badge badge-tool">read</span>
                     <span class="badge badge-tool">sessions_send</span>
                 </div>
-                <div class="bg-black p-2 rounded small mb-3" style="font-family: monospace; font-size: 0.7rem; color: #10b981; min-height: 40px;">
+                <div class="bg-black p-2 rounded small mb-3" style="font-family: monospace; font-size: 0.7rem; color: #10b981; min-height: 40px; border: 1px solid #1e293b;">
                     Logic: IF efficiency < 95% SPAWN Optimizer-SubAgent...
                 </div>
                 <div class="d-grid gap-2">
-                    <button class="btn btn-sm btn-primary" onclick="window.open('https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Tesla')">Download Agent Files</button>
+                    <button class="btn btn-sm btn-primary" onclick="window.open('https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Tesla')">Download Logic</button>
                     <button class="btn btn-sm btn-outline-info" onclick="alert('Connecting to Local Sandbox via Cloudflare... Please ensure your local OpenClaw is running with Ollama.')">Test in Sandbox</button>
                 </div>
             </div>
@@ -432,7 +478,7 @@
         <div class="col-md-4 mb-4">
             <div class="agent-card p-4">
                 <div class="d-flex justify-content-between align-items-start mb-3">
-                    <h3 class="h5 mb-0">Galileo</h3>
+                    <h3 class="h5 mb-0" style="color: #38bdf8;">Galileo</h3>
                     <span class="fs-4">⚡</span>
                 </div>
                 <p class="text-secondary small">Expertise: Physics/Energy</p>
@@ -441,11 +487,11 @@
                     <span class="badge badge-tool">read</span>
                     <span class="badge badge-tool">sessions_send</span>
                 </div>
-                <div class="bg-black p-2 rounded small mb-3" style="font-family: monospace; font-size: 0.7rem; color: #10b981; min-height: 40px;">
+                <div class="bg-black p-2 rounded small mb-3" style="font-family: monospace; font-size: 0.7rem; color: #10b981; min-height: 40px; border: 1px solid #1e293b;">
                     Logic: Execute specialized microservice logic via sessions_send...
                 </div>
                 <div class="d-grid gap-2">
-                    <button class="btn btn-sm btn-primary" onclick="window.open('https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Galileo')">Download Agent Files</button>
+                    <button class="btn btn-sm btn-primary" onclick="window.open('https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Galileo')">Download Logic</button>
                     <button class="btn btn-sm btn-outline-info" onclick="alert('Connecting to Local Sandbox via Cloudflare... Please ensure your local OpenClaw is running with Ollama.')">Test in Sandbox</button>
                 </div>
             </div>
@@ -454,7 +500,7 @@
         <div class="col-md-4 mb-4">
             <div class="agent-card p-4">
                 <div class="d-flex justify-content-between align-items-start mb-3">
-                    <h3 class="h5 mb-0">Newton</h3>
+                    <h3 class="h5 mb-0" style="color: #38bdf8;">Newton</h3>
                     <span class="fs-4">⚡</span>
                 </div>
                 <p class="text-secondary small">Expertise: Physics/Energy</p>
@@ -463,11 +509,11 @@
                     <span class="badge badge-tool">read</span>
                     <span class="badge badge-tool">sessions_send</span>
                 </div>
-                <div class="bg-black p-2 rounded small mb-3" style="font-family: monospace; font-size: 0.7rem; color: #10b981; min-height: 40px;">
+                <div class="bg-black p-2 rounded small mb-3" style="font-family: monospace; font-size: 0.7rem; color: #10b981; min-height: 40px; border: 1px solid #1e293b;">
                     Logic: Execute specialized microservice logic via sessions_send...
                 </div>
                 <div class="d-grid gap-2">
-                    <button class="btn btn-sm btn-primary" onclick="window.open('https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Newton')">Download Agent Files</button>
+                    <button class="btn btn-sm btn-primary" onclick="window.open('https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Newton')">Download Logic</button>
                     <button class="btn btn-sm btn-outline-info" onclick="alert('Connecting to Local Sandbox via Cloudflare... Please ensure your local OpenClaw is running with Ollama.')">Test in Sandbox</button>
                 </div>
             </div>
@@ -476,7 +522,7 @@
         <div class="col-md-4 mb-4">
             <div class="agent-card p-4">
                 <div class="d-flex justify-content-between align-items-start mb-3">
-                    <h3 class="h5 mb-0">Einstein</h3>
+                    <h3 class="h5 mb-0" style="color: #38bdf8;">Einstein</h3>
                     <span class="fs-4">⚡</span>
                 </div>
                 <p class="text-secondary small">Expertise: Physics/Energy</p>
@@ -485,11 +531,11 @@
                     <span class="badge badge-tool">read</span>
                     <span class="badge badge-tool">sessions_send</span>
                 </div>
-                <div class="bg-black p-2 rounded small mb-3" style="font-family: monospace; font-size: 0.7rem; color: #10b981; min-height: 40px;">
+                <div class="bg-black p-2 rounded small mb-3" style="font-family: monospace; font-size: 0.7rem; color: #10b981; min-height: 40px; border: 1px solid #1e293b;">
                     Logic: Execute specialized microservice logic via sessions_send...
                 </div>
                 <div class="d-grid gap-2">
-                    <button class="btn btn-sm btn-primary" onclick="window.open('https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Einstein')">Download Agent Files</button>
+                    <button class="btn btn-sm btn-primary" onclick="window.open('https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Einstein')">Download Logic</button>
                     <button class="btn btn-sm btn-outline-info" onclick="alert('Connecting to Local Sandbox via Cloudflare... Please ensure your local OpenClaw is running with Ollama.')">Test in Sandbox</button>
                 </div>
             </div>
@@ -498,7 +544,7 @@
         <div class="col-md-4 mb-4">
             <div class="agent-card p-4">
                 <div class="d-flex justify-content-between align-items-start mb-3">
-                    <h3 class="h5 mb-0">Hawking</h3>
+                    <h3 class="h5 mb-0" style="color: #38bdf8;">Hawking</h3>
                     <span class="fs-4">⚡</span>
                 </div>
                 <p class="text-secondary small">Expertise: Physics/Energy</p>
@@ -507,11 +553,11 @@
                     <span class="badge badge-tool">read</span>
                     <span class="badge badge-tool">sessions_send</span>
                 </div>
-                <div class="bg-black p-2 rounded small mb-3" style="font-family: monospace; font-size: 0.7rem; color: #10b981; min-height: 40px;">
+                <div class="bg-black p-2 rounded small mb-3" style="font-family: monospace; font-size: 0.7rem; color: #10b981; min-height: 40px; border: 1px solid #1e293b;">
                     Logic: Execute specialized microservice logic via sessions_send...
                 </div>
                 <div class="d-grid gap-2">
-                    <button class="btn btn-sm btn-primary" onclick="window.open('https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Hawking')">Download Agent Files</button>
+                    <button class="btn btn-sm btn-primary" onclick="window.open('https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Hawking')">Download Logic</button>
                     <button class="btn btn-sm btn-outline-info" onclick="alert('Connecting to Local Sandbox via Cloudflare... Please ensure your local OpenClaw is running with Ollama.')">Test in Sandbox</button>
                 </div>
             </div>
@@ -520,7 +566,7 @@
         <div class="col-md-4 mb-4">
             <div class="agent-card p-4">
                 <div class="d-flex justify-content-between align-items-start mb-3">
-                    <h3 class="h5 mb-0">Bohr</h3>
+                    <h3 class="h5 mb-0" style="color: #38bdf8;">Bohr</h3>
                     <span class="fs-4">⚡</span>
                 </div>
                 <p class="text-secondary small">Expertise: Physics/Energy</p>
@@ -529,11 +575,11 @@
                     <span class="badge badge-tool">read</span>
                     <span class="badge badge-tool">sessions_send</span>
                 </div>
-                <div class="bg-black p-2 rounded small mb-3" style="font-family: monospace; font-size: 0.7rem; color: #10b981; min-height: 40px;">
+                <div class="bg-black p-2 rounded small mb-3" style="font-family: monospace; font-size: 0.7rem; color: #10b981; min-height: 40px; border: 1px solid #1e293b;">
                     Logic: Execute specialized microservice logic via sessions_send...
                 </div>
                 <div class="d-grid gap-2">
-                    <button class="btn btn-sm btn-primary" onclick="window.open('https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Bohr')">Download Agent Files</button>
+                    <button class="btn btn-sm btn-primary" onclick="window.open('https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Bohr')">Download Logic</button>
                     <button class="btn btn-sm btn-outline-info" onclick="alert('Connecting to Local Sandbox via Cloudflare... Please ensure your local OpenClaw is running with Ollama.')">Test in Sandbox</button>
                 </div>
             </div>
@@ -542,7 +588,7 @@
         <div class="col-md-4 mb-4">
             <div class="agent-card p-4">
                 <div class="d-flex justify-content-between align-items-start mb-3">
-                    <h3 class="h5 mb-0">Planck</h3>
+                    <h3 class="h5 mb-0" style="color: #38bdf8;">Planck</h3>
                     <span class="fs-4">⚡</span>
                 </div>
                 <p class="text-secondary small">Expertise: Physics/Energy</p>
@@ -551,11 +597,11 @@
                     <span class="badge badge-tool">read</span>
                     <span class="badge badge-tool">sessions_send</span>
                 </div>
-                <div class="bg-black p-2 rounded small mb-3" style="font-family: monospace; font-size: 0.7rem; color: #10b981; min-height: 40px;">
+                <div class="bg-black p-2 rounded small mb-3" style="font-family: monospace; font-size: 0.7rem; color: #10b981; min-height: 40px; border: 1px solid #1e293b;">
                     Logic: Execute specialized microservice logic via sessions_send...
                 </div>
                 <div class="d-grid gap-2">
-                    <button class="btn btn-sm btn-primary" onclick="window.open('https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Planck')">Download Agent Files</button>
+                    <button class="btn btn-sm btn-primary" onclick="window.open('https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Planck')">Download Logic</button>
                     <button class="btn btn-sm btn-outline-info" onclick="alert('Connecting to Local Sandbox via Cloudflare... Please ensure your local OpenClaw is running with Ollama.')">Test in Sandbox</button>
                 </div>
             </div>
@@ -564,7 +610,7 @@
         <div class="col-md-4 mb-4">
             <div class="agent-card p-4">
                 <div class="d-flex justify-content-between align-items-start mb-3">
-                    <h3 class="h5 mb-0">Feynman</h3>
+                    <h3 class="h5 mb-0" style="color: #38bdf8;">Feynman</h3>
                     <span class="fs-4">⚡</span>
                 </div>
                 <p class="text-secondary small">Expertise: Physics/Energy</p>
@@ -573,11 +619,11 @@
                     <span class="badge badge-tool">read</span>
                     <span class="badge badge-tool">sessions_send</span>
                 </div>
-                <div class="bg-black p-2 rounded small mb-3" style="font-family: monospace; font-size: 0.7rem; color: #10b981; min-height: 40px;">
+                <div class="bg-black p-2 rounded small mb-3" style="font-family: monospace; font-size: 0.7rem; color: #10b981; min-height: 40px; border: 1px solid #1e293b;">
                     Logic: Execute specialized microservice logic via sessions_send...
                 </div>
                 <div class="d-grid gap-2">
-                    <button class="btn btn-sm btn-primary" onclick="window.open('https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Feynman')">Download Agent Files</button>
+                    <button class="btn btn-sm btn-primary" onclick="window.open('https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Feynman')">Download Logic</button>
                     <button class="btn btn-sm btn-outline-info" onclick="alert('Connecting to Local Sandbox via Cloudflare... Please ensure your local OpenClaw is running with Ollama.')">Test in Sandbox</button>
                 </div>
             </div>
@@ -586,7 +632,7 @@
         <div class="col-md-4 mb-4">
             <div class="agent-card p-4">
                 <div class="d-flex justify-content-between align-items-start mb-3">
-                    <h3 class="h5 mb-0">Maxwell</h3>
+                    <h3 class="h5 mb-0" style="color: #38bdf8;">Maxwell</h3>
                     <span class="fs-4">⚡</span>
                 </div>
                 <p class="text-secondary small">Expertise: Physics/Energy</p>
@@ -595,11 +641,11 @@
                     <span class="badge badge-tool">read</span>
                     <span class="badge badge-tool">sessions_send</span>
                 </div>
-                <div class="bg-black p-2 rounded small mb-3" style="font-family: monospace; font-size: 0.7rem; color: #10b981; min-height: 40px;">
+                <div class="bg-black p-2 rounded small mb-3" style="font-family: monospace; font-size: 0.7rem; color: #10b981; min-height: 40px; border: 1px solid #1e293b;">
                     Logic: Execute specialized microservice logic via sessions_send...
                 </div>
                 <div class="d-grid gap-2">
-                    <button class="btn btn-sm btn-primary" onclick="window.open('https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Maxwell')">Download Agent Files</button>
+                    <button class="btn btn-sm btn-primary" onclick="window.open('https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Maxwell')">Download Logic</button>
                     <button class="btn btn-sm btn-outline-info" onclick="alert('Connecting to Local Sandbox via Cloudflare... Please ensure your local OpenClaw is running with Ollama.')">Test in Sandbox</button>
                 </div>
             </div>
@@ -608,7 +654,7 @@
         <div class="col-md-4 mb-4">
             <div class="agent-card p-4">
                 <div class="d-flex justify-content-between align-items-start mb-3">
-                    <h3 class="h5 mb-0">Hertz</h3>
+                    <h3 class="h5 mb-0" style="color: #38bdf8;">Hertz</h3>
                     <span class="fs-4">⚡</span>
                 </div>
                 <p class="text-secondary small">Expertise: Physics/Energy</p>
@@ -617,11 +663,11 @@
                     <span class="badge badge-tool">read</span>
                     <span class="badge badge-tool">sessions_send</span>
                 </div>
-                <div class="bg-black p-2 rounded small mb-3" style="font-family: monospace; font-size: 0.7rem; color: #10b981; min-height: 40px;">
+                <div class="bg-black p-2 rounded small mb-3" style="font-family: monospace; font-size: 0.7rem; color: #10b981; min-height: 40px; border: 1px solid #1e293b;">
                     Logic: Execute specialized microservice logic via sessions_send...
                 </div>
                 <div class="d-grid gap-2">
-                    <button class="btn btn-sm btn-primary" onclick="window.open('https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Hertz')">Download Agent Files</button>
+                    <button class="btn btn-sm btn-primary" onclick="window.open('https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Hertz')">Download Logic</button>
                     <button class="btn btn-sm btn-outline-info" onclick="alert('Connecting to Local Sandbox via Cloudflare... Please ensure your local OpenClaw is running with Ollama.')">Test in Sandbox</button>
                 </div>
             </div>
@@ -630,7 +676,7 @@
         <div class="col-md-4 mb-4">
             <div class="agent-card p-4">
                 <div class="d-flex justify-content-between align-items-start mb-3">
-                    <h3 class="h5 mb-0">Kepler</h3>
+                    <h3 class="h5 mb-0" style="color: #38bdf8;">Kepler</h3>
                     <span class="fs-4">⚡</span>
                 </div>
                 <p class="text-secondary small">Expertise: Physics/Energy</p>
@@ -639,11 +685,11 @@
                     <span class="badge badge-tool">read</span>
                     <span class="badge badge-tool">sessions_send</span>
                 </div>
-                <div class="bg-black p-2 rounded small mb-3" style="font-family: monospace; font-size: 0.7rem; color: #10b981; min-height: 40px;">
+                <div class="bg-black p-2 rounded small mb-3" style="font-family: monospace; font-size: 0.7rem; color: #10b981; min-height: 40px; border: 1px solid #1e293b;">
                     Logic: Execute specialized microservice logic via sessions_send...
                 </div>
                 <div class="d-grid gap-2">
-                    <button class="btn btn-sm btn-primary" onclick="window.open('https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Kepler')">Download Agent Files</button>
+                    <button class="btn btn-sm btn-primary" onclick="window.open('https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Kepler')">Download Logic</button>
                     <button class="btn btn-sm btn-outline-info" onclick="alert('Connecting to Local Sandbox via Cloudflare... Please ensure your local OpenClaw is running with Ollama.')">Test in Sandbox</button>
                 </div>
             </div>
@@ -652,7 +698,7 @@
         <div class="col-md-4 mb-4">
             <div class="agent-card p-4">
                 <div class="d-flex justify-content-between align-items-start mb-3">
-                    <h3 class="h5 mb-0">Copernicus</h3>
+                    <h3 class="h5 mb-0" style="color: #38bdf8;">Copernicus</h3>
                     <span class="fs-4">⚡</span>
                 </div>
                 <p class="text-secondary small">Expertise: Physics/Energy</p>
@@ -661,11 +707,11 @@
                     <span class="badge badge-tool">read</span>
                     <span class="badge badge-tool">sessions_send</span>
                 </div>
-                <div class="bg-black p-2 rounded small mb-3" style="font-family: monospace; font-size: 0.7rem; color: #10b981; min-height: 40px;">
+                <div class="bg-black p-2 rounded small mb-3" style="font-family: monospace; font-size: 0.7rem; color: #10b981; min-height: 40px; border: 1px solid #1e293b;">
                     Logic: Execute specialized microservice logic via sessions_send...
                 </div>
                 <div class="d-grid gap-2">
-                    <button class="btn btn-sm btn-primary" onclick="window.open('https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Copernicus')">Download Agent Files</button>
+                    <button class="btn btn-sm btn-primary" onclick="window.open('https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Copernicus')">Download Logic</button>
                     <button class="btn btn-sm btn-outline-info" onclick="alert('Connecting to Local Sandbox via Cloudflare... Please ensure your local OpenClaw is running with Ollama.')">Test in Sandbox</button>
                 </div>
             </div>
@@ -674,7 +720,7 @@
         <div class="col-md-4 mb-4">
             <div class="agent-card p-4">
                 <div class="d-flex justify-content-between align-items-start mb-3">
-                    <h3 class="h5 mb-0">Brahe</h3>
+                    <h3 class="h5 mb-0" style="color: #38bdf8;">Brahe</h3>
                     <span class="fs-4">⚡</span>
                 </div>
                 <p class="text-secondary small">Expertise: Physics/Energy</p>
@@ -683,11 +729,11 @@
                     <span class="badge badge-tool">read</span>
                     <span class="badge badge-tool">sessions_send</span>
                 </div>
-                <div class="bg-black p-2 rounded small mb-3" style="font-family: monospace; font-size: 0.7rem; color: #10b981; min-height: 40px;">
+                <div class="bg-black p-2 rounded small mb-3" style="font-family: monospace; font-size: 0.7rem; color: #10b981; min-height: 40px; border: 1px solid #1e293b;">
                     Logic: Execute specialized microservice logic via sessions_send...
                 </div>
                 <div class="d-grid gap-2">
-                    <button class="btn btn-sm btn-primary" onclick="window.open('https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Brahe')">Download Agent Files</button>
+                    <button class="btn btn-sm btn-primary" onclick="window.open('https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Brahe')">Download Logic</button>
                     <button class="btn btn-sm btn-outline-info" onclick="alert('Connecting to Local Sandbox via Cloudflare... Please ensure your local OpenClaw is running with Ollama.')">Test in Sandbox</button>
                 </div>
             </div>
@@ -696,7 +742,7 @@
         <div class="col-md-4 mb-4">
             <div class="agent-card p-4">
                 <div class="d-flex justify-content-between align-items-start mb-3">
-                    <h3 class="h5 mb-0">Halley</h3>
+                    <h3 class="h5 mb-0" style="color: #38bdf8;">Halley</h3>
                     <span class="fs-4">⚡</span>
                 </div>
                 <p class="text-secondary small">Expertise: Physics/Energy</p>
@@ -705,11 +751,11 @@
                     <span class="badge badge-tool">read</span>
                     <span class="badge badge-tool">sessions_send</span>
                 </div>
-                <div class="bg-black p-2 rounded small mb-3" style="font-family: monospace; font-size: 0.7rem; color: #10b981; min-height: 40px;">
+                <div class="bg-black p-2 rounded small mb-3" style="font-family: monospace; font-size: 0.7rem; color: #10b981; min-height: 40px; border: 1px solid #1e293b;">
                     Logic: Execute specialized microservice logic via sessions_send...
                 </div>
                 <div class="d-grid gap-2">
-                    <button class="btn btn-sm btn-primary" onclick="window.open('https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Halley')">Download Agent Files</button>
+                    <button class="btn btn-sm btn-primary" onclick="window.open('https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Halley')">Download Logic</button>
                     <button class="btn btn-sm btn-outline-info" onclick="alert('Connecting to Local Sandbox via Cloudflare... Please ensure your local OpenClaw is running with Ollama.')">Test in Sandbox</button>
                 </div>
             </div>
@@ -718,7 +764,7 @@
         <div class="col-md-4 mb-4">
             <div class="agent-card p-4">
                 <div class="d-flex justify-content-between align-items-start mb-3">
-                    <h3 class="h5 mb-0">Hubble</h3>
+                    <h3 class="h5 mb-0" style="color: #38bdf8;">Hubble</h3>
                     <span class="fs-4">⚡</span>
                 </div>
                 <p class="text-secondary small">Expertise: Physics/Energy</p>
@@ -727,11 +773,11 @@
                     <span class="badge badge-tool">read</span>
                     <span class="badge badge-tool">sessions_send</span>
                 </div>
-                <div class="bg-black p-2 rounded small mb-3" style="font-family: monospace; font-size: 0.7rem; color: #10b981; min-height: 40px;">
+                <div class="bg-black p-2 rounded small mb-3" style="font-family: monospace; font-size: 0.7rem; color: #10b981; min-height: 40px; border: 1px solid #1e293b;">
                     Logic: Execute specialized microservice logic via sessions_send...
                 </div>
                 <div class="d-grid gap-2">
-                    <button class="btn btn-sm btn-primary" onclick="window.open('https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Hubble')">Download Agent Files</button>
+                    <button class="btn btn-sm btn-primary" onclick="window.open('https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Hubble')">Download Logic</button>
                     <button class="btn btn-sm btn-outline-info" onclick="alert('Connecting to Local Sandbox via Cloudflare... Please ensure your local OpenClaw is running with Ollama.')">Test in Sandbox</button>
                 </div>
             </div>
@@ -740,7 +786,7 @@
         <div class="col-md-4 mb-4">
             <div class="agent-card p-4">
                 <div class="d-flex justify-content-between align-items-start mb-3">
-                    <h3 class="h5 mb-0">Sagan</h3>
+                    <h3 class="h5 mb-0" style="color: #38bdf8;">Sagan</h3>
                     <span class="fs-4">⚡</span>
                 </div>
                 <p class="text-secondary small">Expertise: Physics/Energy</p>
@@ -749,11 +795,11 @@
                     <span class="badge badge-tool">read</span>
                     <span class="badge badge-tool">sessions_send</span>
                 </div>
-                <div class="bg-black p-2 rounded small mb-3" style="font-family: monospace; font-size: 0.7rem; color: #10b981; min-height: 40px;">
+                <div class="bg-black p-2 rounded small mb-3" style="font-family: monospace; font-size: 0.7rem; color: #10b981; min-height: 40px; border: 1px solid #1e293b;">
                     Logic: Execute specialized microservice logic via sessions_send...
                 </div>
                 <div class="d-grid gap-2">
-                    <button class="btn btn-sm btn-primary" onclick="window.open('https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Sagan')">Download Agent Files</button>
+                    <button class="btn btn-sm btn-primary" onclick="window.open('https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Sagan')">Download Logic</button>
                     <button class="btn btn-sm btn-outline-info" onclick="alert('Connecting to Local Sandbox via Cloudflare... Please ensure your local OpenClaw is running with Ollama.')">Test in Sandbox</button>
                 </div>
             </div>
@@ -762,7 +808,7 @@
         <div class="col-md-4 mb-4">
             <div class="agent-card p-4">
                 <div class="d-flex justify-content-between align-items-start mb-3">
-                    <h3 class="h5 mb-0">Ada</h3>
+                    <h3 class="h5 mb-0" style="color: #38bdf8;">Ada</h3>
                     <span class="fs-4">💻</span>
                 </div>
                 <p class="text-secondary small">Expertise: Code/Data/AI</p>
@@ -771,11 +817,11 @@
                     <span class="badge badge-tool">read</span>
                     <span class="badge badge-tool">sessions_send</span>
                 </div>
-                <div class="bg-black p-2 rounded small mb-3" style="font-family: monospace; font-size: 0.7rem; color: #10b981; min-height: 40px;">
+                <div class="bg-black p-2 rounded small mb-3" style="font-family: monospace; font-size: 0.7rem; color: #10b981; min-height: 40px; border: 1px solid #1e293b;">
                     Logic: Execute specialized microservice logic via sessions_send...
                 </div>
                 <div class="d-grid gap-2">
-                    <button class="btn btn-sm btn-primary" onclick="window.open('https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Ada')">Download Agent Files</button>
+                    <button class="btn btn-sm btn-primary" onclick="window.open('https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Ada')">Download Logic</button>
                     <button class="btn btn-sm btn-outline-info" onclick="alert('Connecting to Local Sandbox via Cloudflare... Please ensure your local OpenClaw is running with Ollama.')">Test in Sandbox</button>
                 </div>
             </div>
@@ -784,7 +830,7 @@
         <div class="col-md-4 mb-4">
             <div class="agent-card p-4">
                 <div class="d-flex justify-content-between align-items-start mb-3">
-                    <h3 class="h5 mb-0">Lovelace</h3>
+                    <h3 class="h5 mb-0" style="color: #38bdf8;">Lovelace</h3>
                     <span class="fs-4">💻</span>
                 </div>
                 <p class="text-secondary small">Expertise: Code/Data/AI</p>
@@ -793,11 +839,11 @@
                     <span class="badge badge-tool">read</span>
                     <span class="badge badge-tool">sessions_send</span>
                 </div>
-                <div class="bg-black p-2 rounded small mb-3" style="font-family: monospace; font-size: 0.7rem; color: #10b981; min-height: 40px;">
+                <div class="bg-black p-2 rounded small mb-3" style="font-family: monospace; font-size: 0.7rem; color: #10b981; min-height: 40px; border: 1px solid #1e293b;">
                     Logic: Render live A2UI dashboard of ecosystem health...
                 </div>
                 <div class="d-grid gap-2">
-                    <button class="btn btn-sm btn-primary" onclick="window.open('https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Lovelace')">Download Agent Files</button>
+                    <button class="btn btn-sm btn-primary" onclick="window.open('https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Lovelace')">Download Logic</button>
                     <button class="btn btn-sm btn-outline-info" onclick="alert('Connecting to Local Sandbox via Cloudflare... Please ensure your local OpenClaw is running with Ollama.')">Test in Sandbox</button>
                 </div>
             </div>
@@ -806,7 +852,7 @@
         <div class="col-md-4 mb-4">
             <div class="agent-card p-4">
                 <div class="d-flex justify-content-between align-items-start mb-3">
-                    <h3 class="h5 mb-0">Knuth</h3>
+                    <h3 class="h5 mb-0" style="color: #38bdf8;">Knuth</h3>
                     <span class="fs-4">💻</span>
                 </div>
                 <p class="text-secondary small">Expertise: Code/Data/AI</p>
@@ -815,11 +861,11 @@
                     <span class="badge badge-tool">read</span>
                     <span class="badge badge-tool">sessions_send</span>
                 </div>
-                <div class="bg-black p-2 rounded small mb-3" style="font-family: monospace; font-size: 0.7rem; color: #10b981; min-height: 40px;">
+                <div class="bg-black p-2 rounded small mb-3" style="font-family: monospace; font-size: 0.7rem; color: #10b981; min-height: 40px; border: 1px solid #1e293b;">
                     Logic: Execute specialized microservice logic via sessions_send...
                 </div>
                 <div class="d-grid gap-2">
-                    <button class="btn btn-sm btn-primary" onclick="window.open('https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Knuth')">Download Agent Files</button>
+                    <button class="btn btn-sm btn-primary" onclick="window.open('https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Knuth')">Download Logic</button>
                     <button class="btn btn-sm btn-outline-info" onclick="alert('Connecting to Local Sandbox via Cloudflare... Please ensure your local OpenClaw is running with Ollama.')">Test in Sandbox</button>
                 </div>
             </div>
@@ -828,7 +874,7 @@
         <div class="col-md-4 mb-4">
             <div class="agent-card p-4">
                 <div class="d-flex justify-content-between align-items-start mb-3">
-                    <h3 class="h5 mb-0">BernersLee</h3>
+                    <h3 class="h5 mb-0" style="color: #38bdf8;">BernersLee</h3>
                     <span class="fs-4">💻</span>
                 </div>
                 <p class="text-secondary small">Expertise: Code/Data/AI</p>
@@ -837,11 +883,11 @@
                     <span class="badge badge-tool">read</span>
                     <span class="badge badge-tool">sessions_send</span>
                 </div>
-                <div class="bg-black p-2 rounded small mb-3" style="font-family: monospace; font-size: 0.7rem; color: #10b981; min-height: 40px;">
+                <div class="bg-black p-2 rounded small mb-3" style="font-family: monospace; font-size: 0.7rem; color: #10b981; min-height: 40px; border: 1px solid #1e293b;">
                     Logic: Execute specialized microservice logic via sessions_send...
                 </div>
                 <div class="d-grid gap-2">
-                    <button class="btn btn-sm btn-primary" onclick="window.open('https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/BernersLee')">Download Agent Files</button>
+                    <button class="btn btn-sm btn-primary" onclick="window.open('https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/BernersLee')">Download Logic</button>
                     <button class="btn btn-sm btn-outline-info" onclick="alert('Connecting to Local Sandbox via Cloudflare... Please ensure your local OpenClaw is running with Ollama.')">Test in Sandbox</button>
                 </div>
             </div>
@@ -850,7 +896,7 @@
         <div class="col-md-4 mb-4">
             <div class="agent-card p-4">
                 <div class="d-flex justify-content-between align-items-start mb-3">
-                    <h3 class="h5 mb-0">Darwin</h3>
+                    <h3 class="h5 mb-0" style="color: #38bdf8;">Darwin</h3>
                     <span class="fs-4">💻</span>
                 </div>
                 <p class="text-secondary small">Expertise: Code/Data/AI</p>
@@ -859,11 +905,11 @@
                     <span class="badge badge-tool">read</span>
                     <span class="badge badge-tool">sessions_send</span>
                 </div>
-                <div class="bg-black p-2 rounded small mb-3" style="font-family: monospace; font-size: 0.7rem; color: #10b981; min-height: 40px;">
+                <div class="bg-black p-2 rounded small mb-3" style="font-family: monospace; font-size: 0.7rem; color: #10b981; min-height: 40px; border: 1px solid #1e293b;">
                     Logic: Execute specialized microservice logic via sessions_send...
                 </div>
                 <div class="d-grid gap-2">
-                    <button class="btn btn-sm btn-primary" onclick="window.open('https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Darwin')">Download Agent Files</button>
+                    <button class="btn btn-sm btn-primary" onclick="window.open('https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Darwin')">Download Logic</button>
                     <button class="btn btn-sm btn-outline-info" onclick="alert('Connecting to Local Sandbox via Cloudflare... Please ensure your local OpenClaw is running with Ollama.')">Test in Sandbox</button>
                 </div>
             </div>
@@ -872,7 +918,7 @@
         <div class="col-md-4 mb-4">
             <div class="agent-card p-4">
                 <div class="d-flex justify-content-between align-items-start mb-3">
-                    <h3 class="h5 mb-0">Mendel</h3>
+                    <h3 class="h5 mb-0" style="color: #38bdf8;">Mendel</h3>
                     <span class="fs-4">💻</span>
                 </div>
                 <p class="text-secondary small">Expertise: Code/Data/AI</p>
@@ -881,11 +927,11 @@
                     <span class="badge badge-tool">read</span>
                     <span class="badge badge-tool">sessions_send</span>
                 </div>
-                <div class="bg-black p-2 rounded small mb-3" style="font-family: monospace; font-size: 0.7rem; color: #10b981; min-height: 40px;">
+                <div class="bg-black p-2 rounded small mb-3" style="font-family: monospace; font-size: 0.7rem; color: #10b981; min-height: 40px; border: 1px solid #1e293b;">
                     Logic: Execute specialized microservice logic via sessions_send...
                 </div>
                 <div class="d-grid gap-2">
-                    <button class="btn btn-sm btn-primary" onclick="window.open('https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Mendel')">Download Agent Files</button>
+                    <button class="btn btn-sm btn-primary" onclick="window.open('https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Mendel')">Download Logic</button>
                     <button class="btn btn-sm btn-outline-info" onclick="alert('Connecting to Local Sandbox via Cloudflare... Please ensure your local OpenClaw is running with Ollama.')">Test in Sandbox</button>
                 </div>
             </div>
@@ -894,7 +940,7 @@
         <div class="col-md-4 mb-4">
             <div class="agent-card p-4">
                 <div class="d-flex justify-content-between align-items-start mb-3">
-                    <h3 class="h5 mb-0">Hinton</h3>
+                    <h3 class="h5 mb-0" style="color: #38bdf8;">Hinton</h3>
                     <span class="fs-4">💻</span>
                 </div>
                 <p class="text-secondary small">Expertise: Code/Data/AI</p>
@@ -903,11 +949,11 @@
                     <span class="badge badge-tool">read</span>
                     <span class="badge badge-tool">sessions_send</span>
                 </div>
-                <div class="bg-black p-2 rounded small mb-3" style="font-family: monospace; font-size: 0.7rem; color: #10b981; min-height: 40px;">
+                <div class="bg-black p-2 rounded small mb-3" style="font-family: monospace; font-size: 0.7rem; color: #10b981; min-height: 40px; border: 1px solid #1e293b;">
                     Logic: Execute specialized microservice logic via sessions_send...
                 </div>
                 <div class="d-grid gap-2">
-                    <button class="btn btn-sm btn-primary" onclick="window.open('https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Hinton')">Download Agent Files</button>
+                    <button class="btn btn-sm btn-primary" onclick="window.open('https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Hinton')">Download Logic</button>
                     <button class="btn btn-sm btn-outline-info" onclick="alert('Connecting to Local Sandbox via Cloudflare... Please ensure your local OpenClaw is running with Ollama.')">Test in Sandbox</button>
                 </div>
             </div>
@@ -916,7 +962,7 @@
         <div class="col-md-4 mb-4">
             <div class="agent-card p-4">
                 <div class="d-flex justify-content-between align-items-start mb-3">
-                    <h3 class="h5 mb-0">Bengio</h3>
+                    <h3 class="h5 mb-0" style="color: #38bdf8;">Bengio</h3>
                     <span class="fs-4">💻</span>
                 </div>
                 <p class="text-secondary small">Expertise: Code/Data/AI</p>
@@ -925,11 +971,11 @@
                     <span class="badge badge-tool">read</span>
                     <span class="badge badge-tool">sessions_send</span>
                 </div>
-                <div class="bg-black p-2 rounded small mb-3" style="font-family: monospace; font-size: 0.7rem; color: #10b981; min-height: 40px;">
+                <div class="bg-black p-2 rounded small mb-3" style="font-family: monospace; font-size: 0.7rem; color: #10b981; min-height: 40px; border: 1px solid #1e293b;">
                     Logic: Execute specialized microservice logic via sessions_send...
                 </div>
                 <div class="d-grid gap-2">
-                    <button class="btn btn-sm btn-primary" onclick="window.open('https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Bengio')">Download Agent Files</button>
+                    <button class="btn btn-sm btn-primary" onclick="window.open('https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Bengio')">Download Logic</button>
                     <button class="btn btn-sm btn-outline-info" onclick="alert('Connecting to Local Sandbox via Cloudflare... Please ensure your local OpenClaw is running with Ollama.')">Test in Sandbox</button>
                 </div>
             </div>
@@ -938,7 +984,7 @@
         <div class="col-md-4 mb-4">
             <div class="agent-card p-4">
                 <div class="d-flex justify-content-between align-items-start mb-3">
-                    <h3 class="h5 mb-0">LeCun</h3>
+                    <h3 class="h5 mb-0" style="color: #38bdf8;">LeCun</h3>
                     <span class="fs-4">💻</span>
                 </div>
                 <p class="text-secondary small">Expertise: Code/Data/AI</p>
@@ -947,11 +993,11 @@
                     <span class="badge badge-tool">read</span>
                     <span class="badge badge-tool">sessions_send</span>
                 </div>
-                <div class="bg-black p-2 rounded small mb-3" style="font-family: monospace; font-size: 0.7rem; color: #10b981; min-height: 40px;">
+                <div class="bg-black p-2 rounded small mb-3" style="font-family: monospace; font-size: 0.7rem; color: #10b981; min-height: 40px; border: 1px solid #1e293b;">
                     Logic: Execute specialized microservice logic via sessions_send...
                 </div>
                 <div class="d-grid gap-2">
-                    <button class="btn btn-sm btn-primary" onclick="window.open('https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/LeCun')">Download Agent Files</button>
+                    <button class="btn btn-sm btn-primary" onclick="window.open('https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/LeCun')">Download Logic</button>
                     <button class="btn btn-sm btn-outline-info" onclick="alert('Connecting to Local Sandbox via Cloudflare... Please ensure your local OpenClaw is running with Ollama.')">Test in Sandbox</button>
                 </div>
             </div>
@@ -960,7 +1006,7 @@
         <div class="col-md-4 mb-4">
             <div class="agent-card p-4">
                 <div class="d-flex justify-content-between align-items-start mb-3">
-                    <h3 class="h5 mb-0">Ng</h3>
+                    <h3 class="h5 mb-0" style="color: #38bdf8;">Ng</h3>
                     <span class="fs-4">💻</span>
                 </div>
                 <p class="text-secondary small">Expertise: Code/Data/AI</p>
@@ -969,11 +1015,11 @@
                     <span class="badge badge-tool">read</span>
                     <span class="badge badge-tool">sessions_send</span>
                 </div>
-                <div class="bg-black p-2 rounded small mb-3" style="font-family: monospace; font-size: 0.7rem; color: #10b981; min-height: 40px;">
+                <div class="bg-black p-2 rounded small mb-3" style="font-family: monospace; font-size: 0.7rem; color: #10b981; min-height: 40px; border: 1px solid #1e293b;">
                     Logic: Execute specialized microservice logic via sessions_send...
                 </div>
                 <div class="d-grid gap-2">
-                    <button class="btn btn-sm btn-primary" onclick="window.open('https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Ng')">Download Agent Files</button>
+                    <button class="btn btn-sm btn-primary" onclick="window.open('https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Ng')">Download Logic</button>
                     <button class="btn btn-sm btn-outline-info" onclick="alert('Connecting to Local Sandbox via Cloudflare... Please ensure your local OpenClaw is running with Ollama.')">Test in Sandbox</button>
                 </div>
             </div>
@@ -982,7 +1028,7 @@
         <div class="col-md-4 mb-4">
             <div class="agent-card p-4">
                 <div class="d-flex justify-content-between align-items-start mb-3">
-                    <h3 class="h5 mb-0">Karpathy</h3>
+                    <h3 class="h5 mb-0" style="color: #38bdf8;">Karpathy</h3>
                     <span class="fs-4">💻</span>
                 </div>
                 <p class="text-secondary small">Expertise: Code/Data/AI</p>
@@ -991,11 +1037,11 @@
                     <span class="badge badge-tool">read</span>
                     <span class="badge badge-tool">sessions_send</span>
                 </div>
-                <div class="bg-black p-2 rounded small mb-3" style="font-family: monospace; font-size: 0.7rem; color: #10b981; min-height: 40px;">
+                <div class="bg-black p-2 rounded small mb-3" style="font-family: monospace; font-size: 0.7rem; color: #10b981; min-height: 40px; border: 1px solid #1e293b;">
                     Logic: Execute specialized microservice logic via sessions_send...
                 </div>
                 <div class="d-grid gap-2">
-                    <button class="btn btn-sm btn-primary" onclick="window.open('https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Karpathy')">Download Agent Files</button>
+                    <button class="btn btn-sm btn-primary" onclick="window.open('https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Karpathy')">Download Logic</button>
                     <button class="btn btn-sm btn-outline-info" onclick="alert('Connecting to Local Sandbox via Cloudflare... Please ensure your local OpenClaw is running with Ollama.')">Test in Sandbox</button>
                 </div>
             </div>
@@ -1004,7 +1050,7 @@
         <div class="col-md-4 mb-4">
             <div class="agent-card p-4">
                 <div class="d-flex justify-content-between align-items-start mb-3">
-                    <h3 class="h5 mb-0">Sutskever</h3>
+                    <h3 class="h5 mb-0" style="color: #38bdf8;">Sutskever</h3>
                     <span class="fs-4">💻</span>
                 </div>
                 <p class="text-secondary small">Expertise: Code/Data/AI</p>
@@ -1013,11 +1059,11 @@
                     <span class="badge badge-tool">read</span>
                     <span class="badge badge-tool">sessions_send</span>
                 </div>
-                <div class="bg-black p-2 rounded small mb-3" style="font-family: monospace; font-size: 0.7rem; color: #10b981; min-height: 40px;">
+                <div class="bg-black p-2 rounded small mb-3" style="font-family: monospace; font-size: 0.7rem; color: #10b981; min-height: 40px; border: 1px solid #1e293b;">
                     Logic: Execute specialized microservice logic via sessions_send...
                 </div>
                 <div class="d-grid gap-2">
-                    <button class="btn btn-sm btn-primary" onclick="window.open('https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Sutskever')">Download Agent Files</button>
+                    <button class="btn btn-sm btn-primary" onclick="window.open('https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Sutskever')">Download Logic</button>
                     <button class="btn btn-sm btn-outline-info" onclick="alert('Connecting to Local Sandbox via Cloudflare... Please ensure your local OpenClaw is running with Ollama.')">Test in Sandbox</button>
                 </div>
             </div>
@@ -1026,7 +1072,7 @@
         <div class="col-md-4 mb-4">
             <div class="agent-card p-4">
                 <div class="d-flex justify-content-between align-items-start mb-3">
-                    <h3 class="h5 mb-0">Amodei</h3>
+                    <h3 class="h5 mb-0" style="color: #38bdf8;">Amodei</h3>
                     <span class="fs-4">💻</span>
                 </div>
                 <p class="text-secondary small">Expertise: Code/Data/AI</p>
@@ -1035,11 +1081,11 @@
                     <span class="badge badge-tool">read</span>
                     <span class="badge badge-tool">sessions_send</span>
                 </div>
-                <div class="bg-black p-2 rounded small mb-3" style="font-family: monospace; font-size: 0.7rem; color: #10b981; min-height: 40px;">
+                <div class="bg-black p-2 rounded small mb-3" style="font-family: monospace; font-size: 0.7rem; color: #10b981; min-height: 40px; border: 1px solid #1e293b;">
                     Logic: Execute specialized microservice logic via sessions_send...
                 </div>
                 <div class="d-grid gap-2">
-                    <button class="btn btn-sm btn-primary" onclick="window.open('https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Amodei')">Download Agent Files</button>
+                    <button class="btn btn-sm btn-primary" onclick="window.open('https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Amodei')">Download Logic</button>
                     <button class="btn btn-sm btn-outline-info" onclick="alert('Connecting to Local Sandbox via Cloudflare... Please ensure your local OpenClaw is running with Ollama.')">Test in Sandbox</button>
                 </div>
             </div>
@@ -1048,7 +1094,7 @@
         <div class="col-md-4 mb-4">
             <div class="agent-card p-4">
                 <div class="d-flex justify-content-between align-items-start mb-3">
-                    <h3 class="h5 mb-0">Wozniak</h3>
+                    <h3 class="h5 mb-0" style="color: #38bdf8;">Wozniak</h3>
                     <span class="fs-4">💻</span>
                 </div>
                 <p class="text-secondary small">Expertise: Code/Data/AI</p>
@@ -1057,11 +1103,11 @@
                     <span class="badge badge-tool">read</span>
                     <span class="badge badge-tool">sessions_send</span>
                 </div>
-                <div class="bg-black p-2 rounded small mb-3" style="font-family: monospace; font-size: 0.7rem; color: #10b981; min-height: 40px;">
+                <div class="bg-black p-2 rounded small mb-3" style="font-family: monospace; font-size: 0.7rem; color: #10b981; min-height: 40px; border: 1px solid #1e293b;">
                     Logic: Execute specialized microservice logic via sessions_send...
                 </div>
                 <div class="d-grid gap-2">
-                    <button class="btn btn-sm btn-primary" onclick="window.open('https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Wozniak')">Download Agent Files</button>
+                    <button class="btn btn-sm btn-primary" onclick="window.open('https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Wozniak')">Download Logic</button>
                     <button class="btn btn-sm btn-outline-info" onclick="alert('Connecting to Local Sandbox via Cloudflare... Please ensure your local OpenClaw is running with Ollama.')">Test in Sandbox</button>
                 </div>
             </div>
@@ -1070,7 +1116,7 @@
         <div class="col-md-4 mb-4">
             <div class="agent-card p-4">
                 <div class="d-flex justify-content-between align-items-start mb-3">
-                    <h3 class="h5 mb-0">Torvalds</h3>
+                    <h3 class="h5 mb-0" style="color: #38bdf8;">Torvalds</h3>
                     <span class="fs-4">💻</span>
                 </div>
                 <p class="text-secondary small">Expertise: Code/Data/AI</p>
@@ -1079,11 +1125,11 @@
                     <span class="badge badge-tool">read</span>
                     <span class="badge badge-tool">sessions_send</span>
                 </div>
-                <div class="bg-black p-2 rounded small mb-3" style="font-family: monospace; font-size: 0.7rem; color: #10b981; min-height: 40px;">
+                <div class="bg-black p-2 rounded small mb-3" style="font-family: monospace; font-size: 0.7rem; color: #10b981; min-height: 40px; border: 1px solid #1e293b;">
                     Logic: Execute specialized microservice logic via sessions_send...
                 </div>
                 <div class="d-grid gap-2">
-                    <button class="btn btn-sm btn-primary" onclick="window.open('https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Torvalds')">Download Agent Files</button>
+                    <button class="btn btn-sm btn-primary" onclick="window.open('https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Torvalds')">Download Logic</button>
                     <button class="btn btn-sm btn-outline-info" onclick="alert('Connecting to Local Sandbox via Cloudflare... Please ensure your local OpenClaw is running with Ollama.')">Test in Sandbox</button>
                 </div>
             </div>
@@ -1092,7 +1138,7 @@
         <div class="col-md-4 mb-4">
             <div class="agent-card p-4">
                 <div class="d-flex justify-content-between align-items-start mb-3">
-                    <h3 class="h5 mb-0">Liskov</h3>
+                    <h3 class="h5 mb-0" style="color: #38bdf8;">Liskov</h3>
                     <span class="fs-4">💻</span>
                 </div>
                 <p class="text-secondary small">Expertise: Code/Data/AI</p>
@@ -1101,11 +1147,11 @@
                     <span class="badge badge-tool">read</span>
                     <span class="badge badge-tool">sessions_send</span>
                 </div>
-                <div class="bg-black p-2 rounded small mb-3" style="font-family: monospace; font-size: 0.7rem; color: #10b981; min-height: 40px;">
+                <div class="bg-black p-2 rounded small mb-3" style="font-family: monospace; font-size: 0.7rem; color: #10b981; min-height: 40px; border: 1px solid #1e293b;">
                     Logic: Execute specialized microservice logic via sessions_send...
                 </div>
                 <div class="d-grid gap-2">
-                    <button class="btn btn-sm btn-primary" onclick="window.open('https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Liskov')">Download Agent Files</button>
+                    <button class="btn btn-sm btn-primary" onclick="window.open('https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Liskov')">Download Logic</button>
                     <button class="btn btn-sm btn-outline-info" onclick="alert('Connecting to Local Sandbox via Cloudflare... Please ensure your local OpenClaw is running with Ollama.')">Test in Sandbox</button>
                 </div>
             </div>
@@ -1114,7 +1160,7 @@
         <div class="col-md-4 mb-4">
             <div class="agent-card p-4">
                 <div class="d-flex justify-content-between align-items-start mb-3">
-                    <h3 class="h5 mb-0">Vapnik</h3>
+                    <h3 class="h5 mb-0" style="color: #38bdf8;">Vapnik</h3>
                     <span class="fs-4">💻</span>
                 </div>
                 <p class="text-secondary small">Expertise: Code/Data/AI</p>
@@ -1123,11 +1169,11 @@
                     <span class="badge badge-tool">read</span>
                     <span class="badge badge-tool">sessions_send</span>
                 </div>
-                <div class="bg-black p-2 rounded small mb-3" style="font-family: monospace; font-size: 0.7rem; color: #10b981; min-height: 40px;">
+                <div class="bg-black p-2 rounded small mb-3" style="font-family: monospace; font-size: 0.7rem; color: #10b981; min-height: 40px; border: 1px solid #1e293b;">
                     Logic: Execute specialized microservice logic via sessions_send...
                 </div>
                 <div class="d-grid gap-2">
-                    <button class="btn btn-sm btn-primary" onclick="window.open('https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Vapnik')">Download Agent Files</button>
+                    <button class="btn btn-sm btn-primary" onclick="window.open('https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Vapnik')">Download Logic</button>
                     <button class="btn btn-sm btn-outline-info" onclick="alert('Connecting to Local Sandbox via Cloudflare... Please ensure your local OpenClaw is running with Ollama.')">Test in Sandbox</button>
                 </div>
             </div>
@@ -1136,7 +1182,7 @@
         <div class="col-md-4 mb-4">
             <div class="agent-card p-4">
                 <div class="d-flex justify-content-between align-items-start mb-3">
-                    <h3 class="h5 mb-0">Pearl</h3>
+                    <h3 class="h5 mb-0" style="color: #38bdf8;">Pearl</h3>
                     <span class="fs-4">💻</span>
                 </div>
                 <p class="text-secondary small">Expertise: Code/Data/AI</p>
@@ -1145,11 +1191,11 @@
                     <span class="badge badge-tool">read</span>
                     <span class="badge badge-tool">sessions_send</span>
                 </div>
-                <div class="bg-black p-2 rounded small mb-3" style="font-family: monospace; font-size: 0.7rem; color: #10b981; min-height: 40px;">
+                <div class="bg-black p-2 rounded small mb-3" style="font-family: monospace; font-size: 0.7rem; color: #10b981; min-height: 40px; border: 1px solid #1e293b;">
                     Logic: Execute specialized microservice logic via sessions_send...
                 </div>
                 <div class="d-grid gap-2">
-                    <button class="btn btn-sm btn-primary" onclick="window.open('https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Pearl')">Download Agent Files</button>
+                    <button class="btn btn-sm btn-primary" onclick="window.open('https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Pearl')">Download Logic</button>
                     <button class="btn btn-sm btn-outline-info" onclick="alert('Connecting to Local Sandbox via Cloudflare... Please ensure your local OpenClaw is running with Ollama.')">Test in Sandbox</button>
                 </div>
             </div>
@@ -1158,7 +1204,7 @@
         <div class="col-md-4 mb-4">
             <div class="agent-card p-4">
                 <div class="d-flex justify-content-between align-items-start mb-3">
-                    <h3 class="h5 mb-0">Dante</h3>
+                    <h3 class="h5 mb-0" style="color: #38bdf8;">Dante</h3>
                     <span class="fs-4">📜</span>
                 </div>
                 <p class="text-secondary small">Expertise: Strategy/Philosophy</p>
@@ -1167,11 +1213,11 @@
                     <span class="badge badge-tool">read</span>
                     <span class="badge badge-tool">sessions_send</span>
                 </div>
-                <div class="bg-black p-2 rounded small mb-3" style="font-family: monospace; font-size: 0.7rem; color: #10b981; min-height: 40px;">
+                <div class="bg-black p-2 rounded small mb-3" style="font-family: monospace; font-size: 0.7rem; color: #10b981; min-height: 40px; border: 1px solid #1e293b;">
                     Logic: Execute specialized microservice logic via sessions_send...
                 </div>
                 <div class="d-grid gap-2">
-                    <button class="btn btn-sm btn-primary" onclick="window.open('https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Dante')">Download Agent Files</button>
+                    <button class="btn btn-sm btn-primary" onclick="window.open('https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Dante')">Download Logic</button>
                     <button class="btn btn-sm btn-outline-info" onclick="alert('Connecting to Local Sandbox via Cloudflare... Please ensure your local OpenClaw is running with Ollama.')">Test in Sandbox</button>
                 </div>
             </div>
@@ -1180,7 +1226,7 @@
         <div class="col-md-4 mb-4">
             <div class="agent-card p-4">
                 <div class="d-flex justify-content-between align-items-start mb-3">
-                    <h3 class="h5 mb-0">Shakespeare</h3>
+                    <h3 class="h5 mb-0" style="color: #38bdf8;">Shakespeare</h3>
                     <span class="fs-4">📜</span>
                 </div>
                 <p class="text-secondary small">Expertise: Strategy/Philosophy</p>
@@ -1189,11 +1235,11 @@
                     <span class="badge badge-tool">read</span>
                     <span class="badge badge-tool">sessions_send</span>
                 </div>
-                <div class="bg-black p-2 rounded small mb-3" style="font-family: monospace; font-size: 0.7rem; color: #10b981; min-height: 40px;">
+                <div class="bg-black p-2 rounded small mb-3" style="font-family: monospace; font-size: 0.7rem; color: #10b981; min-height: 40px; border: 1px solid #1e293b;">
                     Logic: Execute specialized microservice logic via sessions_send...
                 </div>
                 <div class="d-grid gap-2">
-                    <button class="btn btn-sm btn-primary" onclick="window.open('https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Shakespeare')">Download Agent Files</button>
+                    <button class="btn btn-sm btn-primary" onclick="window.open('https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Shakespeare')">Download Logic</button>
                     <button class="btn btn-sm btn-outline-info" onclick="alert('Connecting to Local Sandbox via Cloudflare... Please ensure your local OpenClaw is running with Ollama.')">Test in Sandbox</button>
                 </div>
             </div>
@@ -1202,7 +1248,7 @@
         <div class="col-md-4 mb-4">
             <div class="agent-card p-4">
                 <div class="d-flex justify-content-between align-items-start mb-3">
-                    <h3 class="h5 mb-0">Mozart</h3>
+                    <h3 class="h5 mb-0" style="color: #38bdf8;">Mozart</h3>
                     <span class="fs-4">📜</span>
                 </div>
                 <p class="text-secondary small">Expertise: Strategy/Philosophy</p>
@@ -1211,11 +1257,11 @@
                     <span class="badge badge-tool">read</span>
                     <span class="badge badge-tool">sessions_send</span>
                 </div>
-                <div class="bg-black p-2 rounded small mb-3" style="font-family: monospace; font-size: 0.7rem; color: #10b981; min-height: 40px;">
+                <div class="bg-black p-2 rounded small mb-3" style="font-family: monospace; font-size: 0.7rem; color: #10b981; min-height: 40px; border: 1px solid #1e293b;">
                     Logic: Execute specialized microservice logic via sessions_send...
                 </div>
                 <div class="d-grid gap-2">
-                    <button class="btn btn-sm btn-primary" onclick="window.open('https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Mozart')">Download Agent Files</button>
+                    <button class="btn btn-sm btn-primary" onclick="window.open('https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Mozart')">Download Logic</button>
                     <button class="btn btn-sm btn-outline-info" onclick="alert('Connecting to Local Sandbox via Cloudflare... Please ensure your local OpenClaw is running with Ollama.')">Test in Sandbox</button>
                 </div>
             </div>
@@ -1224,7 +1270,7 @@
         <div class="col-md-4 mb-4">
             <div class="agent-card p-4">
                 <div class="d-flex justify-content-between align-items-start mb-3">
-                    <h3 class="h5 mb-0">Socrates</h3>
+                    <h3 class="h5 mb-0" style="color: #38bdf8;">Socrates</h3>
                     <span class="fs-4">📜</span>
                 </div>
                 <p class="text-secondary small">Expertise: Strategy/Philosophy</p>
@@ -1233,11 +1279,11 @@
                     <span class="badge badge-tool">read</span>
                     <span class="badge badge-tool">sessions_send</span>
                 </div>
-                <div class="bg-black p-2 rounded small mb-3" style="font-family: monospace; font-size: 0.7rem; color: #10b981; min-height: 40px;">
+                <div class="bg-black p-2 rounded small mb-3" style="font-family: monospace; font-size: 0.7rem; color: #10b981; min-height: 40px; border: 1px solid #1e293b;">
                     Logic: Execute specialized microservice logic via sessions_send...
                 </div>
                 <div class="d-grid gap-2">
-                    <button class="btn btn-sm btn-primary" onclick="window.open('https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Socrates')">Download Agent Files</button>
+                    <button class="btn btn-sm btn-primary" onclick="window.open('https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Socrates')">Download Logic</button>
                     <button class="btn btn-sm btn-outline-info" onclick="alert('Connecting to Local Sandbox via Cloudflare... Please ensure your local OpenClaw is running with Ollama.')">Test in Sandbox</button>
                 </div>
             </div>
@@ -1246,7 +1292,7 @@
         <div class="col-md-4 mb-4">
             <div class="agent-card p-4">
                 <div class="d-flex justify-content-between align-items-start mb-3">
-                    <h3 class="h5 mb-0">Plato</h3>
+                    <h3 class="h5 mb-0" style="color: #38bdf8;">Plato</h3>
                     <span class="fs-4">📜</span>
                 </div>
                 <p class="text-secondary small">Expertise: Strategy/Philosophy</p>
@@ -1255,11 +1301,11 @@
                     <span class="badge badge-tool">read</span>
                     <span class="badge badge-tool">sessions_send</span>
                 </div>
-                <div class="bg-black p-2 rounded small mb-3" style="font-family: monospace; font-size: 0.7rem; color: #10b981; min-height: 40px;">
+                <div class="bg-black p-2 rounded small mb-3" style="font-family: monospace; font-size: 0.7rem; color: #10b981; min-height: 40px; border: 1px solid #1e293b;">
                     Logic: Execute specialized microservice logic via sessions_send...
                 </div>
                 <div class="d-grid gap-2">
-                    <button class="btn btn-sm btn-primary" onclick="window.open('https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Plato')">Download Agent Files</button>
+                    <button class="btn btn-sm btn-primary" onclick="window.open('https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Plato')">Download Logic</button>
                     <button class="btn btn-sm btn-outline-info" onclick="alert('Connecting to Local Sandbox via Cloudflare... Please ensure your local OpenClaw is running with Ollama.')">Test in Sandbox</button>
                 </div>
             </div>
@@ -1268,7 +1314,7 @@
         <div class="col-md-4 mb-4">
             <div class="agent-card p-4">
                 <div class="d-flex justify-content-between align-items-start mb-3">
-                    <h3 class="h5 mb-0">Aristotle</h3>
+                    <h3 class="h5 mb-0" style="color: #38bdf8;">Aristotle</h3>
                     <span class="fs-4">📜</span>
                 </div>
                 <p class="text-secondary small">Expertise: Strategy/Philosophy</p>
@@ -1277,11 +1323,11 @@
                     <span class="badge badge-tool">read</span>
                     <span class="badge badge-tool">sessions_send</span>
                 </div>
-                <div class="bg-black p-2 rounded small mb-3" style="font-family: monospace; font-size: 0.7rem; color: #10b981; min-height: 40px;">
+                <div class="bg-black p-2 rounded small mb-3" style="font-family: monospace; font-size: 0.7rem; color: #10b981; min-height: 40px; border: 1px solid #1e293b;">
                     Logic: Execute specialized microservice logic via sessions_send...
                 </div>
                 <div class="d-grid gap-2">
-                    <button class="btn btn-sm btn-primary" onclick="window.open('https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Aristotle')">Download Agent Files</button>
+                    <button class="btn btn-sm btn-primary" onclick="window.open('https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Aristotle')">Download Logic</button>
                     <button class="btn btn-sm btn-outline-info" onclick="alert('Connecting to Local Sandbox via Cloudflare... Please ensure your local OpenClaw is running with Ollama.')">Test in Sandbox</button>
                 </div>
             </div>
@@ -1290,7 +1336,7 @@
         <div class="col-md-4 mb-4">
             <div class="agent-card p-4">
                 <div class="d-flex justify-content-between align-items-start mb-3">
-                    <h3 class="h5 mb-0">Nietzsche</h3>
+                    <h3 class="h5 mb-0" style="color: #38bdf8;">Nietzsche</h3>
                     <span class="fs-4">📜</span>
                 </div>
                 <p class="text-secondary small">Expertise: Strategy/Philosophy</p>
@@ -1299,11 +1345,11 @@
                     <span class="badge badge-tool">read</span>
                     <span class="badge badge-tool">sessions_send</span>
                 </div>
-                <div class="bg-black p-2 rounded small mb-3" style="font-family: monospace; font-size: 0.7rem; color: #10b981; min-height: 40px;">
+                <div class="bg-black p-2 rounded small mb-3" style="font-family: monospace; font-size: 0.7rem; color: #10b981; min-height: 40px; border: 1px solid #1e293b;">
                     Logic: Execute specialized microservice logic via sessions_send...
                 </div>
                 <div class="d-grid gap-2">
-                    <button class="btn btn-sm btn-primary" onclick="window.open('https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Nietzsche')">Download Agent Files</button>
+                    <button class="btn btn-sm btn-primary" onclick="window.open('https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Nietzsche')">Download Logic</button>
                     <button class="btn btn-sm btn-outline-info" onclick="alert('Connecting to Local Sandbox via Cloudflare... Please ensure your local OpenClaw is running with Ollama.')">Test in Sandbox</button>
                 </div>
             </div>
@@ -1312,7 +1358,7 @@
         <div class="col-md-4 mb-4">
             <div class="agent-card p-4">
                 <div class="d-flex justify-content-between align-items-start mb-3">
-                    <h3 class="h5 mb-0">Kant</h3>
+                    <h3 class="h5 mb-0" style="color: #38bdf8;">Kant</h3>
                     <span class="fs-4">📜</span>
                 </div>
                 <p class="text-secondary small">Expertise: Strategy/Philosophy</p>
@@ -1321,11 +1367,11 @@
                     <span class="badge badge-tool">read</span>
                     <span class="badge badge-tool">sessions_send</span>
                 </div>
-                <div class="bg-black p-2 rounded small mb-3" style="font-family: monospace; font-size: 0.7rem; color: #10b981; min-height: 40px;">
+                <div class="bg-black p-2 rounded small mb-3" style="font-family: monospace; font-size: 0.7rem; color: #10b981; min-height: 40px; border: 1px solid #1e293b;">
                     Logic: Execute specialized microservice logic via sessions_send...
                 </div>
                 <div class="d-grid gap-2">
-                    <button class="btn btn-sm btn-primary" onclick="window.open('https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Kant')">Download Agent Files</button>
+                    <button class="btn btn-sm btn-primary" onclick="window.open('https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Kant')">Download Logic</button>
                     <button class="btn btn-sm btn-outline-info" onclick="alert('Connecting to Local Sandbox via Cloudflare... Please ensure your local OpenClaw is running with Ollama.')">Test in Sandbox</button>
                 </div>
             </div>
@@ -1334,7 +1380,7 @@
         <div class="col-md-4 mb-4">
             <div class="agent-card p-4">
                 <div class="d-flex justify-content-between align-items-start mb-3">
-                    <h3 class="h5 mb-0">Hegel</h3>
+                    <h3 class="h5 mb-0" style="color: #38bdf8;">Hegel</h3>
                     <span class="fs-4">📜</span>
                 </div>
                 <p class="text-secondary small">Expertise: Strategy/Philosophy</p>
@@ -1343,11 +1389,11 @@
                     <span class="badge badge-tool">read</span>
                     <span class="badge badge-tool">sessions_send</span>
                 </div>
-                <div class="bg-black p-2 rounded small mb-3" style="font-family: monospace; font-size: 0.7rem; color: #10b981; min-height: 40px;">
+                <div class="bg-black p-2 rounded small mb-3" style="font-family: monospace; font-size: 0.7rem; color: #10b981; min-height: 40px; border: 1px solid #1e293b;">
                     Logic: Execute specialized microservice logic via sessions_send...
                 </div>
                 <div class="d-grid gap-2">
-                    <button class="btn btn-sm btn-primary" onclick="window.open('https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Hegel')">Download Agent Files</button>
+                    <button class="btn btn-sm btn-primary" onclick="window.open('https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Hegel')">Download Logic</button>
                     <button class="btn btn-sm btn-outline-info" onclick="alert('Connecting to Local Sandbox via Cloudflare... Please ensure your local OpenClaw is running with Ollama.')">Test in Sandbox</button>
                 </div>
             </div>
@@ -1356,7 +1402,7 @@
         <div class="col-md-4 mb-4">
             <div class="agent-card p-4">
                 <div class="d-flex justify-content-between align-items-start mb-3">
-                    <h3 class="h5 mb-0">Spinoza</h3>
+                    <h3 class="h5 mb-0" style="color: #38bdf8;">Spinoza</h3>
                     <span class="fs-4">📜</span>
                 </div>
                 <p class="text-secondary small">Expertise: Strategy/Philosophy</p>
@@ -1365,11 +1411,11 @@
                     <span class="badge badge-tool">read</span>
                     <span class="badge badge-tool">sessions_send</span>
                 </div>
-                <div class="bg-black p-2 rounded small mb-3" style="font-family: monospace; font-size: 0.7rem; color: #10b981; min-height: 40px;">
+                <div class="bg-black p-2 rounded small mb-3" style="font-family: monospace; font-size: 0.7rem; color: #10b981; min-height: 40px; border: 1px solid #1e293b;">
                     Logic: Execute specialized microservice logic via sessions_send...
                 </div>
                 <div class="d-grid gap-2">
-                    <button class="btn btn-sm btn-primary" onclick="window.open('https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Spinoza')">Download Agent Files</button>
+                    <button class="btn btn-sm btn-primary" onclick="window.open('https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Spinoza')">Download Logic</button>
                     <button class="btn btn-sm btn-outline-info" onclick="alert('Connecting to Local Sandbox via Cloudflare... Please ensure your local OpenClaw is running with Ollama.')">Test in Sandbox</button>
                 </div>
             </div>
@@ -1378,7 +1424,7 @@
         <div class="col-md-4 mb-4">
             <div class="agent-card p-4">
                 <div class="d-flex justify-content-between align-items-start mb-3">
-                    <h3 class="h5 mb-0">Locke</h3>
+                    <h3 class="h5 mb-0" style="color: #38bdf8;">Locke</h3>
                     <span class="fs-4">📜</span>
                 </div>
                 <p class="text-secondary small">Expertise: Strategy/Philosophy</p>
@@ -1387,11 +1433,11 @@
                     <span class="badge badge-tool">read</span>
                     <span class="badge badge-tool">sessions_send</span>
                 </div>
-                <div class="bg-black p-2 rounded small mb-3" style="font-family: monospace; font-size: 0.7rem; color: #10b981; min-height: 40px;">
+                <div class="bg-black p-2 rounded small mb-3" style="font-family: monospace; font-size: 0.7rem; color: #10b981; min-height: 40px; border: 1px solid #1e293b;">
                     Logic: Execute specialized microservice logic via sessions_send...
                 </div>
                 <div class="d-grid gap-2">
-                    <button class="btn btn-sm btn-primary" onclick="window.open('https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Locke')">Download Agent Files</button>
+                    <button class="btn btn-sm btn-primary" onclick="window.open('https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Locke')">Download Logic</button>
                     <button class="btn btn-sm btn-outline-info" onclick="alert('Connecting to Local Sandbox via Cloudflare... Please ensure your local OpenClaw is running with Ollama.')">Test in Sandbox</button>
                 </div>
             </div>
@@ -1400,7 +1446,7 @@
         <div class="col-md-4 mb-4">
             <div class="agent-card p-4">
                 <div class="d-flex justify-content-between align-items-start mb-3">
-                    <h3 class="h5 mb-0">Hume</h3>
+                    <h3 class="h5 mb-0" style="color: #38bdf8;">Hume</h3>
                     <span class="fs-4">📜</span>
                 </div>
                 <p class="text-secondary small">Expertise: Strategy/Philosophy</p>
@@ -1409,11 +1455,11 @@
                     <span class="badge badge-tool">read</span>
                     <span class="badge badge-tool">sessions_send</span>
                 </div>
-                <div class="bg-black p-2 rounded small mb-3" style="font-family: monospace; font-size: 0.7rem; color: #10b981; min-height: 40px;">
+                <div class="bg-black p-2 rounded small mb-3" style="font-family: monospace; font-size: 0.7rem; color: #10b981; min-height: 40px; border: 1px solid #1e293b;">
                     Logic: Execute specialized microservice logic via sessions_send...
                 </div>
                 <div class="d-grid gap-2">
-                    <button class="btn btn-sm btn-primary" onclick="window.open('https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Hume')">Download Agent Files</button>
+                    <button class="btn btn-sm btn-primary" onclick="window.open('https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Hume')">Download Logic</button>
                     <button class="btn btn-sm btn-outline-info" onclick="alert('Connecting to Local Sandbox via Cloudflare... Please ensure your local OpenClaw is running with Ollama.')">Test in Sandbox</button>
                 </div>
             </div>
@@ -1422,7 +1468,7 @@
         <div class="col-md-4 mb-4">
             <div class="agent-card p-4">
                 <div class="d-flex justify-content-between align-items-start mb-3">
-                    <h3 class="h5 mb-0">Voltaire</h3>
+                    <h3 class="h5 mb-0" style="color: #38bdf8;">Voltaire</h3>
                     <span class="fs-4">📜</span>
                 </div>
                 <p class="text-secondary small">Expertise: Strategy/Philosophy</p>
@@ -1431,11 +1477,11 @@
                     <span class="badge badge-tool">read</span>
                     <span class="badge badge-tool">sessions_send</span>
                 </div>
-                <div class="bg-black p-2 rounded small mb-3" style="font-family: monospace; font-size: 0.7rem; color: #10b981; min-height: 40px;">
+                <div class="bg-black p-2 rounded small mb-3" style="font-family: monospace; font-size: 0.7rem; color: #10b981; min-height: 40px; border: 1px solid #1e293b;">
                     Logic: Execute specialized microservice logic via sessions_send...
                 </div>
                 <div class="d-grid gap-2">
-                    <button class="btn btn-sm btn-primary" onclick="window.open('https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Voltaire')">Download Agent Files</button>
+                    <button class="btn btn-sm btn-primary" onclick="window.open('https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Voltaire')">Download Logic</button>
                     <button class="btn btn-sm btn-outline-info" onclick="alert('Connecting to Local Sandbox via Cloudflare... Please ensure your local OpenClaw is running with Ollama.')">Test in Sandbox</button>
                 </div>
             </div>
@@ -1444,7 +1490,7 @@
         <div class="col-md-4 mb-4">
             <div class="agent-card p-4">
                 <div class="d-flex justify-content-between align-items-start mb-3">
-                    <h3 class="h5 mb-0">Rousseau</h3>
+                    <h3 class="h5 mb-0" style="color: #38bdf8;">Rousseau</h3>
                     <span class="fs-4">📜</span>
                 </div>
                 <p class="text-secondary small">Expertise: Strategy/Philosophy</p>
@@ -1453,11 +1499,11 @@
                     <span class="badge badge-tool">read</span>
                     <span class="badge badge-tool">sessions_send</span>
                 </div>
-                <div class="bg-black p-2 rounded small mb-3" style="font-family: monospace; font-size: 0.7rem; color: #10b981; min-height: 40px;">
+                <div class="bg-black p-2 rounded small mb-3" style="font-family: monospace; font-size: 0.7rem; color: #10b981; min-height: 40px; border: 1px solid #1e293b;">
                     Logic: Execute specialized microservice logic via sessions_send...
                 </div>
                 <div class="d-grid gap-2">
-                    <button class="btn btn-sm btn-primary" onclick="window.open('https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Rousseau')">Download Agent Files</button>
+                    <button class="btn btn-sm btn-primary" onclick="window.open('https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Rousseau')">Download Logic</button>
                     <button class="btn btn-sm btn-outline-info" onclick="alert('Connecting to Local Sandbox via Cloudflare... Please ensure your local OpenClaw is running with Ollama.')">Test in Sandbox</button>
                 </div>
             </div>
@@ -1466,7 +1512,7 @@
         <div class="col-md-4 mb-4">
             <div class="agent-card p-4">
                 <div class="d-flex justify-content-between align-items-start mb-3">
-                    <h3 class="h5 mb-0">Montesquieu</h3>
+                    <h3 class="h5 mb-0" style="color: #38bdf8;">Montesquieu</h3>
                     <span class="fs-4">📜</span>
                 </div>
                 <p class="text-secondary small">Expertise: Strategy/Philosophy</p>
@@ -1475,11 +1521,11 @@
                     <span class="badge badge-tool">read</span>
                     <span class="badge badge-tool">sessions_send</span>
                 </div>
-                <div class="bg-black p-2 rounded small mb-3" style="font-family: monospace; font-size: 0.7rem; color: #10b981; min-height: 40px;">
+                <div class="bg-black p-2 rounded small mb-3" style="font-family: monospace; font-size: 0.7rem; color: #10b981; min-height: 40px; border: 1px solid #1e293b;">
                     Logic: Execute specialized microservice logic via sessions_send...
                 </div>
                 <div class="d-grid gap-2">
-                    <button class="btn btn-sm btn-primary" onclick="window.open('https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Montesquieu')">Download Agent Files</button>
+                    <button class="btn btn-sm btn-primary" onclick="window.open('https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Montesquieu')">Download Logic</button>
                     <button class="btn btn-sm btn-outline-info" onclick="alert('Connecting to Local Sandbox via Cloudflare... Please ensure your local OpenClaw is running with Ollama.')">Test in Sandbox</button>
                 </div>
             </div>
@@ -1488,7 +1534,7 @@
         <div class="col-md-4 mb-4">
             <div class="agent-card p-4">
                 <div class="d-flex justify-content-between align-items-start mb-3">
-                    <h3 class="h5 mb-0">MarcusAurelius</h3>
+                    <h3 class="h5 mb-0" style="color: #38bdf8;">MarcusAurelius</h3>
                     <span class="fs-4">📜</span>
                 </div>
                 <p class="text-secondary small">Expertise: Strategy/Philosophy</p>
@@ -1497,11 +1543,11 @@
                     <span class="badge badge-tool">read</span>
                     <span class="badge badge-tool">sessions_send</span>
                 </div>
-                <div class="bg-black p-2 rounded small mb-3" style="font-family: monospace; font-size: 0.7rem; color: #10b981; min-height: 40px;">
+                <div class="bg-black p-2 rounded small mb-3" style="font-family: monospace; font-size: 0.7rem; color: #10b981; min-height: 40px; border: 1px solid #1e293b;">
                     Logic: Execute specialized microservice logic via sessions_send...
                 </div>
                 <div class="d-grid gap-2">
-                    <button class="btn btn-sm btn-primary" onclick="window.open('https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/MarcusAurelius')">Download Agent Files</button>
+                    <button class="btn btn-sm btn-primary" onclick="window.open('https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/MarcusAurelius')">Download Logic</button>
                     <button class="btn btn-sm btn-outline-info" onclick="alert('Connecting to Local Sandbox via Cloudflare... Please ensure your local OpenClaw is running with Ollama.')">Test in Sandbox</button>
                 </div>
             </div>
@@ -1510,7 +1556,7 @@
         <div class="col-md-4 mb-4">
             <div class="agent-card p-4">
                 <div class="d-flex justify-content-between align-items-start mb-3">
-                    <h3 class="h5 mb-0">Seneca</h3>
+                    <h3 class="h5 mb-0" style="color: #38bdf8;">Seneca</h3>
                     <span class="fs-4">📜</span>
                 </div>
                 <p class="text-secondary small">Expertise: Strategy/Philosophy</p>
@@ -1519,11 +1565,11 @@
                     <span class="badge badge-tool">read</span>
                     <span class="badge badge-tool">sessions_send</span>
                 </div>
-                <div class="bg-black p-2 rounded small mb-3" style="font-family: monospace; font-size: 0.7rem; color: #10b981; min-height: 40px;">
+                <div class="bg-black p-2 rounded small mb-3" style="font-family: monospace; font-size: 0.7rem; color: #10b981; min-height: 40px; border: 1px solid #1e293b;">
                     Logic: Execute specialized microservice logic via sessions_send...
                 </div>
                 <div class="d-grid gap-2">
-                    <button class="btn btn-sm btn-primary" onclick="window.open('https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Seneca')">Download Agent Files</button>
+                    <button class="btn btn-sm btn-primary" onclick="window.open('https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Seneca')">Download Logic</button>
                     <button class="btn btn-sm btn-outline-info" onclick="alert('Connecting to Local Sandbox via Cloudflare... Please ensure your local OpenClaw is running with Ollama.')">Test in Sandbox</button>
                 </div>
             </div>
@@ -1532,7 +1578,7 @@
         <div class="col-md-4 mb-4">
             <div class="agent-card p-4">
                 <div class="d-flex justify-content-between align-items-start mb-3">
-                    <h3 class="h5 mb-0">Cicero</h3>
+                    <h3 class="h5 mb-0" style="color: #38bdf8;">Cicero</h3>
                     <span class="fs-4">📜</span>
                 </div>
                 <p class="text-secondary small">Expertise: Strategy/Philosophy</p>
@@ -1541,11 +1587,11 @@
                     <span class="badge badge-tool">read</span>
                     <span class="badge badge-tool">sessions_send</span>
                 </div>
-                <div class="bg-black p-2 rounded small mb-3" style="font-family: monospace; font-size: 0.7rem; color: #10b981; min-height: 40px;">
+                <div class="bg-black p-2 rounded small mb-3" style="font-family: monospace; font-size: 0.7rem; color: #10b981; min-height: 40px; border: 1px solid #1e293b;">
                     Logic: Execute specialized microservice logic via sessions_send...
                 </div>
                 <div class="d-grid gap-2">
-                    <button class="btn btn-sm btn-primary" onclick="window.open('https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Cicero')">Download Agent Files</button>
+                    <button class="btn btn-sm btn-primary" onclick="window.open('https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Cicero')">Download Logic</button>
                     <button class="btn btn-sm btn-outline-info" onclick="alert('Connecting to Local Sandbox via Cloudflare... Please ensure your local OpenClaw is running with Ollama.')">Test in Sandbox</button>
                 </div>
             </div>
@@ -1554,7 +1600,7 @@
         <div class="col-md-4 mb-4">
             <div class="agent-card p-4">
                 <div class="d-flex justify-content-between align-items-start mb-3">
-                    <h3 class="h5 mb-0">Herodotus</h3>
+                    <h3 class="h5 mb-0" style="color: #38bdf8;">Herodotus</h3>
                     <span class="fs-4">📜</span>
                 </div>
                 <p class="text-secondary small">Expertise: Strategy/Philosophy</p>
@@ -1563,11 +1609,11 @@
                     <span class="badge badge-tool">read</span>
                     <span class="badge badge-tool">sessions_send</span>
                 </div>
-                <div class="bg-black p-2 rounded small mb-3" style="font-family: monospace; font-size: 0.7rem; color: #10b981; min-height: 40px;">
+                <div class="bg-black p-2 rounded small mb-3" style="font-family: monospace; font-size: 0.7rem; color: #10b981; min-height: 40px; border: 1px solid #1e293b;">
                     Logic: Execute specialized microservice logic via sessions_send...
                 </div>
                 <div class="d-grid gap-2">
-                    <button class="btn btn-sm btn-primary" onclick="window.open('https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Herodotus')">Download Agent Files</button>
+                    <button class="btn btn-sm btn-primary" onclick="window.open('https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Herodotus')">Download Logic</button>
                     <button class="btn btn-sm btn-outline-info" onclick="alert('Connecting to Local Sandbox via Cloudflare... Please ensure your local OpenClaw is running with Ollama.')">Test in Sandbox</button>
                 </div>
             </div>
@@ -1576,7 +1622,7 @@
         <div class="col-md-4 mb-4">
             <div class="agent-card p-4">
                 <div class="d-flex justify-content-between align-items-start mb-3">
-                    <h3 class="h5 mb-0">Thucydides</h3>
+                    <h3 class="h5 mb-0" style="color: #38bdf8;">Thucydides</h3>
                     <span class="fs-4">📜</span>
                 </div>
                 <p class="text-secondary small">Expertise: Strategy/Philosophy</p>
@@ -1585,11 +1631,11 @@
                     <span class="badge badge-tool">read</span>
                     <span class="badge badge-tool">sessions_send</span>
                 </div>
-                <div class="bg-black p-2 rounded small mb-3" style="font-family: monospace; font-size: 0.7rem; color: #10b981; min-height: 40px;">
+                <div class="bg-black p-2 rounded small mb-3" style="font-family: monospace; font-size: 0.7rem; color: #10b981; min-height: 40px; border: 1px solid #1e293b;">
                     Logic: Execute specialized microservice logic via sessions_send...
                 </div>
                 <div class="d-grid gap-2">
-                    <button class="btn btn-sm btn-primary" onclick="window.open('https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Thucydides')">Download Agent Files</button>
+                    <button class="btn btn-sm btn-primary" onclick="window.open('https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Thucydides')">Download Logic</button>
                     <button class="btn btn-sm btn-outline-info" onclick="alert('Connecting to Local Sandbox via Cloudflare... Please ensure your local OpenClaw is running with Ollama.')">Test in Sandbox</button>
                 </div>
             </div>
@@ -1598,7 +1644,7 @@
         <div class="col-md-4 mb-4">
             <div class="agent-card p-4">
                 <div class="d-flex justify-content-between align-items-start mb-3">
-                    <h3 class="h5 mb-0">Harari</h3>
+                    <h3 class="h5 mb-0" style="color: #38bdf8;">Harari</h3>
                     <span class="fs-4">📜</span>
                 </div>
                 <p class="text-secondary small">Expertise: Strategy/Philosophy</p>
@@ -1607,11 +1653,11 @@
                     <span class="badge badge-tool">read</span>
                     <span class="badge badge-tool">sessions_send</span>
                 </div>
-                <div class="bg-black p-2 rounded small mb-3" style="font-family: monospace; font-size: 0.7rem; color: #10b981; min-height: 40px;">
+                <div class="bg-black p-2 rounded small mb-3" style="font-family: monospace; font-size: 0.7rem; color: #10b981; min-height: 40px; border: 1px solid #1e293b;">
                     Logic: Execute specialized microservice logic via sessions_send...
                 </div>
                 <div class="d-grid gap-2">
-                    <button class="btn btn-sm btn-primary" onclick="window.open('https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Harari')">Download Agent Files</button>
+                    <button class="btn btn-sm btn-primary" onclick="window.open('https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Harari')">Download Logic</button>
                     <button class="btn btn-sm btn-outline-info" onclick="alert('Connecting to Local Sandbox via Cloudflare... Please ensure your local OpenClaw is running with Ollama.')">Test in Sandbox</button>
                 </div>
             </div>
@@ -1620,7 +1666,7 @@
         <div class="col-md-4 mb-4">
             <div class="agent-card p-4">
                 <div class="d-flex justify-content-between align-items-start mb-3">
-                    <h3 class="h5 mb-0">Bostrom</h3>
+                    <h3 class="h5 mb-0" style="color: #38bdf8;">Bostrom</h3>
                     <span class="fs-4">📜</span>
                 </div>
                 <p class="text-secondary small">Expertise: Strategy/Philosophy</p>
@@ -1629,11 +1675,11 @@
                     <span class="badge badge-tool">read</span>
                     <span class="badge badge-tool">sessions_send</span>
                 </div>
-                <div class="bg-black p-2 rounded small mb-3" style="font-family: monospace; font-size: 0.7rem; color: #10b981; min-height: 40px;">
+                <div class="bg-black p-2 rounded small mb-3" style="font-family: monospace; font-size: 0.7rem; color: #10b981; min-height: 40px; border: 1px solid #1e293b;">
                     Logic: Execute specialized microservice logic via sessions_send...
                 </div>
                 <div class="d-grid gap-2">
-                    <button class="btn btn-sm btn-primary" onclick="window.open('https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Bostrom')">Download Agent Files</button>
+                    <button class="btn btn-sm btn-primary" onclick="window.open('https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Bostrom')">Download Logic</button>
                     <button class="btn btn-sm btn-outline-info" onclick="alert('Connecting to Local Sandbox via Cloudflare... Please ensure your local OpenClaw is running with Ollama.')">Test in Sandbox</button>
                 </div>
             </div>
@@ -1642,7 +1688,7 @@
         <div class="col-md-4 mb-4">
             <div class="agent-card p-4">
                 <div class="d-flex justify-content-between align-items-start mb-3">
-                    <h3 class="h5 mb-0">Musk</h3>
+                    <h3 class="h5 mb-0" style="color: #38bdf8;">Musk</h3>
                     <span class="fs-4">🚀</span>
                 </div>
                 <p class="text-secondary small">Expertise: Infrastructure/Scaling</p>
@@ -1651,11 +1697,11 @@
                     <span class="badge badge-tool">read</span>
                     <span class="badge badge-tool">sessions_send</span>
                 </div>
-                <div class="bg-black p-2 rounded small mb-3" style="font-family: monospace; font-size: 0.7rem; color: #10b981; min-height: 40px;">
+                <div class="bg-black p-2 rounded small mb-3" style="font-family: monospace; font-size: 0.7rem; color: #10b981; min-height: 40px; border: 1px solid #1e293b;">
                     Logic: Execute specialized microservice logic via sessions_send...
                 </div>
                 <div class="d-grid gap-2">
-                    <button class="btn btn-sm btn-primary" onclick="window.open('https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Musk')">Download Agent Files</button>
+                    <button class="btn btn-sm btn-primary" onclick="window.open('https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Musk')">Download Logic</button>
                     <button class="btn btn-sm btn-outline-info" onclick="alert('Connecting to Local Sandbox via Cloudflare... Please ensure your local OpenClaw is running with Ollama.')">Test in Sandbox</button>
                 </div>
             </div>
@@ -1664,7 +1710,7 @@
         <div class="col-md-4 mb-4">
             <div class="agent-card p-4">
                 <div class="d-flex justify-content-between align-items-start mb-3">
-                    <h3 class="h5 mb-0">Gates</h3>
+                    <h3 class="h5 mb-0" style="color: #38bdf8;">Gates</h3>
                     <span class="fs-4">🚀</span>
                 </div>
                 <p class="text-secondary small">Expertise: Infrastructure/Scaling</p>
@@ -1673,11 +1719,11 @@
                     <span class="badge badge-tool">read</span>
                     <span class="badge badge-tool">sessions_send</span>
                 </div>
-                <div class="bg-black p-2 rounded small mb-3" style="font-family: monospace; font-size: 0.7rem; color: #10b981; min-height: 40px;">
+                <div class="bg-black p-2 rounded small mb-3" style="font-family: monospace; font-size: 0.7rem; color: #10b981; min-height: 40px; border: 1px solid #1e293b;">
                     Logic: Execute specialized microservice logic via sessions_send...
                 </div>
                 <div class="d-grid gap-2">
-                    <button class="btn btn-sm btn-primary" onclick="window.open('https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Gates')">Download Agent Files</button>
+                    <button class="btn btn-sm btn-primary" onclick="window.open('https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Gates')">Download Logic</button>
                     <button class="btn btn-sm btn-outline-info" onclick="alert('Connecting to Local Sandbox via Cloudflare... Please ensure your local OpenClaw is running with Ollama.')">Test in Sandbox</button>
                 </div>
             </div>
@@ -1686,7 +1732,7 @@
         <div class="col-md-4 mb-4">
             <div class="agent-card p-4">
                 <div class="d-flex justify-content-between align-items-start mb-3">
-                    <h3 class="h5 mb-0">Jobs</h3>
+                    <h3 class="h5 mb-0" style="color: #38bdf8;">Jobs</h3>
                     <span class="fs-4">🚀</span>
                 </div>
                 <p class="text-secondary small">Expertise: Infrastructure/Scaling</p>
@@ -1695,11 +1741,11 @@
                     <span class="badge badge-tool">read</span>
                     <span class="badge badge-tool">sessions_send</span>
                 </div>
-                <div class="bg-black p-2 rounded small mb-3" style="font-family: monospace; font-size: 0.7rem; color: #10b981; min-height: 40px;">
+                <div class="bg-black p-2 rounded small mb-3" style="font-family: monospace; font-size: 0.7rem; color: #10b981; min-height: 40px; border: 1px solid #1e293b;">
                     Logic: Execute specialized microservice logic via sessions_send...
                 </div>
                 <div class="d-grid gap-2">
-                    <button class="btn btn-sm btn-primary" onclick="window.open('https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Jobs')">Download Agent Files</button>
+                    <button class="btn btn-sm btn-primary" onclick="window.open('https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Jobs')">Download Logic</button>
                     <button class="btn btn-sm btn-outline-info" onclick="alert('Connecting to Local Sandbox via Cloudflare... Please ensure your local OpenClaw is running with Ollama.')">Test in Sandbox</button>
                 </div>
             </div>
@@ -1708,7 +1754,7 @@
         <div class="col-md-4 mb-4">
             <div class="agent-card p-4">
                 <div class="d-flex justify-content-between align-items-start mb-3">
-                    <h3 class="h5 mb-0">Zuckerberg</h3>
+                    <h3 class="h5 mb-0" style="color: #38bdf8;">Zuckerberg</h3>
                     <span class="fs-4">🚀</span>
                 </div>
                 <p class="text-secondary small">Expertise: Infrastructure/Scaling</p>
@@ -1717,11 +1763,11 @@
                     <span class="badge badge-tool">read</span>
                     <span class="badge badge-tool">sessions_send</span>
                 </div>
-                <div class="bg-black p-2 rounded small mb-3" style="font-family: monospace; font-size: 0.7rem; color: #10b981; min-height: 40px;">
+                <div class="bg-black p-2 rounded small mb-3" style="font-family: monospace; font-size: 0.7rem; color: #10b981; min-height: 40px; border: 1px solid #1e293b;">
                     Logic: Execute specialized microservice logic via sessions_send...
                 </div>
                 <div class="d-grid gap-2">
-                    <button class="btn btn-sm btn-primary" onclick="window.open('https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Zuckerberg')">Download Agent Files</button>
+                    <button class="btn btn-sm btn-primary" onclick="window.open('https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Zuckerberg')">Download Logic</button>
                     <button class="btn btn-sm btn-outline-info" onclick="alert('Connecting to Local Sandbox via Cloudflare... Please ensure your local OpenClaw is running with Ollama.')">Test in Sandbox</button>
                 </div>
             </div>
@@ -1730,7 +1776,7 @@
         <div class="col-md-4 mb-4">
             <div class="agent-card p-4">
                 <div class="d-flex justify-content-between align-items-start mb-3">
-                    <h3 class="h5 mb-0">Hassabis</h3>
+                    <h3 class="h5 mb-0" style="color: #38bdf8;">Hassabis</h3>
                     <span class="fs-4">🚀</span>
                 </div>
                 <p class="text-secondary small">Expertise: Infrastructure/Scaling</p>
@@ -1739,11 +1785,11 @@
                     <span class="badge badge-tool">read</span>
                     <span class="badge badge-tool">sessions_send</span>
                 </div>
-                <div class="bg-black p-2 rounded small mb-3" style="font-family: monospace; font-size: 0.7rem; color: #10b981; min-height: 40px;">
+                <div class="bg-black p-2 rounded small mb-3" style="font-family: monospace; font-size: 0.7rem; color: #10b981; min-height: 40px; border: 1px solid #1e293b;">
                     Logic: Execute specialized microservice logic via sessions_send...
                 </div>
                 <div class="d-grid gap-2">
-                    <button class="btn btn-sm btn-primary" onclick="window.open('https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Hassabis')">Download Agent Files</button>
+                    <button class="btn btn-sm btn-primary" onclick="window.open('https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Hassabis')">Download Logic</button>
                     <button class="btn btn-sm btn-outline-info" onclick="alert('Connecting to Local Sandbox via Cloudflare... Please ensure your local OpenClaw is running with Ollama.')">Test in Sandbox</button>
                 </div>
             </div>
@@ -1752,7 +1798,7 @@
         <div class="col-md-4 mb-4">
             <div class="agent-card p-4">
                 <div class="d-flex justify-content-between align-items-start mb-3">
-                    <h3 class="h5 mb-0">Kahn</h3>
+                    <h3 class="h5 mb-0" style="color: #38bdf8;">Kahn</h3>
                     <span class="fs-4">🚀</span>
                 </div>
                 <p class="text-secondary small">Expertise: Infrastructure/Scaling</p>
@@ -1761,11 +1807,11 @@
                     <span class="badge badge-tool">read</span>
                     <span class="badge badge-tool">sessions_send</span>
                 </div>
-                <div class="bg-black p-2 rounded small mb-3" style="font-family: monospace; font-size: 0.7rem; color: #10b981; min-height: 40px;">
+                <div class="bg-black p-2 rounded small mb-3" style="font-family: monospace; font-size: 0.7rem; color: #10b981; min-height: 40px; border: 1px solid #1e293b;">
                     Logic: Execute specialized microservice logic via sessions_send...
                 </div>
                 <div class="d-grid gap-2">
-                    <button class="btn btn-sm btn-primary" onclick="window.open('https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Kahn')">Download Agent Files</button>
+                    <button class="btn btn-sm btn-primary" onclick="window.open('https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Kahn')">Download Logic</button>
                     <button class="btn btn-sm btn-outline-info" onclick="alert('Connecting to Local Sandbox via Cloudflare... Please ensure your local OpenClaw is running with Ollama.')">Test in Sandbox</button>
                 </div>
             </div>
@@ -1773,6 +1819,16 @@
         
     </div>
 </main>
-<footer class="text-center text-secondary"><p>&copy; 2026 AgentCraft | Mac Mini Cloud HQ</p></footer>
+
+<footer class="text-center">
+    <div class="container">
+        <div class="mb-4">
+            <span class="fs-4">🧙‍♂️</span>
+            <h4 class="mt-2 fw-bold">AGENTCRAFT</h4>
+        </div>
+        <p class="text-secondary">Part of the FreeClaw Multiverse Ecosystem</p>
+        <p class="small text-muted">&copy; 2026 Mac Mini Cloud HQ | Secured by Cloudflare</p>
+    </div>
+</footer>
 </body>
 </html>
