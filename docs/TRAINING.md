@@ -1,14 +1,16 @@
-# Ajan Eğitimi ve Özelleştirme Rehberi
+# Agent Training & Customization Guide
 
-OpenClaw ajanları üç ana dosya üzerinden eğitilir:
+OpenClaw agents are trained through three primary files:
 
-### 1. IDENTITY.md (Kimlik)
-Ajanın adı, türü ve temel karakterini belirler.
-### 2. SOUL.md (Ruh ve Mantık)
-Ajanın nasıl düşüneceği, karar vereceği ve tonu.
-### 3. TOOLS.md (Yetenekler)
-Ajanın kullanabileceği araçların (skills) listesi.
+### 1. IDENTITY.md
+Defines the agent's name, creature type, and core personality traits.
 
-## Mikroservis Bağlantısı
-Bir ajanın diğerine görev devretmesi için:
-`sessions_spawn(target_agent, task)` komutunu kullanın.
+### 2. SOUL.md (Logic & Spirit)
+Defines how the agent thinks, makes decisions, and its communication tone.
+
+### 3. TOOLS.md (Capabilities)
+A list of skills (tools) the agent is authorized to use.
+
+## Microservices Connection
+To enable one agent to delegate tasks to another:
+Use the `sessions_spawn(target_agent, task)` command.

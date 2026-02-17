@@ -1,22 +1,22 @@
-# Ollama ile Ücretsiz Ajan Çalıştırma Rehberi
+# Free Tier Agent Execution with Ollama
 
-AgentCraft ajanlarını hiçbir token ücreti ödemeden, tamamen yerel (local) makinenizde çalıştırmak için bu adımları izleyin.
+Follow these steps to run AgentCraft agents on your local machine with zero token costs.
 
-## 1. Ollama Kurulumu
-Ajanların beyni olarak Ollama kullanacağız.
+## 1. Install Ollama
+We use Ollama as the local brain for our agents.
 - **macOS:** `brew install ollama`
-- **Windows/Linux:** [ollama.com](https://ollama.com) adresinden indirin.
+- **Windows/Linux:** Download from [ollama.com](https://ollama.com).
 
-## 2. Model İndirme
-Ajanlarımız için optimize edilmiş modelleri indirin:
+## 2. Download a Model
+Download the optimized models for our agents:
 ```bash
 ollama run qwen2.5-coder:7b
-# Veya daha hafif bir model için:
+# Or for a lighter model:
 ollama run llama3.2:3b
 ```
 
-## 3. OpenClaw Konfigürasyonu
-`~/.openclaw/openclaw.json` dosyanızı Ollama'yı kullanacak şekilde güncelleyin:
+## 3. OpenClaw Configuration
+Update your `~/.openclaw/openclaw.json` file to use Ollama:
 
 ```json
 {
@@ -31,10 +31,10 @@ ollama run llama3.2:3b
 }
 ```
 
-## 4. Avantajlar
-- **0 Token Maliyeti:** Tüm işlemler sizin donanımınızda döner.
-- **Gizlilik:** Verileriniz internete çıkmaz, Mac Mini'nizde kalır.
-- **Hız:** İnternet gecikmesi olmadan anlık tepki.
+## 4. Advantages
+- **Zero Token Cost:** All processing happens on your hardware.
+- **Privacy:** Your data stays on your machine and never leaves your network.
+- **Speed:** Instant response without internet latency.
 
 ---
 *AgentCraft - Powered by OpenClaw & Ollama*

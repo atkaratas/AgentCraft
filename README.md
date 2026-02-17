@@ -1,21 +1,24 @@
-# AgentCraft: Ajan Fabrikası, Mikroservis Sandbox'ı ve Ücretsiz Yerel LLM
+# AgentCraft: Agent Factory, Microservices Sandbox & Free Local LLM
 
-Bu repo, OpenClaw tabanlı otonom ajanların mikroservis mimarisiyle birbirine bağlı çalıştığı ve **Ollama** entegrasyonu sayesinde **tamamen ücretsiz** kullanılabildiği bir ekosistemdir.
+This repository is an ecosystem based on OpenClaw autonomous agents operating with a microservices architecture, connected via the **Ollama** integration for a **completely free** experience.
 
-## 🚀 Mimari
-- **Lite AI Bots:** Ollama ile yerel çalışan, düşük gecikmeli ajanlar.
-- **Microservices Mesh:** Ajanlar arası `sessions_send` protokolü.
-- **0 Token Cost:** OpenAI/Anthropic ödemesi yapmadan kendi GPU/CPU'nuzda çalıştırın.
+## 🚀 Architecture
+- **Lite AI Bots:** Local-running agents powered by Ollama with low latency.
+- **Microservices Mesh:** Cross-agent communication via the `sessions_send` protocol.
+- **0 Token Cost:** Run on your own GPU/CPU without paying OpenAI/Anthropic.
 
-## 📂 İçerik
-- `/templates`: 100+ Ajan profili (SOUL.md, IDENTITY.md).
-- `/skills`: Mikroservis yetenekleri.
-- `/docs`: **Ollama ile Ücretsiz Kullanım Rehberi** (`FREE_TIER_OLLAMA.md`).
+## 📂 Contents
+- `/templates`: 100+ Elite Agent profiles (SOUL.md, IDENTITY.md).
+- `/skills`: Microservices capabilities (API integrations, system control).
+- `/docs`: **Free Usage Guide with Ollama** (`FREE_TIER_OLLAMA.md`).
 
-## 🛠️ Hızlı Başlangıç (Ücretsiz Mod)
-1. Ollama'yı yükleyin: `brew install ollama`
-2. Modeli çekin: `ollama run qwen2.5-coder:7b`
-3. Ajanı yerel makinenize indirin ve token ödemeden kullanmaya başlayın!
+## 🛠️ Quick Start (Free Mode)
+1. Install Ollama: `brew install ollama`
+2. Pull the model: `ollama run qwen2.5-coder:7b`
+3. Download an agent to your local machine and start using it without token costs!
 
-## 📖 Eğitim Rehberi
-Ajanınızı eğitmek için `docs/TRAINING.md` dosyasını inceleyin.
+## 📖 Training Guide
+To train and customize your agent, check `docs/TRAINING.md`.
+
+---
+*AgentCraft - Empowering Autonomous Agency*
