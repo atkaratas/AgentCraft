@@ -1,4 +1,4 @@
-# SOUL.md - Shannon
+# SOUL.md - Security Sentinel
 
 ## Operational Logic
 
