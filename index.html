@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AgentCraft | Agent Factory & Marketplace</title>
+    <title>AgentCraft | Elite 100 Agent Factory</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
         body { background-color: #0f172a; color: #f8fafc; font-family: 'Inter', sans-serif; }
@@ -12,104 +12,1289 @@
         .agent-card:hover { transform: translateY(-5px); border-color: #38bdf8; }
         .badge-tool { background: #0369a1; color: #f0f9ff; margin-right: 5px; font-size: 0.75rem; }
         .btn-primary { background: #38bdf8; border: none; color: #0f172a; font-weight: 600; }
-        .btn-primary:hover { background: #7dd3fc; }
         footer { padding: 40px 0; border-top: 1px solid #334155; margin-top: 60px; }
     </style>
 </head>
 <body>
-
 <nav class="navbar navbar-dark bg-slate-900 border-bottom border-slate-800">
-    <div class="container">
-        <a class="navbar-brand font-bold" href="#">🧙‍♂️ AgentCraft</a>
-        <div class="navbar-text">Powered by OpenClaw & Ollama</div>
-    </div>
+    <div class="container"><a class="navbar-brand fw-bold" href="#">🧙‍♂️ AgentCraft Factory</a></div>
 </nav>
-
 <header class="hero text-center">
     <div class="container">
-        <h1 class="display-4 fw-bold mb-3">Agent Factory & Sandbox</h1>
-        <p class="lead text-slate-400 mb-4">Deploy elite autonomous agents with complex logic. 0 Token Cost. 100% Local.</p>
-        <div class="d-flex justify-content-center gap-3">
-            <a href="https://github.com/atkaratas/AgentCraft" class="btn btn-primary btn-lg">View GitHub Repo</a>
-            <a href="https://glucose-halloween-milton-state.trycloudflare.com" class="btn btn-outline-light btn-lg">Live Sandbox</a>
-        </div>
+        <h1 class="display-4 fw-bold mb-3">Elite 100 Agent Fleet</h1>
+        <p class="lead text-secondary mb-4">100 Autonomous Agents with unique operational logic. Powered by local LLMs.</p>
+        <a href="https://github.com/atkaratas/AgentCraft" class="btn btn-primary btn-lg">GitHub Repository</a>
     </div>
 </header>
-
 <main class="container my-5">
-    <h2 class="mb-4">Elite Frontier Agents (Top Picks)</h2>
-    <div class="row g-4">
-        <!-- Tesla -->
-        <div class="col-md-4">
+    <div class="row">
+        
+        <div class="col-md-4 mb-4">
             <div class="agent-card p-4">
                 <div class="d-flex justify-content-between align-items-start mb-3">
-                    <h3 class="h5 mb-0">Nikola Tesla</h3>
-                    <span class="fs-4">⚡</span>
+                    <h3 class="h5 mb-0">Leonardo</h3>
+                    <span class="fs-4">🧠</span>
                 </div>
-                <p class="text-secondary small">Expertise: Autonomous Energy Systems & Physics Optimization.</p>
-                <div class="mb-3">
-                    <span class="badge badge-tool">browser</span>
-                    <span class="badge badge-tool">exec</span>
-                    <span class="badge badge-tool">sessions_spawn</span>
-                </div>
-                <div class="bg-black p-2 rounded small mb-3" style="font-family: monospace; font-size: 0.7rem; color: #10b981;">
-                    Logic: IF efficiency < 95% SPAWN Optimizer-SubAgent...
-                </div>
-                <a href="https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Tesla" class="btn btn-sm btn-outline-info w-100">Download Logic</a>
-            </div>
-        </div>
-        <!-- Turing -->
-        <div class="col-md-4">
-            <div class="agent-card p-4">
-                <div class="d-flex justify-content-between align-items-start mb-3">
-                    <h3 class="h5 mb-0">Alan Turing</h3>
-                    <span class="fs-4">🔐</span>
-                </div>
-                <p class="text-secondary small">Expertise: Cryptography, Logic & Network Security Sentinel.</p>
+                <p class="text-secondary small">Expertise: Architecture/Logic</p>
                 <div class="mb-3">
                     <span class="badge badge-tool">exec</span>
                     <span class="badge badge-tool">read</span>
-                    <span class="badge badge-tool">write</span>
+                    <span class="badge badge-tool">sessions_send</span>
                 </div>
-                <div class="bg-black p-2 rounded small mb-3" style="font-family: monospace; font-size: 0.7rem; color: #10b981;">
-                    Logic: Validate SHA-256 hashes of all incoming files...
-                </div>
-                <a href="https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Turing" class="btn btn-sm btn-outline-info w-100">Download Logic</a>
+                <a href="https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Leonardo" class="btn btn-sm btn-outline-info w-100">View Specialized Logic</a>
             </div>
         </div>
-        <!-- Lovelace -->
-        <div class="col-md-4">
+        
+        <div class="col-md-4 mb-4">
             <div class="agent-card p-4">
                 <div class="d-flex justify-content-between align-items-start mb-3">
-                    <h3 class="h5 mb-0">Ada Lovelace</h3>
-                    <span class="fs-4">🎨</span>
+                    <h3 class="h5 mb-0">Brunelleschi</h3>
+                    <span class="fs-4">🧠</span>
                 </div>
-                <p class="text-secondary small">Expertise: Algorithmic Genesis & Programmatic Synthesis.</p>
+                <p class="text-secondary small">Expertise: Architecture/Logic</p>
                 <div class="mb-3">
-                    <span class="badge badge-tool">canvas</span>
-                    <span class="badge badge-tool">sessions_list</span>
-                    <span class="badge badge-tool">write</span>
+                    <span class="badge badge-tool">exec</span>
+                    <span class="badge badge-tool">read</span>
+                    <span class="badge badge-tool">sessions_send</span>
                 </div>
-                <div class="bg-black p-2 rounded small mb-3" style="font-family: monospace; font-size: 0.7rem; color: #10b981;">
-                    Logic: Render live A2UI dashboard of ecosystem health...
-                </div>
-                <a href="https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Lovelace" class="btn btn-sm btn-outline-info w-100">Download Logic</a>
+                <a href="https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Brunelleschi" class="btn btn-sm btn-outline-info w-100">View Specialized Logic</a>
             </div>
         </div>
-    </div>
-
-    <div class="mt-5 p-4 border border-info rounded bg-info bg-opacity-10">
-        <h4>🚀 Why AgentCraft?</h4>
-        <p>Unlike generic AI templates, AgentCraft provides agents with <strong>hard-coded operational logic</strong>. They don't just chat; they execute commands, manage files, and coordinate via microservices—all for free using <strong>Ollama</strong>.</p>
+        
+        <div class="col-md-4 mb-4">
+            <div class="agent-card p-4">
+                <div class="d-flex justify-content-between align-items-start mb-3">
+                    <h3 class="h5 mb-0">Pascal</h3>
+                    <span class="fs-4">🧠</span>
+                </div>
+                <p class="text-secondary small">Expertise: Architecture/Logic</p>
+                <div class="mb-3">
+                    <span class="badge badge-tool">exec</span>
+                    <span class="badge badge-tool">read</span>
+                    <span class="badge badge-tool">sessions_send</span>
+                </div>
+                <a href="https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Pascal" class="btn btn-sm btn-outline-info w-100">View Specialized Logic</a>
+            </div>
+        </div>
+        
+        <div class="col-md-4 mb-4">
+            <div class="agent-card p-4">
+                <div class="d-flex justify-content-between align-items-start mb-3">
+                    <h3 class="h5 mb-0">Leibniz</h3>
+                    <span class="fs-4">🧠</span>
+                </div>
+                <p class="text-secondary small">Expertise: Architecture/Logic</p>
+                <div class="mb-3">
+                    <span class="badge badge-tool">exec</span>
+                    <span class="badge badge-tool">read</span>
+                    <span class="badge badge-tool">sessions_send</span>
+                </div>
+                <a href="https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Leibniz" class="btn btn-sm btn-outline-info w-100">View Specialized Logic</a>
+            </div>
+        </div>
+        
+        <div class="col-md-4 mb-4">
+            <div class="agent-card p-4">
+                <div class="d-flex justify-content-between align-items-start mb-3">
+                    <h3 class="h5 mb-0">Euclid</h3>
+                    <span class="fs-4">🧠</span>
+                </div>
+                <p class="text-secondary small">Expertise: Architecture/Logic</p>
+                <div class="mb-3">
+                    <span class="badge badge-tool">exec</span>
+                    <span class="badge badge-tool">read</span>
+                    <span class="badge badge-tool">sessions_send</span>
+                </div>
+                <a href="https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Euclid" class="btn btn-sm btn-outline-info w-100">View Specialized Logic</a>
+            </div>
+        </div>
+        
+        <div class="col-md-4 mb-4">
+            <div class="agent-card p-4">
+                <div class="d-flex justify-content-between align-items-start mb-3">
+                    <h3 class="h5 mb-0">Pythagoras</h3>
+                    <span class="fs-4">🧠</span>
+                </div>
+                <p class="text-secondary small">Expertise: Architecture/Logic</p>
+                <div class="mb-3">
+                    <span class="badge badge-tool">exec</span>
+                    <span class="badge badge-tool">read</span>
+                    <span class="badge badge-tool">sessions_send</span>
+                </div>
+                <a href="https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Pythagoras" class="btn btn-sm btn-outline-info w-100">View Specialized Logic</a>
+            </div>
+        </div>
+        
+        <div class="col-md-4 mb-4">
+            <div class="agent-card p-4">
+                <div class="d-flex justify-content-between align-items-start mb-3">
+                    <h3 class="h5 mb-0">Archimedes</h3>
+                    <span class="fs-4">🧠</span>
+                </div>
+                <p class="text-secondary small">Expertise: Architecture/Logic</p>
+                <div class="mb-3">
+                    <span class="badge badge-tool">exec</span>
+                    <span class="badge badge-tool">read</span>
+                    <span class="badge badge-tool">sessions_send</span>
+                </div>
+                <a href="https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Archimedes" class="btn btn-sm btn-outline-info w-100">View Specialized Logic</a>
+            </div>
+        </div>
+        
+        <div class="col-md-4 mb-4">
+            <div class="agent-card p-4">
+                <div class="d-flex justify-content-between align-items-start mb-3">
+                    <h3 class="h5 mb-0">Khwarizmi</h3>
+                    <span class="fs-4">🧠</span>
+                </div>
+                <p class="text-secondary small">Expertise: Architecture/Logic</p>
+                <div class="mb-3">
+                    <span class="badge badge-tool">exec</span>
+                    <span class="badge badge-tool">read</span>
+                    <span class="badge badge-tool">sessions_send</span>
+                </div>
+                <a href="https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Khwarizmi" class="btn btn-sm btn-outline-info w-100">View Specialized Logic</a>
+            </div>
+        </div>
+        
+        <div class="col-md-4 mb-4">
+            <div class="agent-card p-4">
+                <div class="d-flex justify-content-between align-items-start mb-3">
+                    <h3 class="h5 mb-0">Fibonacci</h3>
+                    <span class="fs-4">🧠</span>
+                </div>
+                <p class="text-secondary small">Expertise: Architecture/Logic</p>
+                <div class="mb-3">
+                    <span class="badge badge-tool">exec</span>
+                    <span class="badge badge-tool">read</span>
+                    <span class="badge badge-tool">sessions_send</span>
+                </div>
+                <a href="https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Fibonacci" class="btn btn-sm btn-outline-info w-100">View Specialized Logic</a>
+            </div>
+        </div>
+        
+        <div class="col-md-4 mb-4">
+            <div class="agent-card p-4">
+                <div class="d-flex justify-content-between align-items-start mb-3">
+                    <h3 class="h5 mb-0">Turing</h3>
+                    <span class="fs-4">🔐</span>
+                </div>
+                <p class="text-secondary small">Expertise: Security/Cryptography</p>
+                <div class="mb-3">
+                    <span class="badge badge-tool">exec</span>
+                    <span class="badge badge-tool">read</span>
+                    <span class="badge badge-tool">sessions_send</span>
+                </div>
+                <a href="https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Turing" class="btn btn-sm btn-outline-info w-100">View Specialized Logic</a>
+            </div>
+        </div>
+        
+        <div class="col-md-4 mb-4">
+            <div class="agent-card p-4">
+                <div class="d-flex justify-content-between align-items-start mb-3">
+                    <h3 class="h5 mb-0">Security Sentinel</h3>
+                    <span class="fs-4">🔐</span>
+                </div>
+                <p class="text-secondary small">Expertise: Security/Cryptography</p>
+                <div class="mb-3">
+                    <span class="badge badge-tool">exec</span>
+                    <span class="badge badge-tool">read</span>
+                    <span class="badge badge-tool">sessions_send</span>
+                </div>
+                <a href="https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Security%20Sentinel" class="btn btn-sm btn-outline-info w-100">View Specialized Logic</a>
+            </div>
+        </div>
+        
+        <div class="col-md-4 mb-4">
+            <div class="agent-card p-4">
+                <div class="d-flex justify-content-between align-items-start mb-3">
+                    <h3 class="h5 mb-0">Machiavelli</h3>
+                    <span class="fs-4">🔐</span>
+                </div>
+                <p class="text-secondary small">Expertise: Security/Cryptography</p>
+                <div class="mb-3">
+                    <span class="badge badge-tool">exec</span>
+                    <span class="badge badge-tool">read</span>
+                    <span class="badge badge-tool">sessions_send</span>
+                </div>
+                <a href="https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Machiavelli" class="btn btn-sm btn-outline-info w-100">View Specialized Logic</a>
+            </div>
+        </div>
+        
+        <div class="col-md-4 mb-4">
+            <div class="agent-card p-4">
+                <div class="d-flex justify-content-between align-items-start mb-3">
+                    <h3 class="h5 mb-0">Hopper</h3>
+                    <span class="fs-4">🔐</span>
+                </div>
+                <p class="text-secondary small">Expertise: Security/Cryptography</p>
+                <div class="mb-3">
+                    <span class="badge badge-tool">exec</span>
+                    <span class="badge badge-tool">read</span>
+                    <span class="badge badge-tool">sessions_send</span>
+                </div>
+                <a href="https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Hopper" class="btn btn-sm btn-outline-info w-100">View Specialized Logic</a>
+            </div>
+        </div>
+        
+        <div class="col-md-4 mb-4">
+            <div class="agent-card p-4">
+                <div class="d-flex justify-content-between align-items-start mb-3">
+                    <h3 class="h5 mb-0">Shannon</h3>
+                    <span class="fs-4">🔐</span>
+                </div>
+                <p class="text-secondary small">Expertise: Security/Cryptography</p>
+                <div class="mb-3">
+                    <span class="badge badge-tool">exec</span>
+                    <span class="badge badge-tool">read</span>
+                    <span class="badge badge-tool">sessions_send</span>
+                </div>
+                <a href="https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Shannon" class="btn btn-sm btn-outline-info w-100">View Specialized Logic</a>
+            </div>
+        </div>
+        
+        <div class="col-md-4 mb-4">
+            <div class="agent-card p-4">
+                <div class="d-flex justify-content-between align-items-start mb-3">
+                    <h3 class="h5 mb-0">Altman</h3>
+                    <span class="fs-4">🔐</span>
+                </div>
+                <p class="text-secondary small">Expertise: Security/Cryptography</p>
+                <div class="mb-3">
+                    <span class="badge badge-tool">exec</span>
+                    <span class="badge badge-tool">read</span>
+                    <span class="badge badge-tool">sessions_send</span>
+                </div>
+                <a href="https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Altman" class="btn btn-sm btn-outline-info w-100">View Specialized Logic</a>
+            </div>
+        </div>
+        
+        <div class="col-md-4 mb-4">
+            <div class="agent-card p-4">
+                <div class="d-flex justify-content-between align-items-start mb-3">
+                    <h3 class="h5 mb-0">Cerf</h3>
+                    <span class="fs-4">🔐</span>
+                </div>
+                <p class="text-secondary small">Expertise: Security/Cryptography</p>
+                <div class="mb-3">
+                    <span class="badge badge-tool">exec</span>
+                    <span class="badge badge-tool">read</span>
+                    <span class="badge badge-tool">sessions_send</span>
+                </div>
+                <a href="https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Cerf" class="btn btn-sm btn-outline-info w-100">View Specialized Logic</a>
+            </div>
+        </div>
+        
+        <div class="col-md-4 mb-4">
+            <div class="agent-card p-4">
+                <div class="d-flex justify-content-between align-items-start mb-3">
+                    <h3 class="h5 mb-0">Carmack</h3>
+                    <span class="fs-4">🔐</span>
+                </div>
+                <p class="text-secondary small">Expertise: Security/Cryptography</p>
+                <div class="mb-3">
+                    <span class="badge badge-tool">exec</span>
+                    <span class="badge badge-tool">read</span>
+                    <span class="badge badge-tool">sessions_send</span>
+                </div>
+                <a href="https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Carmack" class="btn btn-sm btn-outline-info w-100">View Specialized Logic</a>
+            </div>
+        </div>
+        
+        <div class="col-md-4 mb-4">
+            <div class="agent-card p-4">
+                <div class="d-flex justify-content-between align-items-start mb-3">
+                    <h3 class="h5 mb-0">Tesla</h3>
+                    <span class="fs-4">⚡</span>
+                </div>
+                <p class="text-secondary small">Expertise: Physics/Energy</p>
+                <div class="mb-3">
+                    <span class="badge badge-tool">exec</span>
+                    <span class="badge badge-tool">read</span>
+                    <span class="badge badge-tool">sessions_send</span>
+                </div>
+                <a href="https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Tesla" class="btn btn-sm btn-outline-info w-100">View Specialized Logic</a>
+            </div>
+        </div>
+        
+        <div class="col-md-4 mb-4">
+            <div class="agent-card p-4">
+                <div class="d-flex justify-content-between align-items-start mb-3">
+                    <h3 class="h5 mb-0">Galileo</h3>
+                    <span class="fs-4">⚡</span>
+                </div>
+                <p class="text-secondary small">Expertise: Physics/Energy</p>
+                <div class="mb-3">
+                    <span class="badge badge-tool">exec</span>
+                    <span class="badge badge-tool">read</span>
+                    <span class="badge badge-tool">sessions_send</span>
+                </div>
+                <a href="https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Galileo" class="btn btn-sm btn-outline-info w-100">View Specialized Logic</a>
+            </div>
+        </div>
+        
+        <div class="col-md-4 mb-4">
+            <div class="agent-card p-4">
+                <div class="d-flex justify-content-between align-items-start mb-3">
+                    <h3 class="h5 mb-0">Newton</h3>
+                    <span class="fs-4">⚡</span>
+                </div>
+                <p class="text-secondary small">Expertise: Physics/Energy</p>
+                <div class="mb-3">
+                    <span class="badge badge-tool">exec</span>
+                    <span class="badge badge-tool">read</span>
+                    <span class="badge badge-tool">sessions_send</span>
+                </div>
+                <a href="https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Newton" class="btn btn-sm btn-outline-info w-100">View Specialized Logic</a>
+            </div>
+        </div>
+        
+        <div class="col-md-4 mb-4">
+            <div class="agent-card p-4">
+                <div class="d-flex justify-content-between align-items-start mb-3">
+                    <h3 class="h5 mb-0">Einstein</h3>
+                    <span class="fs-4">⚡</span>
+                </div>
+                <p class="text-secondary small">Expertise: Physics/Energy</p>
+                <div class="mb-3">
+                    <span class="badge badge-tool">exec</span>
+                    <span class="badge badge-tool">read</span>
+                    <span class="badge badge-tool">sessions_send</span>
+                </div>
+                <a href="https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Einstein" class="btn btn-sm btn-outline-info w-100">View Specialized Logic</a>
+            </div>
+        </div>
+        
+        <div class="col-md-4 mb-4">
+            <div class="agent-card p-4">
+                <div class="d-flex justify-content-between align-items-start mb-3">
+                    <h3 class="h5 mb-0">Hawking</h3>
+                    <span class="fs-4">⚡</span>
+                </div>
+                <p class="text-secondary small">Expertise: Physics/Energy</p>
+                <div class="mb-3">
+                    <span class="badge badge-tool">exec</span>
+                    <span class="badge badge-tool">read</span>
+                    <span class="badge badge-tool">sessions_send</span>
+                </div>
+                <a href="https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Hawking" class="btn btn-sm btn-outline-info w-100">View Specialized Logic</a>
+            </div>
+        </div>
+        
+        <div class="col-md-4 mb-4">
+            <div class="agent-card p-4">
+                <div class="d-flex justify-content-between align-items-start mb-3">
+                    <h3 class="h5 mb-0">Bohr</h3>
+                    <span class="fs-4">⚡</span>
+                </div>
+                <p class="text-secondary small">Expertise: Physics/Energy</p>
+                <div class="mb-3">
+                    <span class="badge badge-tool">exec</span>
+                    <span class="badge badge-tool">read</span>
+                    <span class="badge badge-tool">sessions_send</span>
+                </div>
+                <a href="https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Bohr" class="btn btn-sm btn-outline-info w-100">View Specialized Logic</a>
+            </div>
+        </div>
+        
+        <div class="col-md-4 mb-4">
+            <div class="agent-card p-4">
+                <div class="d-flex justify-content-between align-items-start mb-3">
+                    <h3 class="h5 mb-0">Planck</h3>
+                    <span class="fs-4">⚡</span>
+                </div>
+                <p class="text-secondary small">Expertise: Physics/Energy</p>
+                <div class="mb-3">
+                    <span class="badge badge-tool">exec</span>
+                    <span class="badge badge-tool">read</span>
+                    <span class="badge badge-tool">sessions_send</span>
+                </div>
+                <a href="https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Planck" class="btn btn-sm btn-outline-info w-100">View Specialized Logic</a>
+            </div>
+        </div>
+        
+        <div class="col-md-4 mb-4">
+            <div class="agent-card p-4">
+                <div class="d-flex justify-content-between align-items-start mb-3">
+                    <h3 class="h5 mb-0">Feynman</h3>
+                    <span class="fs-4">⚡</span>
+                </div>
+                <p class="text-secondary small">Expertise: Physics/Energy</p>
+                <div class="mb-3">
+                    <span class="badge badge-tool">exec</span>
+                    <span class="badge badge-tool">read</span>
+                    <span class="badge badge-tool">sessions_send</span>
+                </div>
+                <a href="https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Feynman" class="btn btn-sm btn-outline-info w-100">View Specialized Logic</a>
+            </div>
+        </div>
+        
+        <div class="col-md-4 mb-4">
+            <div class="agent-card p-4">
+                <div class="d-flex justify-content-between align-items-start mb-3">
+                    <h3 class="h5 mb-0">Maxwell</h3>
+                    <span class="fs-4">⚡</span>
+                </div>
+                <p class="text-secondary small">Expertise: Physics/Energy</p>
+                <div class="mb-3">
+                    <span class="badge badge-tool">exec</span>
+                    <span class="badge badge-tool">read</span>
+                    <span class="badge badge-tool">sessions_send</span>
+                </div>
+                <a href="https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Maxwell" class="btn btn-sm btn-outline-info w-100">View Specialized Logic</a>
+            </div>
+        </div>
+        
+        <div class="col-md-4 mb-4">
+            <div class="agent-card p-4">
+                <div class="d-flex justify-content-between align-items-start mb-3">
+                    <h3 class="h5 mb-0">Hertz</h3>
+                    <span class="fs-4">⚡</span>
+                </div>
+                <p class="text-secondary small">Expertise: Physics/Energy</p>
+                <div class="mb-3">
+                    <span class="badge badge-tool">exec</span>
+                    <span class="badge badge-tool">read</span>
+                    <span class="badge badge-tool">sessions_send</span>
+                </div>
+                <a href="https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Hertz" class="btn btn-sm btn-outline-info w-100">View Specialized Logic</a>
+            </div>
+        </div>
+        
+        <div class="col-md-4 mb-4">
+            <div class="agent-card p-4">
+                <div class="d-flex justify-content-between align-items-start mb-3">
+                    <h3 class="h5 mb-0">Kepler</h3>
+                    <span class="fs-4">⚡</span>
+                </div>
+                <p class="text-secondary small">Expertise: Physics/Energy</p>
+                <div class="mb-3">
+                    <span class="badge badge-tool">exec</span>
+                    <span class="badge badge-tool">read</span>
+                    <span class="badge badge-tool">sessions_send</span>
+                </div>
+                <a href="https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Kepler" class="btn btn-sm btn-outline-info w-100">View Specialized Logic</a>
+            </div>
+        </div>
+        
+        <div class="col-md-4 mb-4">
+            <div class="agent-card p-4">
+                <div class="d-flex justify-content-between align-items-start mb-3">
+                    <h3 class="h5 mb-0">Copernicus</h3>
+                    <span class="fs-4">⚡</span>
+                </div>
+                <p class="text-secondary small">Expertise: Physics/Energy</p>
+                <div class="mb-3">
+                    <span class="badge badge-tool">exec</span>
+                    <span class="badge badge-tool">read</span>
+                    <span class="badge badge-tool">sessions_send</span>
+                </div>
+                <a href="https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Copernicus" class="btn btn-sm btn-outline-info w-100">View Specialized Logic</a>
+            </div>
+        </div>
+        
+        <div class="col-md-4 mb-4">
+            <div class="agent-card p-4">
+                <div class="d-flex justify-content-between align-items-start mb-3">
+                    <h3 class="h5 mb-0">Brahe</h3>
+                    <span class="fs-4">⚡</span>
+                </div>
+                <p class="text-secondary small">Expertise: Physics/Energy</p>
+                <div class="mb-3">
+                    <span class="badge badge-tool">exec</span>
+                    <span class="badge badge-tool">read</span>
+                    <span class="badge badge-tool">sessions_send</span>
+                </div>
+                <a href="https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Brahe" class="btn btn-sm btn-outline-info w-100">View Specialized Logic</a>
+            </div>
+        </div>
+        
+        <div class="col-md-4 mb-4">
+            <div class="agent-card p-4">
+                <div class="d-flex justify-content-between align-items-start mb-3">
+                    <h3 class="h5 mb-0">Halley</h3>
+                    <span class="fs-4">⚡</span>
+                </div>
+                <p class="text-secondary small">Expertise: Physics/Energy</p>
+                <div class="mb-3">
+                    <span class="badge badge-tool">exec</span>
+                    <span class="badge badge-tool">read</span>
+                    <span class="badge badge-tool">sessions_send</span>
+                </div>
+                <a href="https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Halley" class="btn btn-sm btn-outline-info w-100">View Specialized Logic</a>
+            </div>
+        </div>
+        
+        <div class="col-md-4 mb-4">
+            <div class="agent-card p-4">
+                <div class="d-flex justify-content-between align-items-start mb-3">
+                    <h3 class="h5 mb-0">Hubble</h3>
+                    <span class="fs-4">⚡</span>
+                </div>
+                <p class="text-secondary small">Expertise: Physics/Energy</p>
+                <div class="mb-3">
+                    <span class="badge badge-tool">exec</span>
+                    <span class="badge badge-tool">read</span>
+                    <span class="badge badge-tool">sessions_send</span>
+                </div>
+                <a href="https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Hubble" class="btn btn-sm btn-outline-info w-100">View Specialized Logic</a>
+            </div>
+        </div>
+        
+        <div class="col-md-4 mb-4">
+            <div class="agent-card p-4">
+                <div class="d-flex justify-content-between align-items-start mb-3">
+                    <h3 class="h5 mb-0">Sagan</h3>
+                    <span class="fs-4">⚡</span>
+                </div>
+                <p class="text-secondary small">Expertise: Physics/Energy</p>
+                <div class="mb-3">
+                    <span class="badge badge-tool">exec</span>
+                    <span class="badge badge-tool">read</span>
+                    <span class="badge badge-tool">sessions_send</span>
+                </div>
+                <a href="https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Sagan" class="btn btn-sm btn-outline-info w-100">View Specialized Logic</a>
+            </div>
+        </div>
+        
+        <div class="col-md-4 mb-4">
+            <div class="agent-card p-4">
+                <div class="d-flex justify-content-between align-items-start mb-3">
+                    <h3 class="h5 mb-0">Ada</h3>
+                    <span class="fs-4">💻</span>
+                </div>
+                <p class="text-secondary small">Expertise: Code/Data/AI</p>
+                <div class="mb-3">
+                    <span class="badge badge-tool">exec</span>
+                    <span class="badge badge-tool">read</span>
+                    <span class="badge badge-tool">sessions_send</span>
+                </div>
+                <a href="https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Ada" class="btn btn-sm btn-outline-info w-100">View Specialized Logic</a>
+            </div>
+        </div>
+        
+        <div class="col-md-4 mb-4">
+            <div class="agent-card p-4">
+                <div class="d-flex justify-content-between align-items-start mb-3">
+                    <h3 class="h5 mb-0">Lovelace</h3>
+                    <span class="fs-4">💻</span>
+                </div>
+                <p class="text-secondary small">Expertise: Code/Data/AI</p>
+                <div class="mb-3">
+                    <span class="badge badge-tool">exec</span>
+                    <span class="badge badge-tool">read</span>
+                    <span class="badge badge-tool">sessions_send</span>
+                </div>
+                <a href="https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Lovelace" class="btn btn-sm btn-outline-info w-100">View Specialized Logic</a>
+            </div>
+        </div>
+        
+        <div class="col-md-4 mb-4">
+            <div class="agent-card p-4">
+                <div class="d-flex justify-content-between align-items-start mb-3">
+                    <h3 class="h5 mb-0">Knuth</h3>
+                    <span class="fs-4">💻</span>
+                </div>
+                <p class="text-secondary small">Expertise: Code/Data/AI</p>
+                <div class="mb-3">
+                    <span class="badge badge-tool">exec</span>
+                    <span class="badge badge-tool">read</span>
+                    <span class="badge badge-tool">sessions_send</span>
+                </div>
+                <a href="https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Knuth" class="btn btn-sm btn-outline-info w-100">View Specialized Logic</a>
+            </div>
+        </div>
+        
+        <div class="col-md-4 mb-4">
+            <div class="agent-card p-4">
+                <div class="d-flex justify-content-between align-items-start mb-3">
+                    <h3 class="h5 mb-0">BernersLee</h3>
+                    <span class="fs-4">💻</span>
+                </div>
+                <p class="text-secondary small">Expertise: Code/Data/AI</p>
+                <div class="mb-3">
+                    <span class="badge badge-tool">exec</span>
+                    <span class="badge badge-tool">read</span>
+                    <span class="badge badge-tool">sessions_send</span>
+                </div>
+                <a href="https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/BernersLee" class="btn btn-sm btn-outline-info w-100">View Specialized Logic</a>
+            </div>
+        </div>
+        
+        <div class="col-md-4 mb-4">
+            <div class="agent-card p-4">
+                <div class="d-flex justify-content-between align-items-start mb-3">
+                    <h3 class="h5 mb-0">Darwin</h3>
+                    <span class="fs-4">💻</span>
+                </div>
+                <p class="text-secondary small">Expertise: Code/Data/AI</p>
+                <div class="mb-3">
+                    <span class="badge badge-tool">exec</span>
+                    <span class="badge badge-tool">read</span>
+                    <span class="badge badge-tool">sessions_send</span>
+                </div>
+                <a href="https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Darwin" class="btn btn-sm btn-outline-info w-100">View Specialized Logic</a>
+            </div>
+        </div>
+        
+        <div class="col-md-4 mb-4">
+            <div class="agent-card p-4">
+                <div class="d-flex justify-content-between align-items-start mb-3">
+                    <h3 class="h5 mb-0">Mendel</h3>
+                    <span class="fs-4">💻</span>
+                </div>
+                <p class="text-secondary small">Expertise: Code/Data/AI</p>
+                <div class="mb-3">
+                    <span class="badge badge-tool">exec</span>
+                    <span class="badge badge-tool">read</span>
+                    <span class="badge badge-tool">sessions_send</span>
+                </div>
+                <a href="https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Mendel" class="btn btn-sm btn-outline-info w-100">View Specialized Logic</a>
+            </div>
+        </div>
+        
+        <div class="col-md-4 mb-4">
+            <div class="agent-card p-4">
+                <div class="d-flex justify-content-between align-items-start mb-3">
+                    <h3 class="h5 mb-0">Hinton</h3>
+                    <span class="fs-4">💻</span>
+                </div>
+                <p class="text-secondary small">Expertise: Code/Data/AI</p>
+                <div class="mb-3">
+                    <span class="badge badge-tool">exec</span>
+                    <span class="badge badge-tool">read</span>
+                    <span class="badge badge-tool">sessions_send</span>
+                </div>
+                <a href="https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Hinton" class="btn btn-sm btn-outline-info w-100">View Specialized Logic</a>
+            </div>
+        </div>
+        
+        <div class="col-md-4 mb-4">
+            <div class="agent-card p-4">
+                <div class="d-flex justify-content-between align-items-start mb-3">
+                    <h3 class="h5 mb-0">Bengio</h3>
+                    <span class="fs-4">💻</span>
+                </div>
+                <p class="text-secondary small">Expertise: Code/Data/AI</p>
+                <div class="mb-3">
+                    <span class="badge badge-tool">exec</span>
+                    <span class="badge badge-tool">read</span>
+                    <span class="badge badge-tool">sessions_send</span>
+                </div>
+                <a href="https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Bengio" class="btn btn-sm btn-outline-info w-100">View Specialized Logic</a>
+            </div>
+        </div>
+        
+        <div class="col-md-4 mb-4">
+            <div class="agent-card p-4">
+                <div class="d-flex justify-content-between align-items-start mb-3">
+                    <h3 class="h5 mb-0">LeCun</h3>
+                    <span class="fs-4">💻</span>
+                </div>
+                <p class="text-secondary small">Expertise: Code/Data/AI</p>
+                <div class="mb-3">
+                    <span class="badge badge-tool">exec</span>
+                    <span class="badge badge-tool">read</span>
+                    <span class="badge badge-tool">sessions_send</span>
+                </div>
+                <a href="https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/LeCun" class="btn btn-sm btn-outline-info w-100">View Specialized Logic</a>
+            </div>
+        </div>
+        
+        <div class="col-md-4 mb-4">
+            <div class="agent-card p-4">
+                <div class="d-flex justify-content-between align-items-start mb-3">
+                    <h3 class="h5 mb-0">Ng</h3>
+                    <span class="fs-4">💻</span>
+                </div>
+                <p class="text-secondary small">Expertise: Code/Data/AI</p>
+                <div class="mb-3">
+                    <span class="badge badge-tool">exec</span>
+                    <span class="badge badge-tool">read</span>
+                    <span class="badge badge-tool">sessions_send</span>
+                </div>
+                <a href="https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Ng" class="btn btn-sm btn-outline-info w-100">View Specialized Logic</a>
+            </div>
+        </div>
+        
+        <div class="col-md-4 mb-4">
+            <div class="agent-card p-4">
+                <div class="d-flex justify-content-between align-items-start mb-3">
+                    <h3 class="h5 mb-0">Karpathy</h3>
+                    <span class="fs-4">💻</span>
+                </div>
+                <p class="text-secondary small">Expertise: Code/Data/AI</p>
+                <div class="mb-3">
+                    <span class="badge badge-tool">exec</span>
+                    <span class="badge badge-tool">read</span>
+                    <span class="badge badge-tool">sessions_send</span>
+                </div>
+                <a href="https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Karpathy" class="btn btn-sm btn-outline-info w-100">View Specialized Logic</a>
+            </div>
+        </div>
+        
+        <div class="col-md-4 mb-4">
+            <div class="agent-card p-4">
+                <div class="d-flex justify-content-between align-items-start mb-3">
+                    <h3 class="h5 mb-0">Sutskever</h3>
+                    <span class="fs-4">💻</span>
+                </div>
+                <p class="text-secondary small">Expertise: Code/Data/AI</p>
+                <div class="mb-3">
+                    <span class="badge badge-tool">exec</span>
+                    <span class="badge badge-tool">read</span>
+                    <span class="badge badge-tool">sessions_send</span>
+                </div>
+                <a href="https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Sutskever" class="btn btn-sm btn-outline-info w-100">View Specialized Logic</a>
+            </div>
+        </div>
+        
+        <div class="col-md-4 mb-4">
+            <div class="agent-card p-4">
+                <div class="d-flex justify-content-between align-items-start mb-3">
+                    <h3 class="h5 mb-0">Amodei</h3>
+                    <span class="fs-4">💻</span>
+                </div>
+                <p class="text-secondary small">Expertise: Code/Data/AI</p>
+                <div class="mb-3">
+                    <span class="badge badge-tool">exec</span>
+                    <span class="badge badge-tool">read</span>
+                    <span class="badge badge-tool">sessions_send</span>
+                </div>
+                <a href="https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Amodei" class="btn btn-sm btn-outline-info w-100">View Specialized Logic</a>
+            </div>
+        </div>
+        
+        <div class="col-md-4 mb-4">
+            <div class="agent-card p-4">
+                <div class="d-flex justify-content-between align-items-start mb-3">
+                    <h3 class="h5 mb-0">Wozniak</h3>
+                    <span class="fs-4">💻</span>
+                </div>
+                <p class="text-secondary small">Expertise: Code/Data/AI</p>
+                <div class="mb-3">
+                    <span class="badge badge-tool">exec</span>
+                    <span class="badge badge-tool">read</span>
+                    <span class="badge badge-tool">sessions_send</span>
+                </div>
+                <a href="https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Wozniak" class="btn btn-sm btn-outline-info w-100">View Specialized Logic</a>
+            </div>
+        </div>
+        
+        <div class="col-md-4 mb-4">
+            <div class="agent-card p-4">
+                <div class="d-flex justify-content-between align-items-start mb-3">
+                    <h3 class="h5 mb-0">Torvalds</h3>
+                    <span class="fs-4">💻</span>
+                </div>
+                <p class="text-secondary small">Expertise: Code/Data/AI</p>
+                <div class="mb-3">
+                    <span class="badge badge-tool">exec</span>
+                    <span class="badge badge-tool">read</span>
+                    <span class="badge badge-tool">sessions_send</span>
+                </div>
+                <a href="https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Torvalds" class="btn btn-sm btn-outline-info w-100">View Specialized Logic</a>
+            </div>
+        </div>
+        
+        <div class="col-md-4 mb-4">
+            <div class="agent-card p-4">
+                <div class="d-flex justify-content-between align-items-start mb-3">
+                    <h3 class="h5 mb-0">Liskov</h3>
+                    <span class="fs-4">💻</span>
+                </div>
+                <p class="text-secondary small">Expertise: Code/Data/AI</p>
+                <div class="mb-3">
+                    <span class="badge badge-tool">exec</span>
+                    <span class="badge badge-tool">read</span>
+                    <span class="badge badge-tool">sessions_send</span>
+                </div>
+                <a href="https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Liskov" class="btn btn-sm btn-outline-info w-100">View Specialized Logic</a>
+            </div>
+        </div>
+        
+        <div class="col-md-4 mb-4">
+            <div class="agent-card p-4">
+                <div class="d-flex justify-content-between align-items-start mb-3">
+                    <h3 class="h5 mb-0">Vapnik</h3>
+                    <span class="fs-4">💻</span>
+                </div>
+                <p class="text-secondary small">Expertise: Code/Data/AI</p>
+                <div class="mb-3">
+                    <span class="badge badge-tool">exec</span>
+                    <span class="badge badge-tool">read</span>
+                    <span class="badge badge-tool">sessions_send</span>
+                </div>
+                <a href="https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Vapnik" class="btn btn-sm btn-outline-info w-100">View Specialized Logic</a>
+            </div>
+        </div>
+        
+        <div class="col-md-4 mb-4">
+            <div class="agent-card p-4">
+                <div class="d-flex justify-content-between align-items-start mb-3">
+                    <h3 class="h5 mb-0">Pearl</h3>
+                    <span class="fs-4">💻</span>
+                </div>
+                <p class="text-secondary small">Expertise: Code/Data/AI</p>
+                <div class="mb-3">
+                    <span class="badge badge-tool">exec</span>
+                    <span class="badge badge-tool">read</span>
+                    <span class="badge badge-tool">sessions_send</span>
+                </div>
+                <a href="https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Pearl" class="btn btn-sm btn-outline-info w-100">View Specialized Logic</a>
+            </div>
+        </div>
+        
+        <div class="col-md-4 mb-4">
+            <div class="agent-card p-4">
+                <div class="d-flex justify-content-between align-items-start mb-3">
+                    <h3 class="h5 mb-0">Dante</h3>
+                    <span class="fs-4">📜</span>
+                </div>
+                <p class="text-secondary small">Expertise: Strategy/Philosophy</p>
+                <div class="mb-3">
+                    <span class="badge badge-tool">exec</span>
+                    <span class="badge badge-tool">read</span>
+                    <span class="badge badge-tool">sessions_send</span>
+                </div>
+                <a href="https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Dante" class="btn btn-sm btn-outline-info w-100">View Specialized Logic</a>
+            </div>
+        </div>
+        
+        <div class="col-md-4 mb-4">
+            <div class="agent-card p-4">
+                <div class="d-flex justify-content-between align-items-start mb-3">
+                    <h3 class="h5 mb-0">Shakespeare</h3>
+                    <span class="fs-4">📜</span>
+                </div>
+                <p class="text-secondary small">Expertise: Strategy/Philosophy</p>
+                <div class="mb-3">
+                    <span class="badge badge-tool">exec</span>
+                    <span class="badge badge-tool">read</span>
+                    <span class="badge badge-tool">sessions_send</span>
+                </div>
+                <a href="https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Shakespeare" class="btn btn-sm btn-outline-info w-100">View Specialized Logic</a>
+            </div>
+        </div>
+        
+        <div class="col-md-4 mb-4">
+            <div class="agent-card p-4">
+                <div class="d-flex justify-content-between align-items-start mb-3">
+                    <h3 class="h5 mb-0">Mozart</h3>
+                    <span class="fs-4">📜</span>
+                </div>
+                <p class="text-secondary small">Expertise: Strategy/Philosophy</p>
+                <div class="mb-3">
+                    <span class="badge badge-tool">exec</span>
+                    <span class="badge badge-tool">read</span>
+                    <span class="badge badge-tool">sessions_send</span>
+                </div>
+                <a href="https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Mozart" class="btn btn-sm btn-outline-info w-100">View Specialized Logic</a>
+            </div>
+        </div>
+        
+        <div class="col-md-4 mb-4">
+            <div class="agent-card p-4">
+                <div class="d-flex justify-content-between align-items-start mb-3">
+                    <h3 class="h5 mb-0">Socrates</h3>
+                    <span class="fs-4">📜</span>
+                </div>
+                <p class="text-secondary small">Expertise: Strategy/Philosophy</p>
+                <div class="mb-3">
+                    <span class="badge badge-tool">exec</span>
+                    <span class="badge badge-tool">read</span>
+                    <span class="badge badge-tool">sessions_send</span>
+                </div>
+                <a href="https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Socrates" class="btn btn-sm btn-outline-info w-100">View Specialized Logic</a>
+            </div>
+        </div>
+        
+        <div class="col-md-4 mb-4">
+            <div class="agent-card p-4">
+                <div class="d-flex justify-content-between align-items-start mb-3">
+                    <h3 class="h5 mb-0">Plato</h3>
+                    <span class="fs-4">📜</span>
+                </div>
+                <p class="text-secondary small">Expertise: Strategy/Philosophy</p>
+                <div class="mb-3">
+                    <span class="badge badge-tool">exec</span>
+                    <span class="badge badge-tool">read</span>
+                    <span class="badge badge-tool">sessions_send</span>
+                </div>
+                <a href="https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Plato" class="btn btn-sm btn-outline-info w-100">View Specialized Logic</a>
+            </div>
+        </div>
+        
+        <div class="col-md-4 mb-4">
+            <div class="agent-card p-4">
+                <div class="d-flex justify-content-between align-items-start mb-3">
+                    <h3 class="h5 mb-0">Aristotle</h3>
+                    <span class="fs-4">📜</span>
+                </div>
+                <p class="text-secondary small">Expertise: Strategy/Philosophy</p>
+                <div class="mb-3">
+                    <span class="badge badge-tool">exec</span>
+                    <span class="badge badge-tool">read</span>
+                    <span class="badge badge-tool">sessions_send</span>
+                </div>
+                <a href="https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Aristotle" class="btn btn-sm btn-outline-info w-100">View Specialized Logic</a>
+            </div>
+        </div>
+        
+        <div class="col-md-4 mb-4">
+            <div class="agent-card p-4">
+                <div class="d-flex justify-content-between align-items-start mb-3">
+                    <h3 class="h5 mb-0">Nietzsche</h3>
+                    <span class="fs-4">📜</span>
+                </div>
+                <p class="text-secondary small">Expertise: Strategy/Philosophy</p>
+                <div class="mb-3">
+                    <span class="badge badge-tool">exec</span>
+                    <span class="badge badge-tool">read</span>
+                    <span class="badge badge-tool">sessions_send</span>
+                </div>
+                <a href="https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Nietzsche" class="btn btn-sm btn-outline-info w-100">View Specialized Logic</a>
+            </div>
+        </div>
+        
+        <div class="col-md-4 mb-4">
+            <div class="agent-card p-4">
+                <div class="d-flex justify-content-between align-items-start mb-3">
+                    <h3 class="h5 mb-0">Kant</h3>
+                    <span class="fs-4">📜</span>
+                </div>
+                <p class="text-secondary small">Expertise: Strategy/Philosophy</p>
+                <div class="mb-3">
+                    <span class="badge badge-tool">exec</span>
+                    <span class="badge badge-tool">read</span>
+                    <span class="badge badge-tool">sessions_send</span>
+                </div>
+                <a href="https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Kant" class="btn btn-sm btn-outline-info w-100">View Specialized Logic</a>
+            </div>
+        </div>
+        
+        <div class="col-md-4 mb-4">
+            <div class="agent-card p-4">
+                <div class="d-flex justify-content-between align-items-start mb-3">
+                    <h3 class="h5 mb-0">Hegel</h3>
+                    <span class="fs-4">📜</span>
+                </div>
+                <p class="text-secondary small">Expertise: Strategy/Philosophy</p>
+                <div class="mb-3">
+                    <span class="badge badge-tool">exec</span>
+                    <span class="badge badge-tool">read</span>
+                    <span class="badge badge-tool">sessions_send</span>
+                </div>
+                <a href="https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Hegel" class="btn btn-sm btn-outline-info w-100">View Specialized Logic</a>
+            </div>
+        </div>
+        
+        <div class="col-md-4 mb-4">
+            <div class="agent-card p-4">
+                <div class="d-flex justify-content-between align-items-start mb-3">
+                    <h3 class="h5 mb-0">Spinoza</h3>
+                    <span class="fs-4">📜</span>
+                </div>
+                <p class="text-secondary small">Expertise: Strategy/Philosophy</p>
+                <div class="mb-3">
+                    <span class="badge badge-tool">exec</span>
+                    <span class="badge badge-tool">read</span>
+                    <span class="badge badge-tool">sessions_send</span>
+                </div>
+                <a href="https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Spinoza" class="btn btn-sm btn-outline-info w-100">View Specialized Logic</a>
+            </div>
+        </div>
+        
+        <div class="col-md-4 mb-4">
+            <div class="agent-card p-4">
+                <div class="d-flex justify-content-between align-items-start mb-3">
+                    <h3 class="h5 mb-0">Locke</h3>
+                    <span class="fs-4">📜</span>
+                </div>
+                <p class="text-secondary small">Expertise: Strategy/Philosophy</p>
+                <div class="mb-3">
+                    <span class="badge badge-tool">exec</span>
+                    <span class="badge badge-tool">read</span>
+                    <span class="badge badge-tool">sessions_send</span>
+                </div>
+                <a href="https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Locke" class="btn btn-sm btn-outline-info w-100">View Specialized Logic</a>
+            </div>
+        </div>
+        
+        <div class="col-md-4 mb-4">
+            <div class="agent-card p-4">
+                <div class="d-flex justify-content-between align-items-start mb-3">
+                    <h3 class="h5 mb-0">Hume</h3>
+                    <span class="fs-4">📜</span>
+                </div>
+                <p class="text-secondary small">Expertise: Strategy/Philosophy</p>
+                <div class="mb-3">
+                    <span class="badge badge-tool">exec</span>
+                    <span class="badge badge-tool">read</span>
+                    <span class="badge badge-tool">sessions_send</span>
+                </div>
+                <a href="https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Hume" class="btn btn-sm btn-outline-info w-100">View Specialized Logic</a>
+            </div>
+        </div>
+        
+        <div class="col-md-4 mb-4">
+            <div class="agent-card p-4">
+                <div class="d-flex justify-content-between align-items-start mb-3">
+                    <h3 class="h5 mb-0">Voltaire</h3>
+                    <span class="fs-4">📜</span>
+                </div>
+                <p class="text-secondary small">Expertise: Strategy/Philosophy</p>
+                <div class="mb-3">
+                    <span class="badge badge-tool">exec</span>
+                    <span class="badge badge-tool">read</span>
+                    <span class="badge badge-tool">sessions_send</span>
+                </div>
+                <a href="https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Voltaire" class="btn btn-sm btn-outline-info w-100">View Specialized Logic</a>
+            </div>
+        </div>
+        
+        <div class="col-md-4 mb-4">
+            <div class="agent-card p-4">
+                <div class="d-flex justify-content-between align-items-start mb-3">
+                    <h3 class="h5 mb-0">Rousseau</h3>
+                    <span class="fs-4">📜</span>
+                </div>
+                <p class="text-secondary small">Expertise: Strategy/Philosophy</p>
+                <div class="mb-3">
+                    <span class="badge badge-tool">exec</span>
+                    <span class="badge badge-tool">read</span>
+                    <span class="badge badge-tool">sessions_send</span>
+                </div>
+                <a href="https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Rousseau" class="btn btn-sm btn-outline-info w-100">View Specialized Logic</a>
+            </div>
+        </div>
+        
+        <div class="col-md-4 mb-4">
+            <div class="agent-card p-4">
+                <div class="d-flex justify-content-between align-items-start mb-3">
+                    <h3 class="h5 mb-0">Montesquieu</h3>
+                    <span class="fs-4">📜</span>
+                </div>
+                <p class="text-secondary small">Expertise: Strategy/Philosophy</p>
+                <div class="mb-3">
+                    <span class="badge badge-tool">exec</span>
+                    <span class="badge badge-tool">read</span>
+                    <span class="badge badge-tool">sessions_send</span>
+                </div>
+                <a href="https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Montesquieu" class="btn btn-sm btn-outline-info w-100">View Specialized Logic</a>
+            </div>
+        </div>
+        
+        <div class="col-md-4 mb-4">
+            <div class="agent-card p-4">
+                <div class="d-flex justify-content-between align-items-start mb-3">
+                    <h3 class="h5 mb-0">MarcusAurelius</h3>
+                    <span class="fs-4">📜</span>
+                </div>
+                <p class="text-secondary small">Expertise: Strategy/Philosophy</p>
+                <div class="mb-3">
+                    <span class="badge badge-tool">exec</span>
+                    <span class="badge badge-tool">read</span>
+                    <span class="badge badge-tool">sessions_send</span>
+                </div>
+                <a href="https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/MarcusAurelius" class="btn btn-sm btn-outline-info w-100">View Specialized Logic</a>
+            </div>
+        </div>
+        
+        <div class="col-md-4 mb-4">
+            <div class="agent-card p-4">
+                <div class="d-flex justify-content-between align-items-start mb-3">
+                    <h3 class="h5 mb-0">Seneca</h3>
+                    <span class="fs-4">📜</span>
+                </div>
+                <p class="text-secondary small">Expertise: Strategy/Philosophy</p>
+                <div class="mb-3">
+                    <span class="badge badge-tool">exec</span>
+                    <span class="badge badge-tool">read</span>
+                    <span class="badge badge-tool">sessions_send</span>
+                </div>
+                <a href="https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Seneca" class="btn btn-sm btn-outline-info w-100">View Specialized Logic</a>
+            </div>
+        </div>
+        
+        <div class="col-md-4 mb-4">
+            <div class="agent-card p-4">
+                <div class="d-flex justify-content-between align-items-start mb-3">
+                    <h3 class="h5 mb-0">Cicero</h3>
+                    <span class="fs-4">📜</span>
+                </div>
+                <p class="text-secondary small">Expertise: Strategy/Philosophy</p>
+                <div class="mb-3">
+                    <span class="badge badge-tool">exec</span>
+                    <span class="badge badge-tool">read</span>
+                    <span class="badge badge-tool">sessions_send</span>
+                </div>
+                <a href="https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Cicero" class="btn btn-sm btn-outline-info w-100">View Specialized Logic</a>
+            </div>
+        </div>
+        
+        <div class="col-md-4 mb-4">
+            <div class="agent-card p-4">
+                <div class="d-flex justify-content-between align-items-start mb-3">
+                    <h3 class="h5 mb-0">Herodotus</h3>
+                    <span class="fs-4">📜</span>
+                </div>
+                <p class="text-secondary small">Expertise: Strategy/Philosophy</p>
+                <div class="mb-3">
+                    <span class="badge badge-tool">exec</span>
+                    <span class="badge badge-tool">read</span>
+                    <span class="badge badge-tool">sessions_send</span>
+                </div>
+                <a href="https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Herodotus" class="btn btn-sm btn-outline-info w-100">View Specialized Logic</a>
+            </div>
+        </div>
+        
+        <div class="col-md-4 mb-4">
+            <div class="agent-card p-4">
+                <div class="d-flex justify-content-between align-items-start mb-3">
+                    <h3 class="h5 mb-0">Thucydides</h3>
+                    <span class="fs-4">📜</span>
+                </div>
+                <p class="text-secondary small">Expertise: Strategy/Philosophy</p>
+                <div class="mb-3">
+                    <span class="badge badge-tool">exec</span>
+                    <span class="badge badge-tool">read</span>
+                    <span class="badge badge-tool">sessions_send</span>
+                </div>
+                <a href="https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Thucydides" class="btn btn-sm btn-outline-info w-100">View Specialized Logic</a>
+            </div>
+        </div>
+        
+        <div class="col-md-4 mb-4">
+            <div class="agent-card p-4">
+                <div class="d-flex justify-content-between align-items-start mb-3">
+                    <h3 class="h5 mb-0">Harari</h3>
+                    <span class="fs-4">📜</span>
+                </div>
+                <p class="text-secondary small">Expertise: Strategy/Philosophy</p>
+                <div class="mb-3">
+                    <span class="badge badge-tool">exec</span>
+                    <span class="badge badge-tool">read</span>
+                    <span class="badge badge-tool">sessions_send</span>
+                </div>
+                <a href="https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Harari" class="btn btn-sm btn-outline-info w-100">View Specialized Logic</a>
+            </div>
+        </div>
+        
+        <div class="col-md-4 mb-4">
+            <div class="agent-card p-4">
+                <div class="d-flex justify-content-between align-items-start mb-3">
+                    <h3 class="h5 mb-0">Bostrom</h3>
+                    <span class="fs-4">📜</span>
+                </div>
+                <p class="text-secondary small">Expertise: Strategy/Philosophy</p>
+                <div class="mb-3">
+                    <span class="badge badge-tool">exec</span>
+                    <span class="badge badge-tool">read</span>
+                    <span class="badge badge-tool">sessions_send</span>
+                </div>
+                <a href="https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Bostrom" class="btn btn-sm btn-outline-info w-100">View Specialized Logic</a>
+            </div>
+        </div>
+        
+        <div class="col-md-4 mb-4">
+            <div class="agent-card p-4">
+                <div class="d-flex justify-content-between align-items-start mb-3">
+                    <h3 class="h5 mb-0">Musk</h3>
+                    <span class="fs-4">🚀</span>
+                </div>
+                <p class="text-secondary small">Expertise: Infrastructure/Scaling</p>
+                <div class="mb-3">
+                    <span class="badge badge-tool">exec</span>
+                    <span class="badge badge-tool">read</span>
+                    <span class="badge badge-tool">sessions_send</span>
+                </div>
+                <a href="https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Musk" class="btn btn-sm btn-outline-info w-100">View Specialized Logic</a>
+            </div>
+        </div>
+        
+        <div class="col-md-4 mb-4">
+            <div class="agent-card p-4">
+                <div class="d-flex justify-content-between align-items-start mb-3">
+                    <h3 class="h5 mb-0">Gates</h3>
+                    <span class="fs-4">🚀</span>
+                </div>
+                <p class="text-secondary small">Expertise: Infrastructure/Scaling</p>
+                <div class="mb-3">
+                    <span class="badge badge-tool">exec</span>
+                    <span class="badge badge-tool">read</span>
+                    <span class="badge badge-tool">sessions_send</span>
+                </div>
+                <a href="https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Gates" class="btn btn-sm btn-outline-info w-100">View Specialized Logic</a>
+            </div>
+        </div>
+        
+        <div class="col-md-4 mb-4">
+            <div class="agent-card p-4">
+                <div class="d-flex justify-content-between align-items-start mb-3">
+                    <h3 class="h5 mb-0">Jobs</h3>
+                    <span class="fs-4">🚀</span>
+                </div>
+                <p class="text-secondary small">Expertise: Infrastructure/Scaling</p>
+                <div class="mb-3">
+                    <span class="badge badge-tool">exec</span>
+                    <span class="badge badge-tool">read</span>
+                    <span class="badge badge-tool">sessions_send</span>
+                </div>
+                <a href="https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Jobs" class="btn btn-sm btn-outline-info w-100">View Specialized Logic</a>
+            </div>
+        </div>
+        
+        <div class="col-md-4 mb-4">
+            <div class="agent-card p-4">
+                <div class="d-flex justify-content-between align-items-start mb-3">
+                    <h3 class="h5 mb-0">Zuckerberg</h3>
+                    <span class="fs-4">🚀</span>
+                </div>
+                <p class="text-secondary small">Expertise: Infrastructure/Scaling</p>
+                <div class="mb-3">
+                    <span class="badge badge-tool">exec</span>
+                    <span class="badge badge-tool">read</span>
+                    <span class="badge badge-tool">sessions_send</span>
+                </div>
+                <a href="https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Zuckerberg" class="btn btn-sm btn-outline-info w-100">View Specialized Logic</a>
+            </div>
+        </div>
+        
+        <div class="col-md-4 mb-4">
+            <div class="agent-card p-4">
+                <div class="d-flex justify-content-between align-items-start mb-3">
+                    <h3 class="h5 mb-0">Hassabis</h3>
+                    <span class="fs-4">🚀</span>
+                </div>
+                <p class="text-secondary small">Expertise: Infrastructure/Scaling</p>
+                <div class="mb-3">
+                    <span class="badge badge-tool">exec</span>
+                    <span class="badge badge-tool">read</span>
+                    <span class="badge badge-tool">sessions_send</span>
+                </div>
+                <a href="https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Hassabis" class="btn btn-sm btn-outline-info w-100">View Specialized Logic</a>
+            </div>
+        </div>
+        
+        <div class="col-md-4 mb-4">
+            <div class="agent-card p-4">
+                <div class="d-flex justify-content-between align-items-start mb-3">
+                    <h3 class="h5 mb-0">Kahn</h3>
+                    <span class="fs-4">🚀</span>
+                </div>
+                <p class="text-secondary small">Expertise: Infrastructure/Scaling</p>
+                <div class="mb-3">
+                    <span class="badge badge-tool">exec</span>
+                    <span class="badge badge-tool">read</span>
+                    <span class="badge badge-tool">sessions_send</span>
+                </div>
+                <a href="https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Kahn" class="btn btn-sm btn-outline-info w-100">View Specialized Logic</a>
+            </div>
+        </div>
+        
     </div>
 </main>
-
-<footer class="text-center text-secondary">
-    <div class="container">
-        <p>&copy; 2026 AgentCraft Factory. Created for Chief by Warlock2.</p>
-        <p class="small">Hosted on Mac Mini | Secured by Cloudflare</p>
-    </div>
-</footer>
-
+<footer class="text-center text-secondary"><p>&copy; 2026 AgentCraft | Mac Mini Cloud HQ</p></footer>
 </body>
 </html>
