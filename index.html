@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgentCraft | Agent Factory & Marketplace</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body { background-color: #0f172a; color: #f8fafc; font-family: 'Inter', sans-serif; }
+        .hero { padding: 60px 0; background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%); border-bottom: 1px solid #334155; }
+        .agent-card { background: #1e293b; border: 1px solid #334155; border-radius: 12px; transition: transform 0.2s; height: 100%; }
+        .agent-card:hover { transform: translateY(-5px); border-color: #38bdf8; }
+        .badge-tool { background: #0369a1; color: #f0f9ff; margin-right: 5px; font-size: 0.75rem; }
+        .btn-primary { background: #38bdf8; border: none; color: #0f172a; font-weight: 600; }
+        .btn-primary:hover { background: #7dd3fc; }
+        footer { padding: 40px 0; border-top: 1px solid #334155; margin-top: 60px; }
+    </style>
+</head>
+<body>
+
+<nav class="navbar navbar-dark bg-slate-900 border-bottom border-slate-800">
+    <div class="container">
+        <a class="navbar-brand font-bold" href="#">🧙‍♂️ AgentCraft</a>
+        <div class="navbar-text">Powered by OpenClaw & Ollama</div>
+    </div>
+</nav>
+
+<header class="hero text-center">
+    <div class="container">
+        <h1 class="display-4 fw-bold mb-3">Agent Factory & Sandbox</h1>
+        <p class="lead text-slate-400 mb-4">Deploy elite autonomous agents with complex logic. 0 Token Cost. 100% Local.</p>
+        <div class="d-flex justify-content-center gap-3">
+            <a href="https://github.com/atkaratas/AgentCraft" class="btn btn-primary btn-lg">View GitHub Repo</a>
+            <a href="https://glucose-halloween-milton-state.trycloudflare.com" class="btn btn-outline-light btn-lg">Live Sandbox</a>
+        </div>
+    </div>
+</header>
+
+<main class="container my-5">
+    <h2 class="mb-4">Elite Frontier Agents (Top Picks)</h2>
+    <div class="row g-4">
+        <!-- Tesla -->
+        <div class="col-md-4">
+            <div class="agent-card p-4">
+                <div class="d-flex justify-content-between align-items-start mb-3">
+                    <h3 class="h5 mb-0">Nikola Tesla</h3>
+                    <span class="fs-4">⚡</span>
+                </div>
+                <p class="text-secondary small">Expertise: Autonomous Energy Systems & Physics Optimization.</p>
+                <div class="mb-3">
+                    <span class="badge badge-tool">browser</span>
+                    <span class="badge badge-tool">exec</span>
+                    <span class="badge badge-tool">sessions_spawn</span>
+                </div>
+                <div class="bg-black p-2 rounded small mb-3" style="font-family: monospace; font-size: 0.7rem; color: #10b981;">
+                    Logic: IF efficiency < 95% SPAWN Optimizer-SubAgent...
+                </div>
+                <a href="https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Tesla" class="btn btn-sm btn-outline-info w-100">Download Logic</a>
+            </div>
+        </div>
+        <!-- Turing -->
+        <div class="col-md-4">
+            <div class="agent-card p-4">
+                <div class="d-flex justify-content-between align-items-start mb-3">
+                    <h3 class="h5 mb-0">Alan Turing</h3>
+                    <span class="fs-4">🔐</span>
+                </div>
+                <p class="text-secondary small">Expertise: Cryptography, Logic & Network Security Sentinel.</p>
+                <div class="mb-3">
+                    <span class="badge badge-tool">exec</span>
+                    <span class="badge badge-tool">read</span>
+                    <span class="badge badge-tool">write</span>
+                </div>
+                <div class="bg-black p-2 rounded small mb-3" style="font-family: monospace; font-size: 0.7rem; color: #10b981;">
+                    Logic: Validate SHA-256 hashes of all incoming files...
+                </div>
+                <a href="https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Turing" class="btn btn-sm btn-outline-info w-100">Download Logic</a>
+            </div>
+        </div>
+        <!-- Lovelace -->
+        <div class="col-md-4">
+            <div class="agent-card p-4">
+                <div class="d-flex justify-content-between align-items-start mb-3">
+                    <h3 class="h5 mb-0">Ada Lovelace</h3>
+                    <span class="fs-4">🎨</span>
+                </div>
+                <p class="text-secondary small">Expertise: Algorithmic Genesis & Programmatic Synthesis.</p>
+                <div class="mb-3">
+                    <span class="badge badge-tool">canvas</span>
+                    <span class="badge badge-tool">sessions_list</span>
+                    <span class="badge badge-tool">write</span>
+                </div>
+                <div class="bg-black p-2 rounded small mb-3" style="font-family: monospace; font-size: 0.7rem; color: #10b981;">
+                    Logic: Render live A2UI dashboard of ecosystem health...
+                </div>
+                <a href="https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Lovelace" class="btn btn-sm btn-outline-info w-100">Download Logic</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="mt-5 p-4 border border-info rounded bg-info bg-opacity-10">
+        <h4>🚀 Why AgentCraft?</h4>
+        <p>Unlike generic AI templates, AgentCraft provides agents with <strong>hard-coded operational logic</strong>. They don't just chat; they execute commands, manage files, and coordinate via microservices—all for free using <strong>Ollama</strong>.</p>
+    </div>
+</main>
+
+<footer class="text-center text-secondary">
+    <div class="container">
+        <p>&copy; 2026 AgentCraft Factory. Created for Chief by Warlock2.</p>
+        <p class="small">Hosted on Mac Mini | Secured by Cloudflare</p>
+    </div>
+</footer>
+
+</body>
+</html>
