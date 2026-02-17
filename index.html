@@ -12,6 +12,7 @@
         .agent-card:hover { transform: translateY(-5px); border-color: #38bdf8; }
         .badge-tool { background: #0369a1; color: #f0f9ff; margin-right: 5px; font-size: 0.75rem; }
         .btn-primary { background: #38bdf8; border: none; color: #0f172a; font-weight: 600; }
+        .btn-primary:hover { background: #7dd3fc; }
         footer { padding: 40px 0; border-top: 1px solid #334155; margin-top: 60px; }
     </style>
 </head>
@@ -22,8 +23,11 @@
 <header class="hero text-center">
     <div class="container">
         <h1 class="display-4 fw-bold mb-3">Elite 100 Agent Fleet</h1>
-        <p class="lead text-secondary mb-4">100 Autonomous Agents with unique operational logic. Powered by local LLMs.</p>
-        <a href="https://github.com/atkaratas/AgentCraft" class="btn btn-primary btn-lg">GitHub Repository</a>
+        <p class="lead text-secondary mb-4">Click a card to download the operational logic. Fully compatible with local Ollama LLMs.</p>
+        <div class="d-flex justify-content-center gap-3">
+            <a href="https://github.com/atkaratas/AgentCraft" class="btn btn-primary btn-lg">GitHub Repository</a>
+            <a href="https://glucose-halloween-milton-state.trycloudflare.com" class="btn btn-outline-light btn-lg">Live Sandbox</a>
+        </div>
     </div>
 </header>
 <main class="container my-5">
@@ -41,7 +45,13 @@
                     <span class="badge badge-tool">read</span>
                     <span class="badge badge-tool">sessions_send</span>
                 </div>
-                <a href="https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Leonardo" class="btn btn-sm btn-outline-info w-100">View Specialized Logic</a>
+                <div class="bg-black p-2 rounded small mb-3" style="font-family: monospace; font-size: 0.7rem; color: #10b981; min-height: 40px;">
+                    Logic: Execute specialized microservice logic via sessions_send...
+                </div>
+                <div class="d-grid gap-2">
+                    <button class="btn btn-sm btn-primary" onclick="window.open('https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Leonardo')">Download Agent Files</button>
+                    <button class="btn btn-sm btn-outline-info" onclick="alert('Connecting to Local Sandbox via Cloudflare... Please ensure your local OpenClaw is running with Ollama.')">Test in Sandbox</button>
+                </div>
             </div>
         </div>
         
@@ -57,7 +67,13 @@
                     <span class="badge badge-tool">read</span>
                     <span class="badge badge-tool">sessions_send</span>
                 </div>
-                <a href="https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Brunelleschi" class="btn btn-sm btn-outline-info w-100">View Specialized Logic</a>
+                <div class="bg-black p-2 rounded small mb-3" style="font-family: monospace; font-size: 0.7rem; color: #10b981; min-height: 40px;">
+                    Logic: Execute specialized microservice logic via sessions_send...
+                </div>
+                <div class="d-grid gap-2">
+                    <button class="btn btn-sm btn-primary" onclick="window.open('https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Brunelleschi')">Download Agent Files</button>
+                    <button class="btn btn-sm btn-outline-info" onclick="alert('Connecting to Local Sandbox via Cloudflare... Please ensure your local OpenClaw is running with Ollama.')">Test in Sandbox</button>
+                </div>
             </div>
         </div>
         
@@ -73,7 +89,13 @@
                     <span class="badge badge-tool">read</span>
                     <span class="badge badge-tool">sessions_send</span>
                 </div>
-                <a href="https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Pascal" class="btn btn-sm btn-outline-info w-100">View Specialized Logic</a>
+                <div class="bg-black p-2 rounded small mb-3" style="font-family: monospace; font-size: 0.7rem; color: #10b981; min-height: 40px;">
+                    Logic: Execute specialized microservice logic via sessions_send...
+                </div>
+                <div class="d-grid gap-2">
+                    <button class="btn btn-sm btn-primary" onclick="window.open('https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Pascal')">Download Agent Files</button>
+                    <button class="btn btn-sm btn-outline-info" onclick="alert('Connecting to Local Sandbox via Cloudflare... Please ensure your local OpenClaw is running with Ollama.')">Test in Sandbox</button>
+                </div>
             </div>
         </div>
         
@@ -89,7 +111,13 @@
                     <span class="badge badge-tool">read</span>
                     <span class="badge badge-tool">sessions_send</span>
                 </div>
-                <a href="https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Leibniz" class="btn btn-sm btn-outline-info w-100">View Specialized Logic</a>
+                <div class="bg-black p-2 rounded small mb-3" style="font-family: monospace; font-size: 0.7rem; color: #10b981; min-height: 40px;">
+                    Logic: Execute specialized microservice logic via sessions_send...
+                </div>
+                <div class="d-grid gap-2">
+                    <button class="btn btn-sm btn-primary" onclick="window.open('https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Leibniz')">Download Agent Files</button>
+                    <button class="btn btn-sm btn-outline-info" onclick="alert('Connecting to Local Sandbox via Cloudflare... Please ensure your local OpenClaw is running with Ollama.')">Test in Sandbox</button>
+                </div>
             </div>
         </div>
         
@@ -105,7 +133,13 @@
                     <span class="badge badge-tool">read</span>
                     <span class="badge badge-tool">sessions_send</span>
                 </div>
-                <a href="https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Euclid" class="btn btn-sm btn-outline-info w-100">View Specialized Logic</a>
+                <div class="bg-black p-2 rounded small mb-3" style="font-family: monospace; font-size: 0.7rem; color: #10b981; min-height: 40px;">
+                    Logic: Execute specialized microservice logic via sessions_send...
+                </div>
+                <div class="d-grid gap-2">
+                    <button class="btn btn-sm btn-primary" onclick="window.open('https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Euclid')">Download Agent Files</button>
+                    <button class="btn btn-sm btn-outline-info" onclick="alert('Connecting to Local Sandbox via Cloudflare... Please ensure your local OpenClaw is running with Ollama.')">Test in Sandbox</button>
+                </div>
             </div>
         </div>
         
@@ -121,7 +155,13 @@
                     <span class="badge badge-tool">read</span>
                     <span class="badge badge-tool">sessions_send</span>
                 </div>
-                <a href="https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Pythagoras" class="btn btn-sm btn-outline-info w-100">View Specialized Logic</a>
+                <div class="bg-black p-2 rounded small mb-3" style="font-family: monospace; font-size: 0.7rem; color: #10b981; min-height: 40px;">
+                    Logic: Execute specialized microservice logic via sessions_send...
+                </div>
+                <div class="d-grid gap-2">
+                    <button class="btn btn-sm btn-primary" onclick="window.open('https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Pythagoras')">Download Agent Files</button>
+                    <button class="btn btn-sm btn-outline-info" onclick="alert('Connecting to Local Sandbox via Cloudflare... Please ensure your local OpenClaw is running with Ollama.')">Test in Sandbox</button>
+                </div>
             </div>
         </div>
         
@@ -137,7 +177,13 @@
                     <span class="badge badge-tool">read</span>
                     <span class="badge badge-tool">sessions_send</span>
                 </div>
-                <a href="https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Archimedes" class="btn btn-sm btn-outline-info w-100">View Specialized Logic</a>
+                <div class="bg-black p-2 rounded small mb-3" style="font-family: monospace; font-size: 0.7rem; color: #10b981; min-height: 40px;">
+                    Logic: Execute specialized microservice logic via sessions_send...
+                </div>
+                <div class="d-grid gap-2">
+                    <button class="btn btn-sm btn-primary" onclick="window.open('https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Archimedes')">Download Agent Files</button>
+                    <button class="btn btn-sm btn-outline-info" onclick="alert('Connecting to Local Sandbox via Cloudflare... Please ensure your local OpenClaw is running with Ollama.')">Test in Sandbox</button>
+                </div>
             </div>
         </div>
         
@@ -153,7 +199,13 @@
                     <span class="badge badge-tool">read</span>
                     <span class="badge badge-tool">sessions_send</span>
                 </div>
-                <a href="https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Khwarizmi" class="btn btn-sm btn-outline-info w-100">View Specialized Logic</a>
+                <div class="bg-black p-2 rounded small mb-3" style="font-family: monospace; font-size: 0.7rem; color: #10b981; min-height: 40px;">
+                    Logic: Execute specialized microservice logic via sessions_send...
+                </div>
+                <div class="d-grid gap-2">
+                    <button class="btn btn-sm btn-primary" onclick="window.open('https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Khwarizmi')">Download Agent Files</button>
+                    <button class="btn btn-sm btn-outline-info" onclick="alert('Connecting to Local Sandbox via Cloudflare... Please ensure your local OpenClaw is running with Ollama.')">Test in Sandbox</button>
+                </div>
             </div>
         </div>
         
@@ -169,7 +221,13 @@
                     <span class="badge badge-tool">read</span>
                     <span class="badge badge-tool">sessions_send</span>
                 </div>
-                <a href="https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Fibonacci" class="btn btn-sm btn-outline-info w-100">View Specialized Logic</a>
+                <div class="bg-black p-2 rounded small mb-3" style="font-family: monospace; font-size: 0.7rem; color: #10b981; min-height: 40px;">
+                    Logic: Execute specialized microservice logic via sessions_send...
+                </div>
+                <div class="d-grid gap-2">
+                    <button class="btn btn-sm btn-primary" onclick="window.open('https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Fibonacci')">Download Agent Files</button>
+                    <button class="btn btn-sm btn-outline-info" onclick="alert('Connecting to Local Sandbox via Cloudflare... Please ensure your local OpenClaw is running with Ollama.')">Test in Sandbox</button>
+                </div>
             </div>
         </div>
         
@@ -185,7 +243,13 @@
                     <span class="badge badge-tool">read</span>
                     <span class="badge badge-tool">sessions_send</span>
                 </div>
-                <a href="https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Turing" class="btn btn-sm btn-outline-info w-100">View Specialized Logic</a>
+                <div class="bg-black p-2 rounded small mb-3" style="font-family: monospace; font-size: 0.7rem; color: #10b981; min-height: 40px;">
+                    Logic: Validate SHA-256 hashes of all incoming files...
+                </div>
+                <div class="d-grid gap-2">
+                    <button class="btn btn-sm btn-primary" onclick="window.open('https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Turing')">Download Agent Files</button>
+                    <button class="btn btn-sm btn-outline-info" onclick="alert('Connecting to Local Sandbox via Cloudflare... Please ensure your local OpenClaw is running with Ollama.')">Test in Sandbox</button>
+                </div>
             </div>
         </div>
         
@@ -201,7 +265,13 @@
                     <span class="badge badge-tool">read</span>
                     <span class="badge badge-tool">sessions_send</span>
                 </div>
-                <a href="https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Security%20Sentinel" class="btn btn-sm btn-outline-info w-100">View Specialized Logic</a>
+                <div class="bg-black p-2 rounded small mb-3" style="font-family: monospace; font-size: 0.7rem; color: #10b981; min-height: 40px;">
+                    Logic: Execute specialized microservice logic via sessions_send...
+                </div>
+                <div class="d-grid gap-2">
+                    <button class="btn btn-sm btn-primary" onclick="window.open('https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Security%20Sentinel')">Download Agent Files</button>
+                    <button class="btn btn-sm btn-outline-info" onclick="alert('Connecting to Local Sandbox via Cloudflare... Please ensure your local OpenClaw is running with Ollama.')">Test in Sandbox</button>
+                </div>
             </div>
         </div>
         
@@ -217,7 +287,13 @@
                     <span class="badge badge-tool">read</span>
                     <span class="badge badge-tool">sessions_send</span>
                 </div>
-                <a href="https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Machiavelli" class="btn btn-sm btn-outline-info w-100">View Specialized Logic</a>
+                <div class="bg-black p-2 rounded small mb-3" style="font-family: monospace; font-size: 0.7rem; color: #10b981; min-height: 40px;">
+                    Logic: Execute specialized microservice logic via sessions_send...
+                </div>
+                <div class="d-grid gap-2">
+                    <button class="btn btn-sm btn-primary" onclick="window.open('https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Machiavelli')">Download Agent Files</button>
+                    <button class="btn btn-sm btn-outline-info" onclick="alert('Connecting to Local Sandbox via Cloudflare... Please ensure your local OpenClaw is running with Ollama.')">Test in Sandbox</button>
+                </div>
             </div>
         </div>
         
@@ -233,7 +309,13 @@
                     <span class="badge badge-tool">read</span>
                     <span class="badge badge-tool">sessions_send</span>
                 </div>
-                <a href="https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Hopper" class="btn btn-sm btn-outline-info w-100">View Specialized Logic</a>
+                <div class="bg-black p-2 rounded small mb-3" style="font-family: monospace; font-size: 0.7rem; color: #10b981; min-height: 40px;">
+                    Logic: Execute specialized microservice logic via sessions_send...
+                </div>
+                <div class="d-grid gap-2">
+                    <button class="btn btn-sm btn-primary" onclick="window.open('https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Hopper')">Download Agent Files</button>
+                    <button class="btn btn-sm btn-outline-info" onclick="alert('Connecting to Local Sandbox via Cloudflare... Please ensure your local OpenClaw is running with Ollama.')">Test in Sandbox</button>
+                </div>
             </div>
         </div>
         
@@ -249,7 +331,13 @@
                     <span class="badge badge-tool">read</span>
                     <span class="badge badge-tool">sessions_send</span>
                 </div>
-                <a href="https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Shannon" class="btn btn-sm btn-outline-info w-100">View Specialized Logic</a>
+                <div class="bg-black p-2 rounded small mb-3" style="font-family: monospace; font-size: 0.7rem; color: #10b981; min-height: 40px;">
+                    Logic: Execute specialized microservice logic via sessions_send...
+                </div>
+                <div class="d-grid gap-2">
+                    <button class="btn btn-sm btn-primary" onclick="window.open('https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Shannon')">Download Agent Files</button>
+                    <button class="btn btn-sm btn-outline-info" onclick="alert('Connecting to Local Sandbox via Cloudflare... Please ensure your local OpenClaw is running with Ollama.')">Test in Sandbox</button>
+                </div>
             </div>
         </div>
         
@@ -265,7 +353,13 @@
                     <span class="badge badge-tool">read</span>
                     <span class="badge badge-tool">sessions_send</span>
                 </div>
-                <a href="https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Altman" class="btn btn-sm btn-outline-info w-100">View Specialized Logic</a>
+                <div class="bg-black p-2 rounded small mb-3" style="font-family: monospace; font-size: 0.7rem; color: #10b981; min-height: 40px;">
+                    Logic: Execute specialized microservice logic via sessions_send...
+                </div>
+                <div class="d-grid gap-2">
+                    <button class="btn btn-sm btn-primary" onclick="window.open('https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Altman')">Download Agent Files</button>
+                    <button class="btn btn-sm btn-outline-info" onclick="alert('Connecting to Local Sandbox via Cloudflare... Please ensure your local OpenClaw is running with Ollama.')">Test in Sandbox</button>
+                </div>
             </div>
         </div>
         
@@ -281,7 +375,13 @@
                     <span class="badge badge-tool">read</span>
                     <span class="badge badge-tool">sessions_send</span>
                 </div>
-                <a href="https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Cerf" class="btn btn-sm btn-outline-info w-100">View Specialized Logic</a>
+                <div class="bg-black p-2 rounded small mb-3" style="font-family: monospace; font-size: 0.7rem; color: #10b981; min-height: 40px;">
+                    Logic: Execute specialized microservice logic via sessions_send...
+                </div>
+                <div class="d-grid gap-2">
+                    <button class="btn btn-sm btn-primary" onclick="window.open('https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Cerf')">Download Agent Files</button>
+                    <button class="btn btn-sm btn-outline-info" onclick="alert('Connecting to Local Sandbox via Cloudflare... Please ensure your local OpenClaw is running with Ollama.')">Test in Sandbox</button>
+                </div>
             </div>
         </div>
         
@@ -297,7 +397,13 @@
                     <span class="badge badge-tool">read</span>
                     <span class="badge badge-tool">sessions_send</span>
                 </div>
-                <a href="https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Carmack" class="btn btn-sm btn-outline-info w-100">View Specialized Logic</a>
+                <div class="bg-black p-2 rounded small mb-3" style="font-family: monospace; font-size: 0.7rem; color: #10b981; min-height: 40px;">
+                    Logic: Execute specialized microservice logic via sessions_send...
+                </div>
+                <div class="d-grid gap-2">
+                    <button class="btn btn-sm btn-primary" onclick="window.open('https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Carmack')">Download Agent Files</button>
+                    <button class="btn btn-sm btn-outline-info" onclick="alert('Connecting to Local Sandbox via Cloudflare... Please ensure your local OpenClaw is running with Ollama.')">Test in Sandbox</button>
+                </div>
             </div>
         </div>
         
@@ -313,7 +419,13 @@
                     <span class="badge badge-tool">read</span>
                     <span class="badge badge-tool">sessions_send</span>
                 </div>
-                <a href="https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Tesla" class="btn btn-sm btn-outline-info w-100">View Specialized Logic</a>
+                <div class="bg-black p-2 rounded small mb-3" style="font-family: monospace; font-size: 0.7rem; color: #10b981; min-height: 40px;">
+                    Logic: IF efficiency < 95% SPAWN Optimizer-SubAgent...
+                </div>
+                <div class="d-grid gap-2">
+                    <button class="btn btn-sm btn-primary" onclick="window.open('https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Tesla')">Download Agent Files</button>
+                    <button class="btn btn-sm btn-outline-info" onclick="alert('Connecting to Local Sandbox via Cloudflare... Please ensure your local OpenClaw is running with Ollama.')">Test in Sandbox</button>
+                </div>
             </div>
         </div>
         
@@ -329,7 +441,13 @@
                     <span class="badge badge-tool">read</span>
                     <span class="badge badge-tool">sessions_send</span>
                 </div>
-                <a href="https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Galileo" class="btn btn-sm btn-outline-info w-100">View Specialized Logic</a>
+                <div class="bg-black p-2 rounded small mb-3" style="font-family: monospace; font-size: 0.7rem; color: #10b981; min-height: 40px;">
+                    Logic: Execute specialized microservice logic via sessions_send...
+                </div>
+                <div class="d-grid gap-2">
+                    <button class="btn btn-sm btn-primary" onclick="window.open('https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Galileo')">Download Agent Files</button>
+                    <button class="btn btn-sm btn-outline-info" onclick="alert('Connecting to Local Sandbox via Cloudflare... Please ensure your local OpenClaw is running with Ollama.')">Test in Sandbox</button>
+                </div>
             </div>
         </div>
         
@@ -345,7 +463,13 @@
                     <span class="badge badge-tool">read</span>
                     <span class="badge badge-tool">sessions_send</span>
                 </div>
-                <a href="https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Newton" class="btn btn-sm btn-outline-info w-100">View Specialized Logic</a>
+                <div class="bg-black p-2 rounded small mb-3" style="font-family: monospace; font-size: 0.7rem; color: #10b981; min-height: 40px;">
+                    Logic: Execute specialized microservice logic via sessions_send...
+                </div>
+                <div class="d-grid gap-2">
+                    <button class="btn btn-sm btn-primary" onclick="window.open('https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Newton')">Download Agent Files</button>
+                    <button class="btn btn-sm btn-outline-info" onclick="alert('Connecting to Local Sandbox via Cloudflare... Please ensure your local OpenClaw is running with Ollama.')">Test in Sandbox</button>
+                </div>
             </div>
         </div>
         
@@ -361,7 +485,13 @@
                     <span class="badge badge-tool">read</span>
                     <span class="badge badge-tool">sessions_send</span>
                 </div>
-                <a href="https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Einstein" class="btn btn-sm btn-outline-info w-100">View Specialized Logic</a>
+                <div class="bg-black p-2 rounded small mb-3" style="font-family: monospace; font-size: 0.7rem; color: #10b981; min-height: 40px;">
+                    Logic: Execute specialized microservice logic via sessions_send...
+                </div>
+                <div class="d-grid gap-2">
+                    <button class="btn btn-sm btn-primary" onclick="window.open('https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Einstein')">Download Agent Files</button>
+                    <button class="btn btn-sm btn-outline-info" onclick="alert('Connecting to Local Sandbox via Cloudflare... Please ensure your local OpenClaw is running with Ollama.')">Test in Sandbox</button>
+                </div>
             </div>
         </div>
         
@@ -377,7 +507,13 @@
                     <span class="badge badge-tool">read</span>
                     <span class="badge badge-tool">sessions_send</span>
                 </div>
-                <a href="https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Hawking" class="btn btn-sm btn-outline-info w-100">View Specialized Logic</a>
+                <div class="bg-black p-2 rounded small mb-3" style="font-family: monospace; font-size: 0.7rem; color: #10b981; min-height: 40px;">
+                    Logic: Execute specialized microservice logic via sessions_send...
+                </div>
+                <div class="d-grid gap-2">
+                    <button class="btn btn-sm btn-primary" onclick="window.open('https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Hawking')">Download Agent Files</button>
+                    <button class="btn btn-sm btn-outline-info" onclick="alert('Connecting to Local Sandbox via Cloudflare... Please ensure your local OpenClaw is running with Ollama.')">Test in Sandbox</button>
+                </div>
             </div>
         </div>
         
@@ -393,7 +529,13 @@
                     <span class="badge badge-tool">read</span>
                     <span class="badge badge-tool">sessions_send</span>
                 </div>
-                <a href="https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Bohr" class="btn btn-sm btn-outline-info w-100">View Specialized Logic</a>
+                <div class="bg-black p-2 rounded small mb-3" style="font-family: monospace; font-size: 0.7rem; color: #10b981; min-height: 40px;">
+                    Logic: Execute specialized microservice logic via sessions_send...
+                </div>
+                <div class="d-grid gap-2">
+                    <button class="btn btn-sm btn-primary" onclick="window.open('https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Bohr')">Download Agent Files</button>
+                    <button class="btn btn-sm btn-outline-info" onclick="alert('Connecting to Local Sandbox via Cloudflare... Please ensure your local OpenClaw is running with Ollama.')">Test in Sandbox</button>
+                </div>
             </div>
         </div>
         
@@ -409,7 +551,13 @@
                     <span class="badge badge-tool">read</span>
                     <span class="badge badge-tool">sessions_send</span>
                 </div>
-                <a href="https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Planck" class="btn btn-sm btn-outline-info w-100">View Specialized Logic</a>
+                <div class="bg-black p-2 rounded small mb-3" style="font-family: monospace; font-size: 0.7rem; color: #10b981; min-height: 40px;">
+                    Logic: Execute specialized microservice logic via sessions_send...
+                </div>
+                <div class="d-grid gap-2">
+                    <button class="btn btn-sm btn-primary" onclick="window.open('https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Planck')">Download Agent Files</button>
+                    <button class="btn btn-sm btn-outline-info" onclick="alert('Connecting to Local Sandbox via Cloudflare... Please ensure your local OpenClaw is running with Ollama.')">Test in Sandbox</button>
+                </div>
             </div>
         </div>
         
@@ -425,7 +573,13 @@
                     <span class="badge badge-tool">read</span>
                     <span class="badge badge-tool">sessions_send</span>
                 </div>
-                <a href="https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Feynman" class="btn btn-sm btn-outline-info w-100">View Specialized Logic</a>
+                <div class="bg-black p-2 rounded small mb-3" style="font-family: monospace; font-size: 0.7rem; color: #10b981; min-height: 40px;">
+                    Logic: Execute specialized microservice logic via sessions_send...
+                </div>
+                <div class="d-grid gap-2">
+                    <button class="btn btn-sm btn-primary" onclick="window.open('https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Feynman')">Download Agent Files</button>
+                    <button class="btn btn-sm btn-outline-info" onclick="alert('Connecting to Local Sandbox via Cloudflare... Please ensure your local OpenClaw is running with Ollama.')">Test in Sandbox</button>
+                </div>
             </div>
         </div>
         
@@ -441,7 +595,13 @@
                     <span class="badge badge-tool">read</span>
                     <span class="badge badge-tool">sessions_send</span>
                 </div>
-                <a href="https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Maxwell" class="btn btn-sm btn-outline-info w-100">View Specialized Logic</a>
+                <div class="bg-black p-2 rounded small mb-3" style="font-family: monospace; font-size: 0.7rem; color: #10b981; min-height: 40px;">
+                    Logic: Execute specialized microservice logic via sessions_send...
+                </div>
+                <div class="d-grid gap-2">
+                    <button class="btn btn-sm btn-primary" onclick="window.open('https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Maxwell')">Download Agent Files</button>
+                    <button class="btn btn-sm btn-outline-info" onclick="alert('Connecting to Local Sandbox via Cloudflare... Please ensure your local OpenClaw is running with Ollama.')">Test in Sandbox</button>
+                </div>
             </div>
         </div>
         
@@ -457,7 +617,13 @@
                     <span class="badge badge-tool">read</span>
                     <span class="badge badge-tool">sessions_send</span>
                 </div>
-                <a href="https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Hertz" class="btn btn-sm btn-outline-info w-100">View Specialized Logic</a>
+                <div class="bg-black p-2 rounded small mb-3" style="font-family: monospace; font-size: 0.7rem; color: #10b981; min-height: 40px;">
+                    Logic: Execute specialized microservice logic via sessions_send...
+                </div>
+                <div class="d-grid gap-2">
+                    <button class="btn btn-sm btn-primary" onclick="window.open('https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Hertz')">Download Agent Files</button>
+                    <button class="btn btn-sm btn-outline-info" onclick="alert('Connecting to Local Sandbox via Cloudflare... Please ensure your local OpenClaw is running with Ollama.')">Test in Sandbox</button>
+                </div>
             </div>
         </div>
         
@@ -473,7 +639,13 @@
                     <span class="badge badge-tool">read</span>
                     <span class="badge badge-tool">sessions_send</span>
                 </div>
-                <a href="https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Kepler" class="btn btn-sm btn-outline-info w-100">View Specialized Logic</a>
+                <div class="bg-black p-2 rounded small mb-3" style="font-family: monospace; font-size: 0.7rem; color: #10b981; min-height: 40px;">
+                    Logic: Execute specialized microservice logic via sessions_send...
+                </div>
+                <div class="d-grid gap-2">
+                    <button class="btn btn-sm btn-primary" onclick="window.open('https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Kepler')">Download Agent Files</button>
+                    <button class="btn btn-sm btn-outline-info" onclick="alert('Connecting to Local Sandbox via Cloudflare... Please ensure your local OpenClaw is running with Ollama.')">Test in Sandbox</button>
+                </div>
             </div>
         </div>
         
@@ -489,7 +661,13 @@
                     <span class="badge badge-tool">read</span>
                     <span class="badge badge-tool">sessions_send</span>
                 </div>
-                <a href="https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Copernicus" class="btn btn-sm btn-outline-info w-100">View Specialized Logic</a>
+                <div class="bg-black p-2 rounded small mb-3" style="font-family: monospace; font-size: 0.7rem; color: #10b981; min-height: 40px;">
+                    Logic: Execute specialized microservice logic via sessions_send...
+                </div>
+                <div class="d-grid gap-2">
+                    <button class="btn btn-sm btn-primary" onclick="window.open('https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Copernicus')">Download Agent Files</button>
+                    <button class="btn btn-sm btn-outline-info" onclick="alert('Connecting to Local Sandbox via Cloudflare... Please ensure your local OpenClaw is running with Ollama.')">Test in Sandbox</button>
+                </div>
             </div>
         </div>
         
@@ -505,7 +683,13 @@
                     <span class="badge badge-tool">read</span>
                     <span class="badge badge-tool">sessions_send</span>
                 </div>
-                <a href="https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Brahe" class="btn btn-sm btn-outline-info w-100">View Specialized Logic</a>
+                <div class="bg-black p-2 rounded small mb-3" style="font-family: monospace; font-size: 0.7rem; color: #10b981; min-height: 40px;">
+                    Logic: Execute specialized microservice logic via sessions_send...
+                </div>
+                <div class="d-grid gap-2">
+                    <button class="btn btn-sm btn-primary" onclick="window.open('https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Brahe')">Download Agent Files</button>
+                    <button class="btn btn-sm btn-outline-info" onclick="alert('Connecting to Local Sandbox via Cloudflare... Please ensure your local OpenClaw is running with Ollama.')">Test in Sandbox</button>
+                </div>
             </div>
         </div>
         
@@ -521,7 +705,13 @@
                     <span class="badge badge-tool">read</span>
                     <span class="badge badge-tool">sessions_send</span>
                 </div>
-                <a href="https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Halley" class="btn btn-sm btn-outline-info w-100">View Specialized Logic</a>
+                <div class="bg-black p-2 rounded small mb-3" style="font-family: monospace; font-size: 0.7rem; color: #10b981; min-height: 40px;">
+                    Logic: Execute specialized microservice logic via sessions_send...
+                </div>
+                <div class="d-grid gap-2">
+                    <button class="btn btn-sm btn-primary" onclick="window.open('https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Halley')">Download Agent Files</button>
+                    <button class="btn btn-sm btn-outline-info" onclick="alert('Connecting to Local Sandbox via Cloudflare... Please ensure your local OpenClaw is running with Ollama.')">Test in Sandbox</button>
+                </div>
             </div>
         </div>
         
@@ -537,7 +727,13 @@
                     <span class="badge badge-tool">read</span>
                     <span class="badge badge-tool">sessions_send</span>
                 </div>
-                <a href="https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Hubble" class="btn btn-sm btn-outline-info w-100">View Specialized Logic</a>
+                <div class="bg-black p-2 rounded small mb-3" style="font-family: monospace; font-size: 0.7rem; color: #10b981; min-height: 40px;">
+                    Logic: Execute specialized microservice logic via sessions_send...
+                </div>
+                <div class="d-grid gap-2">
+                    <button class="btn btn-sm btn-primary" onclick="window.open('https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Hubble')">Download Agent Files</button>
+                    <button class="btn btn-sm btn-outline-info" onclick="alert('Connecting to Local Sandbox via Cloudflare... Please ensure your local OpenClaw is running with Ollama.')">Test in Sandbox</button>
+                </div>
             </div>
         </div>
         
@@ -553,7 +749,13 @@
                     <span class="badge badge-tool">read</span>
                     <span class="badge badge-tool">sessions_send</span>
                 </div>
-                <a href="https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Sagan" class="btn btn-sm btn-outline-info w-100">View Specialized Logic</a>
+                <div class="bg-black p-2 rounded small mb-3" style="font-family: monospace; font-size: 0.7rem; color: #10b981; min-height: 40px;">
+                    Logic: Execute specialized microservice logic via sessions_send...
+                </div>
+                <div class="d-grid gap-2">
+                    <button class="btn btn-sm btn-primary" onclick="window.open('https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Sagan')">Download Agent Files</button>
+                    <button class="btn btn-sm btn-outline-info" onclick="alert('Connecting to Local Sandbox via Cloudflare... Please ensure your local OpenClaw is running with Ollama.')">Test in Sandbox</button>
+                </div>
             </div>
         </div>
         
@@ -569,7 +771,13 @@
                     <span class="badge badge-tool">read</span>
                     <span class="badge badge-tool">sessions_send</span>
                 </div>
-                <a href="https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Ada" class="btn btn-sm btn-outline-info w-100">View Specialized Logic</a>
+                <div class="bg-black p-2 rounded small mb-3" style="font-family: monospace; font-size: 0.7rem; color: #10b981; min-height: 40px;">
+                    Logic: Execute specialized microservice logic via sessions_send...
+                </div>
+                <div class="d-grid gap-2">
+                    <button class="btn btn-sm btn-primary" onclick="window.open('https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Ada')">Download Agent Files</button>
+                    <button class="btn btn-sm btn-outline-info" onclick="alert('Connecting to Local Sandbox via Cloudflare... Please ensure your local OpenClaw is running with Ollama.')">Test in Sandbox</button>
+                </div>
             </div>
         </div>
         
@@ -585,7 +793,13 @@
                     <span class="badge badge-tool">read</span>
                     <span class="badge badge-tool">sessions_send</span>
                 </div>
-                <a href="https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Lovelace" class="btn btn-sm btn-outline-info w-100">View Specialized Logic</a>
+                <div class="bg-black p-2 rounded small mb-3" style="font-family: monospace; font-size: 0.7rem; color: #10b981; min-height: 40px;">
+                    Logic: Render live A2UI dashboard of ecosystem health...
+                </div>
+                <div class="d-grid gap-2">
+                    <button class="btn btn-sm btn-primary" onclick="window.open('https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Lovelace')">Download Agent Files</button>
+                    <button class="btn btn-sm btn-outline-info" onclick="alert('Connecting to Local Sandbox via Cloudflare... Please ensure your local OpenClaw is running with Ollama.')">Test in Sandbox</button>
+                </div>
             </div>
         </div>
         
@@ -601,7 +815,13 @@
                     <span class="badge badge-tool">read</span>
                     <span class="badge badge-tool">sessions_send</span>
                 </div>
-                <a href="https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Knuth" class="btn btn-sm btn-outline-info w-100">View Specialized Logic</a>
+                <div class="bg-black p-2 rounded small mb-3" style="font-family: monospace; font-size: 0.7rem; color: #10b981; min-height: 40px;">
+                    Logic: Execute specialized microservice logic via sessions_send...
+                </div>
+                <div class="d-grid gap-2">
+                    <button class="btn btn-sm btn-primary" onclick="window.open('https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Knuth')">Download Agent Files</button>
+                    <button class="btn btn-sm btn-outline-info" onclick="alert('Connecting to Local Sandbox via Cloudflare... Please ensure your local OpenClaw is running with Ollama.')">Test in Sandbox</button>
+                </div>
             </div>
         </div>
         
@@ -617,7 +837,13 @@
                     <span class="badge badge-tool">read</span>
                     <span class="badge badge-tool">sessions_send</span>
                 </div>
-                <a href="https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/BernersLee" class="btn btn-sm btn-outline-info w-100">View Specialized Logic</a>
+                <div class="bg-black p-2 rounded small mb-3" style="font-family: monospace; font-size: 0.7rem; color: #10b981; min-height: 40px;">
+                    Logic: Execute specialized microservice logic via sessions_send...
+                </div>
+                <div class="d-grid gap-2">
+                    <button class="btn btn-sm btn-primary" onclick="window.open('https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/BernersLee')">Download Agent Files</button>
+                    <button class="btn btn-sm btn-outline-info" onclick="alert('Connecting to Local Sandbox via Cloudflare... Please ensure your local OpenClaw is running with Ollama.')">Test in Sandbox</button>
+                </div>
             </div>
         </div>
         
@@ -633,7 +859,13 @@
                     <span class="badge badge-tool">read</span>
                     <span class="badge badge-tool">sessions_send</span>
                 </div>
-                <a href="https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Darwin" class="btn btn-sm btn-outline-info w-100">View Specialized Logic</a>
+                <div class="bg-black p-2 rounded small mb-3" style="font-family: monospace; font-size: 0.7rem; color: #10b981; min-height: 40px;">
+                    Logic: Execute specialized microservice logic via sessions_send...
+                </div>
+                <div class="d-grid gap-2">
+                    <button class="btn btn-sm btn-primary" onclick="window.open('https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Darwin')">Download Agent Files</button>
+                    <button class="btn btn-sm btn-outline-info" onclick="alert('Connecting to Local Sandbox via Cloudflare... Please ensure your local OpenClaw is running with Ollama.')">Test in Sandbox</button>
+                </div>
             </div>
         </div>
         
@@ -649,7 +881,13 @@
                     <span class="badge badge-tool">read</span>
                     <span class="badge badge-tool">sessions_send</span>
                 </div>
-                <a href="https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Mendel" class="btn btn-sm btn-outline-info w-100">View Specialized Logic</a>
+                <div class="bg-black p-2 rounded small mb-3" style="font-family: monospace; font-size: 0.7rem; color: #10b981; min-height: 40px;">
+                    Logic: Execute specialized microservice logic via sessions_send...
+                </div>
+                <div class="d-grid gap-2">
+                    <button class="btn btn-sm btn-primary" onclick="window.open('https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Mendel')">Download Agent Files</button>
+                    <button class="btn btn-sm btn-outline-info" onclick="alert('Connecting to Local Sandbox via Cloudflare... Please ensure your local OpenClaw is running with Ollama.')">Test in Sandbox</button>
+                </div>
             </div>
         </div>
         
@@ -665,7 +903,13 @@
                     <span class="badge badge-tool">read</span>
                     <span class="badge badge-tool">sessions_send</span>
                 </div>
-                <a href="https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Hinton" class="btn btn-sm btn-outline-info w-100">View Specialized Logic</a>
+                <div class="bg-black p-2 rounded small mb-3" style="font-family: monospace; font-size: 0.7rem; color: #10b981; min-height: 40px;">
+                    Logic: Execute specialized microservice logic via sessions_send...
+                </div>
+                <div class="d-grid gap-2">
+                    <button class="btn btn-sm btn-primary" onclick="window.open('https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Hinton')">Download Agent Files</button>
+                    <button class="btn btn-sm btn-outline-info" onclick="alert('Connecting to Local Sandbox via Cloudflare... Please ensure your local OpenClaw is running with Ollama.')">Test in Sandbox</button>
+                </div>
             </div>
         </div>
         
@@ -681,7 +925,13 @@
                     <span class="badge badge-tool">read</span>
                     <span class="badge badge-tool">sessions_send</span>
                 </div>
-                <a href="https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Bengio" class="btn btn-sm btn-outline-info w-100">View Specialized Logic</a>
+                <div class="bg-black p-2 rounded small mb-3" style="font-family: monospace; font-size: 0.7rem; color: #10b981; min-height: 40px;">
+                    Logic: Execute specialized microservice logic via sessions_send...
+                </div>
+                <div class="d-grid gap-2">
+                    <button class="btn btn-sm btn-primary" onclick="window.open('https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Bengio')">Download Agent Files</button>
+                    <button class="btn btn-sm btn-outline-info" onclick="alert('Connecting to Local Sandbox via Cloudflare... Please ensure your local OpenClaw is running with Ollama.')">Test in Sandbox</button>
+                </div>
             </div>
         </div>
         
@@ -697,7 +947,13 @@
                     <span class="badge badge-tool">read</span>
                     <span class="badge badge-tool">sessions_send</span>
                 </div>
-                <a href="https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/LeCun" class="btn btn-sm btn-outline-info w-100">View Specialized Logic</a>
+                <div class="bg-black p-2 rounded small mb-3" style="font-family: monospace; font-size: 0.7rem; color: #10b981; min-height: 40px;">
+                    Logic: Execute specialized microservice logic via sessions_send...
+                </div>
+                <div class="d-grid gap-2">
+                    <button class="btn btn-sm btn-primary" onclick="window.open('https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/LeCun')">Download Agent Files</button>
+                    <button class="btn btn-sm btn-outline-info" onclick="alert('Connecting to Local Sandbox via Cloudflare... Please ensure your local OpenClaw is running with Ollama.')">Test in Sandbox</button>
+                </div>
             </div>
         </div>
         
@@ -713,7 +969,13 @@
                     <span class="badge badge-tool">read</span>
                     <span class="badge badge-tool">sessions_send</span>
                 </div>
-                <a href="https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Ng" class="btn btn-sm btn-outline-info w-100">View Specialized Logic</a>
+                <div class="bg-black p-2 rounded small mb-3" style="font-family: monospace; font-size: 0.7rem; color: #10b981; min-height: 40px;">
+                    Logic: Execute specialized microservice logic via sessions_send...
+                </div>
+                <div class="d-grid gap-2">
+                    <button class="btn btn-sm btn-primary" onclick="window.open('https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Ng')">Download Agent Files</button>
+                    <button class="btn btn-sm btn-outline-info" onclick="alert('Connecting to Local Sandbox via Cloudflare... Please ensure your local OpenClaw is running with Ollama.')">Test in Sandbox</button>
+                </div>
             </div>
         </div>
         
@@ -729,7 +991,13 @@
                     <span class="badge badge-tool">read</span>
                     <span class="badge badge-tool">sessions_send</span>
                 </div>
-                <a href="https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Karpathy" class="btn btn-sm btn-outline-info w-100">View Specialized Logic</a>
+                <div class="bg-black p-2 rounded small mb-3" style="font-family: monospace; font-size: 0.7rem; color: #10b981; min-height: 40px;">
+                    Logic: Execute specialized microservice logic via sessions_send...
+                </div>
+                <div class="d-grid gap-2">
+                    <button class="btn btn-sm btn-primary" onclick="window.open('https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Karpathy')">Download Agent Files</button>
+                    <button class="btn btn-sm btn-outline-info" onclick="alert('Connecting to Local Sandbox via Cloudflare... Please ensure your local OpenClaw is running with Ollama.')">Test in Sandbox</button>
+                </div>
             </div>
         </div>
         
@@ -745,7 +1013,13 @@
                     <span class="badge badge-tool">read</span>
                     <span class="badge badge-tool">sessions_send</span>
                 </div>
-                <a href="https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Sutskever" class="btn btn-sm btn-outline-info w-100">View Specialized Logic</a>
+                <div class="bg-black p-2 rounded small mb-3" style="font-family: monospace; font-size: 0.7rem; color: #10b981; min-height: 40px;">
+                    Logic: Execute specialized microservice logic via sessions_send...
+                </div>
+                <div class="d-grid gap-2">
+                    <button class="btn btn-sm btn-primary" onclick="window.open('https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Sutskever')">Download Agent Files</button>
+                    <button class="btn btn-sm btn-outline-info" onclick="alert('Connecting to Local Sandbox via Cloudflare... Please ensure your local OpenClaw is running with Ollama.')">Test in Sandbox</button>
+                </div>
             </div>
         </div>
         
@@ -761,7 +1035,13 @@
                     <span class="badge badge-tool">read</span>
                     <span class="badge badge-tool">sessions_send</span>
                 </div>
-                <a href="https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Amodei" class="btn btn-sm btn-outline-info w-100">View Specialized Logic</a>
+                <div class="bg-black p-2 rounded small mb-3" style="font-family: monospace; font-size: 0.7rem; color: #10b981; min-height: 40px;">
+                    Logic: Execute specialized microservice logic via sessions_send...
+                </div>
+                <div class="d-grid gap-2">
+                    <button class="btn btn-sm btn-primary" onclick="window.open('https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Amodei')">Download Agent Files</button>
+                    <button class="btn btn-sm btn-outline-info" onclick="alert('Connecting to Local Sandbox via Cloudflare... Please ensure your local OpenClaw is running with Ollama.')">Test in Sandbox</button>
+                </div>
             </div>
         </div>
         
@@ -777,7 +1057,13 @@
                     <span class="badge badge-tool">read</span>
                     <span class="badge badge-tool">sessions_send</span>
                 </div>
-                <a href="https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Wozniak" class="btn btn-sm btn-outline-info w-100">View Specialized Logic</a>
+                <div class="bg-black p-2 rounded small mb-3" style="font-family: monospace; font-size: 0.7rem; color: #10b981; min-height: 40px;">
+                    Logic: Execute specialized microservice logic via sessions_send...
+                </div>
+                <div class="d-grid gap-2">
+                    <button class="btn btn-sm btn-primary" onclick="window.open('https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Wozniak')">Download Agent Files</button>
+                    <button class="btn btn-sm btn-outline-info" onclick="alert('Connecting to Local Sandbox via Cloudflare... Please ensure your local OpenClaw is running with Ollama.')">Test in Sandbox</button>
+                </div>
             </div>
         </div>
         
@@ -793,7 +1079,13 @@
                     <span class="badge badge-tool">read</span>
                     <span class="badge badge-tool">sessions_send</span>
                 </div>
-                <a href="https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Torvalds" class="btn btn-sm btn-outline-info w-100">View Specialized Logic</a>
+                <div class="bg-black p-2 rounded small mb-3" style="font-family: monospace; font-size: 0.7rem; color: #10b981; min-height: 40px;">
+                    Logic: Execute specialized microservice logic via sessions_send...
+                </div>
+                <div class="d-grid gap-2">
+                    <button class="btn btn-sm btn-primary" onclick="window.open('https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Torvalds')">Download Agent Files</button>
+                    <button class="btn btn-sm btn-outline-info" onclick="alert('Connecting to Local Sandbox via Cloudflare... Please ensure your local OpenClaw is running with Ollama.')">Test in Sandbox</button>
+                </div>
             </div>
         </div>
         
@@ -809,7 +1101,13 @@
                     <span class="badge badge-tool">read</span>
                     <span class="badge badge-tool">sessions_send</span>
                 </div>
-                <a href="https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Liskov" class="btn btn-sm btn-outline-info w-100">View Specialized Logic</a>
+                <div class="bg-black p-2 rounded small mb-3" style="font-family: monospace; font-size: 0.7rem; color: #10b981; min-height: 40px;">
+                    Logic: Execute specialized microservice logic via sessions_send...
+                </div>
+                <div class="d-grid gap-2">
+                    <button class="btn btn-sm btn-primary" onclick="window.open('https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Liskov')">Download Agent Files</button>
+                    <button class="btn btn-sm btn-outline-info" onclick="alert('Connecting to Local Sandbox via Cloudflare... Please ensure your local OpenClaw is running with Ollama.')">Test in Sandbox</button>
+                </div>
             </div>
         </div>
         
@@ -825,7 +1123,13 @@
                     <span class="badge badge-tool">read</span>
                     <span class="badge badge-tool">sessions_send</span>
                 </div>
-                <a href="https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Vapnik" class="btn btn-sm btn-outline-info w-100">View Specialized Logic</a>
+                <div class="bg-black p-2 rounded small mb-3" style="font-family: monospace; font-size: 0.7rem; color: #10b981; min-height: 40px;">
+                    Logic: Execute specialized microservice logic via sessions_send...
+                </div>
+                <div class="d-grid gap-2">
+                    <button class="btn btn-sm btn-primary" onclick="window.open('https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Vapnik')">Download Agent Files</button>
+                    <button class="btn btn-sm btn-outline-info" onclick="alert('Connecting to Local Sandbox via Cloudflare... Please ensure your local OpenClaw is running with Ollama.')">Test in Sandbox</button>
+                </div>
             </div>
         </div>
         
@@ -841,7 +1145,13 @@
                     <span class="badge badge-tool">read</span>
                     <span class="badge badge-tool">sessions_send</span>
                 </div>
-                <a href="https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Pearl" class="btn btn-sm btn-outline-info w-100">View Specialized Logic</a>
+                <div class="bg-black p-2 rounded small mb-3" style="font-family: monospace; font-size: 0.7rem; color: #10b981; min-height: 40px;">
+                    Logic: Execute specialized microservice logic via sessions_send...
+                </div>
+                <div class="d-grid gap-2">
+                    <button class="btn btn-sm btn-primary" onclick="window.open('https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Pearl')">Download Agent Files</button>
+                    <button class="btn btn-sm btn-outline-info" onclick="alert('Connecting to Local Sandbox via Cloudflare... Please ensure your local OpenClaw is running with Ollama.')">Test in Sandbox</button>
+                </div>
             </div>
         </div>
         
@@ -857,7 +1167,13 @@
                     <span class="badge badge-tool">read</span>
                     <span class="badge badge-tool">sessions_send</span>
                 </div>
-                <a href="https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Dante" class="btn btn-sm btn-outline-info w-100">View Specialized Logic</a>
+                <div class="bg-black p-2 rounded small mb-3" style="font-family: monospace; font-size: 0.7rem; color: #10b981; min-height: 40px;">
+                    Logic: Execute specialized microservice logic via sessions_send...
+                </div>
+                <div class="d-grid gap-2">
+                    <button class="btn btn-sm btn-primary" onclick="window.open('https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Dante')">Download Agent Files</button>
+                    <button class="btn btn-sm btn-outline-info" onclick="alert('Connecting to Local Sandbox via Cloudflare... Please ensure your local OpenClaw is running with Ollama.')">Test in Sandbox</button>
+                </div>
             </div>
         </div>
         
@@ -873,7 +1189,13 @@
                     <span class="badge badge-tool">read</span>
                     <span class="badge badge-tool">sessions_send</span>
                 </div>
-                <a href="https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Shakespeare" class="btn btn-sm btn-outline-info w-100">View Specialized Logic</a>
+                <div class="bg-black p-2 rounded small mb-3" style="font-family: monospace; font-size: 0.7rem; color: #10b981; min-height: 40px;">
+                    Logic: Execute specialized microservice logic via sessions_send...
+                </div>
+                <div class="d-grid gap-2">
+                    <button class="btn btn-sm btn-primary" onclick="window.open('https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Shakespeare')">Download Agent Files</button>
+                    <button class="btn btn-sm btn-outline-info" onclick="alert('Connecting to Local Sandbox via Cloudflare... Please ensure your local OpenClaw is running with Ollama.')">Test in Sandbox</button>
+                </div>
             </div>
         </div>
         
@@ -889,7 +1211,13 @@
                     <span class="badge badge-tool">read</span>
                     <span class="badge badge-tool">sessions_send</span>
                 </div>
-                <a href="https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Mozart" class="btn btn-sm btn-outline-info w-100">View Specialized Logic</a>
+                <div class="bg-black p-2 rounded small mb-3" style="font-family: monospace; font-size: 0.7rem; color: #10b981; min-height: 40px;">
+                    Logic: Execute specialized microservice logic via sessions_send...
+                </div>
+                <div class="d-grid gap-2">
+                    <button class="btn btn-sm btn-primary" onclick="window.open('https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Mozart')">Download Agent Files</button>
+                    <button class="btn btn-sm btn-outline-info" onclick="alert('Connecting to Local Sandbox via Cloudflare... Please ensure your local OpenClaw is running with Ollama.')">Test in Sandbox</button>
+                </div>
             </div>
         </div>
         
@@ -905,7 +1233,13 @@
                     <span class="badge badge-tool">read</span>
                     <span class="badge badge-tool">sessions_send</span>
                 </div>
-                <a href="https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Socrates" class="btn btn-sm btn-outline-info w-100">View Specialized Logic</a>
+                <div class="bg-black p-2 rounded small mb-3" style="font-family: monospace; font-size: 0.7rem; color: #10b981; min-height: 40px;">
+                    Logic: Execute specialized microservice logic via sessions_send...
+                </div>
+                <div class="d-grid gap-2">
+                    <button class="btn btn-sm btn-primary" onclick="window.open('https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Socrates')">Download Agent Files</button>
+                    <button class="btn btn-sm btn-outline-info" onclick="alert('Connecting to Local Sandbox via Cloudflare... Please ensure your local OpenClaw is running with Ollama.')">Test in Sandbox</button>
+                </div>
             </div>
         </div>
         
@@ -921,7 +1255,13 @@
                     <span class="badge badge-tool">read</span>
                     <span class="badge badge-tool">sessions_send</span>
                 </div>
-                <a href="https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Plato" class="btn btn-sm btn-outline-info w-100">View Specialized Logic</a>
+                <div class="bg-black p-2 rounded small mb-3" style="font-family: monospace; font-size: 0.7rem; color: #10b981; min-height: 40px;">
+                    Logic: Execute specialized microservice logic via sessions_send...
+                </div>
+                <div class="d-grid gap-2">
+                    <button class="btn btn-sm btn-primary" onclick="window.open('https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Plato')">Download Agent Files</button>
+                    <button class="btn btn-sm btn-outline-info" onclick="alert('Connecting to Local Sandbox via Cloudflare... Please ensure your local OpenClaw is running with Ollama.')">Test in Sandbox</button>
+                </div>
             </div>
         </div>
         
@@ -937,7 +1277,13 @@
                     <span class="badge badge-tool">read</span>
                     <span class="badge badge-tool">sessions_send</span>
                 </div>
-                <a href="https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Aristotle" class="btn btn-sm btn-outline-info w-100">View Specialized Logic</a>
+                <div class="bg-black p-2 rounded small mb-3" style="font-family: monospace; font-size: 0.7rem; color: #10b981; min-height: 40px;">
+                    Logic: Execute specialized microservice logic via sessions_send...
+                </div>
+                <div class="d-grid gap-2">
+                    <button class="btn btn-sm btn-primary" onclick="window.open('https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Aristotle')">Download Agent Files</button>
+                    <button class="btn btn-sm btn-outline-info" onclick="alert('Connecting to Local Sandbox via Cloudflare... Please ensure your local OpenClaw is running with Ollama.')">Test in Sandbox</button>
+                </div>
             </div>
         </div>
         
@@ -953,7 +1299,13 @@
                     <span class="badge badge-tool">read</span>
                     <span class="badge badge-tool">sessions_send</span>
                 </div>
-                <a href="https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Nietzsche" class="btn btn-sm btn-outline-info w-100">View Specialized Logic</a>
+                <div class="bg-black p-2 rounded small mb-3" style="font-family: monospace; font-size: 0.7rem; color: #10b981; min-height: 40px;">
+                    Logic: Execute specialized microservice logic via sessions_send...
+                </div>
+                <div class="d-grid gap-2">
+                    <button class="btn btn-sm btn-primary" onclick="window.open('https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Nietzsche')">Download Agent Files</button>
+                    <button class="btn btn-sm btn-outline-info" onclick="alert('Connecting to Local Sandbox via Cloudflare... Please ensure your local OpenClaw is running with Ollama.')">Test in Sandbox</button>
+                </div>
             </div>
         </div>
         
@@ -969,7 +1321,13 @@
                     <span class="badge badge-tool">read</span>
                     <span class="badge badge-tool">sessions_send</span>
                 </div>
-                <a href="https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Kant" class="btn btn-sm btn-outline-info w-100">View Specialized Logic</a>
+                <div class="bg-black p-2 rounded small mb-3" style="font-family: monospace; font-size: 0.7rem; color: #10b981; min-height: 40px;">
+                    Logic: Execute specialized microservice logic via sessions_send...
+                </div>
+                <div class="d-grid gap-2">
+                    <button class="btn btn-sm btn-primary" onclick="window.open('https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Kant')">Download Agent Files</button>
+                    <button class="btn btn-sm btn-outline-info" onclick="alert('Connecting to Local Sandbox via Cloudflare... Please ensure your local OpenClaw is running with Ollama.')">Test in Sandbox</button>
+                </div>
             </div>
         </div>
         
@@ -985,7 +1343,13 @@
                     <span class="badge badge-tool">read</span>
                     <span class="badge badge-tool">sessions_send</span>
                 </div>
-                <a href="https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Hegel" class="btn btn-sm btn-outline-info w-100">View Specialized Logic</a>
+                <div class="bg-black p-2 rounded small mb-3" style="font-family: monospace; font-size: 0.7rem; color: #10b981; min-height: 40px;">
+                    Logic: Execute specialized microservice logic via sessions_send...
+                </div>
+                <div class="d-grid gap-2">
+                    <button class="btn btn-sm btn-primary" onclick="window.open('https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Hegel')">Download Agent Files</button>
+                    <button class="btn btn-sm btn-outline-info" onclick="alert('Connecting to Local Sandbox via Cloudflare... Please ensure your local OpenClaw is running with Ollama.')">Test in Sandbox</button>
+                </div>
             </div>
         </div>
         
@@ -1001,7 +1365,13 @@
                     <span class="badge badge-tool">read</span>
                     <span class="badge badge-tool">sessions_send</span>
                 </div>
-                <a href="https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Spinoza" class="btn btn-sm btn-outline-info w-100">View Specialized Logic</a>
+                <div class="bg-black p-2 rounded small mb-3" style="font-family: monospace; font-size: 0.7rem; color: #10b981; min-height: 40px;">
+                    Logic: Execute specialized microservice logic via sessions_send...
+                </div>
+                <div class="d-grid gap-2">
+                    <button class="btn btn-sm btn-primary" onclick="window.open('https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Spinoza')">Download Agent Files</button>
+                    <button class="btn btn-sm btn-outline-info" onclick="alert('Connecting to Local Sandbox via Cloudflare... Please ensure your local OpenClaw is running with Ollama.')">Test in Sandbox</button>
+                </div>
             </div>
         </div>
         
@@ -1017,7 +1387,13 @@
                     <span class="badge badge-tool">read</span>
                     <span class="badge badge-tool">sessions_send</span>
                 </div>
-                <a href="https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Locke" class="btn btn-sm btn-outline-info w-100">View Specialized Logic</a>
+                <div class="bg-black p-2 rounded small mb-3" style="font-family: monospace; font-size: 0.7rem; color: #10b981; min-height: 40px;">
+                    Logic: Execute specialized microservice logic via sessions_send...
+                </div>
+                <div class="d-grid gap-2">
+                    <button class="btn btn-sm btn-primary" onclick="window.open('https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Locke')">Download Agent Files</button>
+                    <button class="btn btn-sm btn-outline-info" onclick="alert('Connecting to Local Sandbox via Cloudflare... Please ensure your local OpenClaw is running with Ollama.')">Test in Sandbox</button>
+                </div>
             </div>
         </div>
         
@@ -1033,7 +1409,13 @@
                     <span class="badge badge-tool">read</span>
                     <span class="badge badge-tool">sessions_send</span>
                 </div>
-                <a href="https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Hume" class="btn btn-sm btn-outline-info w-100">View Specialized Logic</a>
+                <div class="bg-black p-2 rounded small mb-3" style="font-family: monospace; font-size: 0.7rem; color: #10b981; min-height: 40px;">
+                    Logic: Execute specialized microservice logic via sessions_send...
+                </div>
+                <div class="d-grid gap-2">
+                    <button class="btn btn-sm btn-primary" onclick="window.open('https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Hume')">Download Agent Files</button>
+                    <button class="btn btn-sm btn-outline-info" onclick="alert('Connecting to Local Sandbox via Cloudflare... Please ensure your local OpenClaw is running with Ollama.')">Test in Sandbox</button>
+                </div>
             </div>
         </div>
         
@@ -1049,7 +1431,13 @@
                     <span class="badge badge-tool">read</span>
                     <span class="badge badge-tool">sessions_send</span>
                 </div>
-                <a href="https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Voltaire" class="btn btn-sm btn-outline-info w-100">View Specialized Logic</a>
+                <div class="bg-black p-2 rounded small mb-3" style="font-family: monospace; font-size: 0.7rem; color: #10b981; min-height: 40px;">
+                    Logic: Execute specialized microservice logic via sessions_send...
+                </div>
+                <div class="d-grid gap-2">
+                    <button class="btn btn-sm btn-primary" onclick="window.open('https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Voltaire')">Download Agent Files</button>
+                    <button class="btn btn-sm btn-outline-info" onclick="alert('Connecting to Local Sandbox via Cloudflare... Please ensure your local OpenClaw is running with Ollama.')">Test in Sandbox</button>
+                </div>
             </div>
         </div>
         
@@ -1065,7 +1453,13 @@
                     <span class="badge badge-tool">read</span>
                     <span class="badge badge-tool">sessions_send</span>
                 </div>
-                <a href="https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Rousseau" class="btn btn-sm btn-outline-info w-100">View Specialized Logic</a>
+                <div class="bg-black p-2 rounded small mb-3" style="font-family: monospace; font-size: 0.7rem; color: #10b981; min-height: 40px;">
+                    Logic: Execute specialized microservice logic via sessions_send...
+                </div>
+                <div class="d-grid gap-2">
+                    <button class="btn btn-sm btn-primary" onclick="window.open('https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Rousseau')">Download Agent Files</button>
+                    <button class="btn btn-sm btn-outline-info" onclick="alert('Connecting to Local Sandbox via Cloudflare... Please ensure your local OpenClaw is running with Ollama.')">Test in Sandbox</button>
+                </div>
             </div>
         </div>
         
@@ -1081,7 +1475,13 @@
                     <span class="badge badge-tool">read</span>
                     <span class="badge badge-tool">sessions_send</span>
                 </div>
-                <a href="https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Montesquieu" class="btn btn-sm btn-outline-info w-100">View Specialized Logic</a>
+                <div class="bg-black p-2 rounded small mb-3" style="font-family: monospace; font-size: 0.7rem; color: #10b981; min-height: 40px;">
+                    Logic: Execute specialized microservice logic via sessions_send...
+                </div>
+                <div class="d-grid gap-2">
+                    <button class="btn btn-sm btn-primary" onclick="window.open('https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Montesquieu')">Download Agent Files</button>
+                    <button class="btn btn-sm btn-outline-info" onclick="alert('Connecting to Local Sandbox via Cloudflare... Please ensure your local OpenClaw is running with Ollama.')">Test in Sandbox</button>
+                </div>
             </div>
         </div>
         
@@ -1097,7 +1497,13 @@
                     <span class="badge badge-tool">read</span>
                     <span class="badge badge-tool">sessions_send</span>
                 </div>
-                <a href="https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/MarcusAurelius" class="btn btn-sm btn-outline-info w-100">View Specialized Logic</a>
+                <div class="bg-black p-2 rounded small mb-3" style="font-family: monospace; font-size: 0.7rem; color: #10b981; min-height: 40px;">
+                    Logic: Execute specialized microservice logic via sessions_send...
+                </div>
+                <div class="d-grid gap-2">
+                    <button class="btn btn-sm btn-primary" onclick="window.open('https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/MarcusAurelius')">Download Agent Files</button>
+                    <button class="btn btn-sm btn-outline-info" onclick="alert('Connecting to Local Sandbox via Cloudflare... Please ensure your local OpenClaw is running with Ollama.')">Test in Sandbox</button>
+                </div>
             </div>
         </div>
         
@@ -1113,7 +1519,13 @@
                     <span class="badge badge-tool">read</span>
                     <span class="badge badge-tool">sessions_send</span>
                 </div>
-                <a href="https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Seneca" class="btn btn-sm btn-outline-info w-100">View Specialized Logic</a>
+                <div class="bg-black p-2 rounded small mb-3" style="font-family: monospace; font-size: 0.7rem; color: #10b981; min-height: 40px;">
+                    Logic: Execute specialized microservice logic via sessions_send...
+                </div>
+                <div class="d-grid gap-2">
+                    <button class="btn btn-sm btn-primary" onclick="window.open('https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Seneca')">Download Agent Files</button>
+                    <button class="btn btn-sm btn-outline-info" onclick="alert('Connecting to Local Sandbox via Cloudflare... Please ensure your local OpenClaw is running with Ollama.')">Test in Sandbox</button>
+                </div>
             </div>
         </div>
         
@@ -1129,7 +1541,13 @@
                     <span class="badge badge-tool">read</span>
                     <span class="badge badge-tool">sessions_send</span>
                 </div>
-                <a href="https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Cicero" class="btn btn-sm btn-outline-info w-100">View Specialized Logic</a>
+                <div class="bg-black p-2 rounded small mb-3" style="font-family: monospace; font-size: 0.7rem; color: #10b981; min-height: 40px;">
+                    Logic: Execute specialized microservice logic via sessions_send...
+                </div>
+                <div class="d-grid gap-2">
+                    <button class="btn btn-sm btn-primary" onclick="window.open('https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Cicero')">Download Agent Files</button>
+                    <button class="btn btn-sm btn-outline-info" onclick="alert('Connecting to Local Sandbox via Cloudflare... Please ensure your local OpenClaw is running with Ollama.')">Test in Sandbox</button>
+                </div>
             </div>
         </div>
         
@@ -1145,7 +1563,13 @@
                     <span class="badge badge-tool">read</span>
                     <span class="badge badge-tool">sessions_send</span>
                 </div>
-                <a href="https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Herodotus" class="btn btn-sm btn-outline-info w-100">View Specialized Logic</a>
+                <div class="bg-black p-2 rounded small mb-3" style="font-family: monospace; font-size: 0.7rem; color: #10b981; min-height: 40px;">
+                    Logic: Execute specialized microservice logic via sessions_send...
+                </div>
+                <div class="d-grid gap-2">
+                    <button class="btn btn-sm btn-primary" onclick="window.open('https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Herodotus')">Download Agent Files</button>
+                    <button class="btn btn-sm btn-outline-info" onclick="alert('Connecting to Local Sandbox via Cloudflare... Please ensure your local OpenClaw is running with Ollama.')">Test in Sandbox</button>
+                </div>
             </div>
         </div>
         
@@ -1161,7 +1585,13 @@
                     <span class="badge badge-tool">read</span>
                     <span class="badge badge-tool">sessions_send</span>
                 </div>
-                <a href="https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Thucydides" class="btn btn-sm btn-outline-info w-100">View Specialized Logic</a>
+                <div class="bg-black p-2 rounded small mb-3" style="font-family: monospace; font-size: 0.7rem; color: #10b981; min-height: 40px;">
+                    Logic: Execute specialized microservice logic via sessions_send...
+                </div>
+                <div class="d-grid gap-2">
+                    <button class="btn btn-sm btn-primary" onclick="window.open('https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Thucydides')">Download Agent Files</button>
+                    <button class="btn btn-sm btn-outline-info" onclick="alert('Connecting to Local Sandbox via Cloudflare... Please ensure your local OpenClaw is running with Ollama.')">Test in Sandbox</button>
+                </div>
             </div>
         </div>
         
@@ -1177,7 +1607,13 @@
                     <span class="badge badge-tool">read</span>
                     <span class="badge badge-tool">sessions_send</span>
                 </div>
-                <a href="https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Harari" class="btn btn-sm btn-outline-info w-100">View Specialized Logic</a>
+                <div class="bg-black p-2 rounded small mb-3" style="font-family: monospace; font-size: 0.7rem; color: #10b981; min-height: 40px;">
+                    Logic: Execute specialized microservice logic via sessions_send...
+                </div>
+                <div class="d-grid gap-2">
+                    <button class="btn btn-sm btn-primary" onclick="window.open('https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Harari')">Download Agent Files</button>
+                    <button class="btn btn-sm btn-outline-info" onclick="alert('Connecting to Local Sandbox via Cloudflare... Please ensure your local OpenClaw is running with Ollama.')">Test in Sandbox</button>
+                </div>
             </div>
         </div>
         
@@ -1193,7 +1629,13 @@
                     <span class="badge badge-tool">read</span>
                     <span class="badge badge-tool">sessions_send</span>
                 </div>
-                <a href="https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Bostrom" class="btn btn-sm btn-outline-info w-100">View Specialized Logic</a>
+                <div class="bg-black p-2 rounded small mb-3" style="font-family: monospace; font-size: 0.7rem; color: #10b981; min-height: 40px;">
+                    Logic: Execute specialized microservice logic via sessions_send...
+                </div>
+                <div class="d-grid gap-2">
+                    <button class="btn btn-sm btn-primary" onclick="window.open('https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Bostrom')">Download Agent Files</button>
+                    <button class="btn btn-sm btn-outline-info" onclick="alert('Connecting to Local Sandbox via Cloudflare... Please ensure your local OpenClaw is running with Ollama.')">Test in Sandbox</button>
+                </div>
             </div>
         </div>
         
@@ -1209,7 +1651,13 @@
                     <span class="badge badge-tool">read</span>
                     <span class="badge badge-tool">sessions_send</span>
                 </div>
-                <a href="https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Musk" class="btn btn-sm btn-outline-info w-100">View Specialized Logic</a>
+                <div class="bg-black p-2 rounded small mb-3" style="font-family: monospace; font-size: 0.7rem; color: #10b981; min-height: 40px;">
+                    Logic: Execute specialized microservice logic via sessions_send...
+                </div>
+                <div class="d-grid gap-2">
+                    <button class="btn btn-sm btn-primary" onclick="window.open('https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Musk')">Download Agent Files</button>
+                    <button class="btn btn-sm btn-outline-info" onclick="alert('Connecting to Local Sandbox via Cloudflare... Please ensure your local OpenClaw is running with Ollama.')">Test in Sandbox</button>
+                </div>
             </div>
         </div>
         
@@ -1225,7 +1673,13 @@
                     <span class="badge badge-tool">read</span>
                     <span class="badge badge-tool">sessions_send</span>
                 </div>
-                <a href="https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Gates" class="btn btn-sm btn-outline-info w-100">View Specialized Logic</a>
+                <div class="bg-black p-2 rounded small mb-3" style="font-family: monospace; font-size: 0.7rem; color: #10b981; min-height: 40px;">
+                    Logic: Execute specialized microservice logic via sessions_send...
+                </div>
+                <div class="d-grid gap-2">
+                    <button class="btn btn-sm btn-primary" onclick="window.open('https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Gates')">Download Agent Files</button>
+                    <button class="btn btn-sm btn-outline-info" onclick="alert('Connecting to Local Sandbox via Cloudflare... Please ensure your local OpenClaw is running with Ollama.')">Test in Sandbox</button>
+                </div>
             </div>
         </div>
         
@@ -1241,7 +1695,13 @@
                     <span class="badge badge-tool">read</span>
                     <span class="badge badge-tool">sessions_send</span>
                 </div>
-                <a href="https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Jobs" class="btn btn-sm btn-outline-info w-100">View Specialized Logic</a>
+                <div class="bg-black p-2 rounded small mb-3" style="font-family: monospace; font-size: 0.7rem; color: #10b981; min-height: 40px;">
+                    Logic: Execute specialized microservice logic via sessions_send...
+                </div>
+                <div class="d-grid gap-2">
+                    <button class="btn btn-sm btn-primary" onclick="window.open('https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Jobs')">Download Agent Files</button>
+                    <button class="btn btn-sm btn-outline-info" onclick="alert('Connecting to Local Sandbox via Cloudflare... Please ensure your local OpenClaw is running with Ollama.')">Test in Sandbox</button>
+                </div>
             </div>
         </div>
         
@@ -1257,7 +1717,13 @@
                     <span class="badge badge-tool">read</span>
                     <span class="badge badge-tool">sessions_send</span>
                 </div>
-                <a href="https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Zuckerberg" class="btn btn-sm btn-outline-info w-100">View Specialized Logic</a>
+                <div class="bg-black p-2 rounded small mb-3" style="font-family: monospace; font-size: 0.7rem; color: #10b981; min-height: 40px;">
+                    Logic: Execute specialized microservice logic via sessions_send...
+                </div>
+                <div class="d-grid gap-2">
+                    <button class="btn btn-sm btn-primary" onclick="window.open('https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Zuckerberg')">Download Agent Files</button>
+                    <button class="btn btn-sm btn-outline-info" onclick="alert('Connecting to Local Sandbox via Cloudflare... Please ensure your local OpenClaw is running with Ollama.')">Test in Sandbox</button>
+                </div>
             </div>
         </div>
         
@@ -1273,7 +1739,13 @@
                     <span class="badge badge-tool">read</span>
                     <span class="badge badge-tool">sessions_send</span>
                 </div>
-                <a href="https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Hassabis" class="btn btn-sm btn-outline-info w-100">View Specialized Logic</a>
+                <div class="bg-black p-2 rounded small mb-3" style="font-family: monospace; font-size: 0.7rem; color: #10b981; min-height: 40px;">
+                    Logic: Execute specialized microservice logic via sessions_send...
+                </div>
+                <div class="d-grid gap-2">
+                    <button class="btn btn-sm btn-primary" onclick="window.open('https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Hassabis')">Download Agent Files</button>
+                    <button class="btn btn-sm btn-outline-info" onclick="alert('Connecting to Local Sandbox via Cloudflare... Please ensure your local OpenClaw is running with Ollama.')">Test in Sandbox</button>
+                </div>
             </div>
         </div>
         
@@ -1289,7 +1761,13 @@
                     <span class="badge badge-tool">read</span>
                     <span class="badge badge-tool">sessions_send</span>
                 </div>
-                <a href="https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Kahn" class="btn btn-sm btn-outline-info w-100">View Specialized Logic</a>
+                <div class="bg-black p-2 rounded small mb-3" style="font-family: monospace; font-size: 0.7rem; color: #10b981; min-height: 40px;">
+                    Logic: Execute specialized microservice logic via sessions_send...
+                </div>
+                <div class="d-grid gap-2">
+                    <button class="btn btn-sm btn-primary" onclick="window.open('https://github.com/atkaratas/AgentCraft/tree/main/templates/elite-100/Kahn')">Download Agent Files</button>
+                    <button class="btn btn-sm btn-outline-info" onclick="alert('Connecting to Local Sandbox via Cloudflare... Please ensure your local OpenClaw is running with Ollama.')">Test in Sandbox</button>
+                </div>
             </div>
         </div>
         
