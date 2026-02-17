@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgentCraft | Elite 100 Multiverse Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body { 
+            background-color: #000000; 
+            color: #ef4444; 
+            font-family: 'JetBrains Mono', monospace; 
+            background-image: radial-gradient(#052e16 1px, transparent 1px); 
+            background-size: 30px 30px; 
+        }
+        .agent-card { 
+            background: rgba(0, 0, 0, 0.9); 
+            border: 1px solid #14532d; 
+            transition: all 0.3s;
+        }
+        .agent-card:hover { 
+            border-color: #ef4444; 
+            box-shadow: 0 0 20px rgba(239, 68, 68, 0.2);
+            transform: translateY(-2px);
+        }
+        .terminal-box {
+            background: #050505;
+            border: 1px solid #14532d;
+            font-size: 0.75rem;
+            color: #10b981;
+        }
+        .active-glow {
+            box-shadow: 0 0 10px #ef4444;
+        }
+        /* Custom scrollbar */
+        ::-webkit-scrollbar { width: 5px; }
+        ::-webkit-scrollbar-track { background: #000; }
+        ::-webkit-scrollbar-thumb { background: #14532d; }
+        ::-webkit-scrollbar-thumb:hover { background: #ef4444; }
+    </style>
+</head>
+<body class="p-4 md:p-8 min-h-screen">
+    <!-- Overlay for CRT effect if needed -->
+    <div class="fixed top-0 left-0 w-full h-full pointer-events-none opacity-[0.03] bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')]"></div>
+
+    <header class="max-w-7xl mx-auto mb-12 flex flex-col md:flex-row justify-between items-center gap-6">
+        <div>
+            <h1 class="text-4xl font-black tracking-tighter text-white">AGENTCRAFT <span class="text-red-600 text-sm">v2.1_COLLECTIVE</span></h1>
+            <p class="text-xs text-green-700 font-mono mt-1 uppercase tracking-widest">Part of the FreeClaw Multiverse Ecosystem</p>
+        </div>
+        <div class="flex gap-4">
+            <div class="px-4 py-2 border border-green-900 bg-black/50 text-[10px] flex flex-col items-center">
+                <span class="text-gray-500">SHARED BRAIN SYNC</span>
+                <span class="text-green-500 font-bold animate-pulse" id="global-sync-status">COLLECTIVE_ACTIVE</span>
+            </div>
+            <div class="px-4 py-2 border border-green-900 bg-black/50 text-[10px] flex flex-col">
+                <span class="text-gray-500">UPLINK STATUS</span>
+                <span class="text-green-500 font-bold">SECURE / ACTIVE</span>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto">
+        <!-- Agent Chat / Dashboard UI (Hidden by default, shown on select) -->
+        <div id="dashboard-overlay" class="fixed inset-0 bg-black/95 z-50 p-4 md:p-8 hidden overflow-y-auto">
+            <div class="max-w-6xl mx-auto h-full flex flex-col">
+                <div class="flex justify-between items-start mb-6 gap-4">
+                    <div class="flex-grow">
+                        <h2 id="active-agent-name" class="text-3xl font-black text-white">AGENT_NAME</h2>
+                        <p id="active-agent-role" class="text-xs text-red-600 uppercase tracking-widest mt-1">Specialist</p>
+                    </div>
+                    
+                    <!-- Outcome / Artifact Box -->
+                    <div class="w-64 border border-green-900 bg-black/80 p-2 overflow-hidden flex flex-col h-24">
+                        <div class="text-[9px] text-green-700 font-bold mb-1 uppercase tracking-tighter border-b border-green-900/30">/Generated_Artifacts</div>
+                        <div id="artifact-list" class="flex-grow overflow-y-auto space-y-1">
+                            <div class="text-[9px] text-gray-600 italic">No artifacts generated yet.</div>
+                        </div>
+                    </div>
+
+                    <button onclick="closeDashboard()" class="text-red-600 hover:text-white border border-red-900 px-4 py-1 text-xs font-bold">/CLOSE_UPLINK</button>
+                </div>
+
+                <!-- Preview Modal (Hidden by default) -->
+                <div id="preview-modal" class="fixed inset-4 bg-black border-2 border-green-900 z-[60] hidden flex flex-col shadow-2xl">
+                    <div class="p-3 border-b border-green-900 flex justify-between items-center bg-green-900/10">
+                        <span id="preview-title" class="text-xs font-bold text-white uppercase tracking-widest">Preview: artifact.pdf</span>
+                        <button onclick="closePreview()" class="text-red-600 font-bold hover:text-white px-2"> [X] CLOSE_PREVIEW </button>
+                    </div>
+                    <div id="preview-content" class="flex-grow overflow-auto p-4 bg-white/5">
+                        <!-- Content injected here -->
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 flex-grow overflow-hidden">
+                    <!-- Chat Interface -->
+                    <div class="lg:col-span-2 flex flex-col border border-green-900 bg-black/50 rounded-sm overflow-hidden">
+                        <div class="bg-green-900/10 p-2 border-bottom border-green-900 text-[10px] text-green-700 font-bold">
+                            ENCRYPTED_CHANNEL // SECURE_TEXT_COMM
+                        </div>
+                        <div id="chat-history" class="flex-grow p-4 space-y-4 overflow-y-auto font-mono text-sm">
+                            <div class="text-gray-500">[SYSTEM] Establishing direct neural link...</div>
+                        </div>
+                        <div class="p-4 border-t border-green-900 flex gap-2">
+                            <input type="text" id="chat-input" placeholder="Type command..." class="flex-grow bg-black border border-green-900 p-2 text-white font-mono text-sm focus:outline-none focus:border-red-600" onkeydown="if(event.key === 'Enter') sendMessage()">
+                            <button onclick="sendMessage()" class="bg-red-600 text-black px-6 font-bold text-sm hover:bg-red-500">SEND</button>
+                        </div>
+                    </div>
+
+                    <!-- Agent Autonomous Status / Logs Dashboard -->
+                    <div class="flex flex-col gap-4 overflow-hidden">
+                        <div class="border border-green-900 bg-black p-4 flex flex-col h-1/2 overflow-hidden">
+                            <h3 class="text-xs font-bold text-white mb-2 uppercase tracking-tighter flex justify-between">
+                                <span>/Autonomous_Queue</span>
+                                <span class="text-red-600 animate-pulse" id="queue-status">IDLE</span>
+                            </h3>
+                            <div id="task-list" class="flex-grow overflow-y-auto font-mono text-[10px] space-y-2">
+                                <div class="text-gray-600 italic">No active directives.</div>
+                            </div>
+                        </div>
+
+                        <div class="border border-green-900 bg-black p-4 flex flex-col h-1/2 overflow-hidden">
+                            <h3 class="text-xs font-bold text-white mb-2 uppercase tracking-tighter">/Internal_Process_Logs</h3>
+                            <div id="internal-logs" class="flex-grow overflow-y-auto font-mono text-[9px] text-green-700 bg-black/80 p-2 leading-tight">
+                                <div class="opacity-30">> Waiting for uplink...</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Agent Grid -->
+        <div id="agent-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <!-- Loaded via JS -->
+            <div class="col-span-full text-center py-20 text-green-900 font-bold animate-pulse">INITIATING AGENT SCAN...</div>
+        </div>
+    </main>
+
+    <footer class="max-w-7xl mx-auto mt-20 pt-8 border-t border-green-900/30 text-center">
+        <p class="text-[10px] text-gray-600 uppercase tracking-[0.5em]">&copy; 2026 Mac Mini Cloud HQ | SECURED BY FREECLAW_SENTINEL</p>
+    </footer>
+
+    <script>
+        const AGENTS = [
+            "Leonardo", "Brunelleschi", "Pascal", "Leibniz", "Euclid", "Pythagoras", "Archimedes", "Khwarizmi", "Fibonacci",
+            "Turing", "Security Sentinel", "Machiavelli", "Hopper", "Shannon", "Altman", "Cerf", "Carmack",
+            "Tesla", "Galileo", "Newton", "Einstein", "Hawking", "Bohr", "Planck", "Feynman", "Maxwell", "Hertz", "Kepler", "Copernicus", "Brahe", "Halley", "Hubble", "Sagan",
+            "Ada", "Lovelace", "Knuth", "BernersLee", "Darwin", "Mendel", "Hinton", "Bengio", "LeCun", "Ng", "Karpathy", "Sutskever", "Amodei", "Wozniak", "Torvalds", "Liskov", "Vapnik", "Pearl",
+            "Dante", "Shakespeare", "Mozart", "Socrates", "Plato", "Aristotle", "Nietzsche", "Kant", "Hegel", "Spinoza", "Locke", "Hume", "Voltaire", "Rousseau", "Montesquieu", "MarcusAurelius", "Seneca", "Cicero", "Herodotus", "Thucydides", "Harari", "Bostrom",
+            "Musk", "Gates", "Jobs", "Zuckerberg", "Hassabis", "Kahn"
+        ];
+
+        const CATEGORIES = {
+            "Architecture/Logic": ["Leonardo", "Brunelleschi", "Pascal", "Leibniz", "Euclid", "Pythagoras", "Archimedes", "Khwarizmi", "Fibonacci"],
+            "Security/Cryptography": ["Turing", "Security Sentinel", "Machiavelli", "Hopper", "Shannon", "Altman", "Cerf", "Carmack"],
+            "Physics/Energy": ["Tesla", "Galileo", "Newton", "Einstein", "Hawking", "Bohr", "Planck", "Feynman", "Maxwell", "Hertz", "Kepler", "Copernicus", "Brahe", "Halley", "Hubble", "Sagan"],
+            "Code/Data/AI": ["Ada", "Lovelace", "Knuth", "BernersLee", "Darwin", "Mendel", "Hinton", "Bengio", "LeCun", "Ng", "Karpathy", "Sutskever", "Amodei", "Wozniak", "Torvalds", "Liskov", "Vapnik", "Pearl"],
+            "Strategy/Philosophy": ["Dante", "Shakespeare", "Mozart", "Socrates", "Plato", "Aristotle", "Nietzsche", "Kant", "Hegel", "Spinoza", "Locke", "Hume", "Voltaire", "Rousseau", "Montesquieu", "MarcusAurelius", "Seneca", "Cicero", "Herodotus", "Thucydides", "Harari", "Bostrom"],
+            "Infrastructure/Scaling": ["Musk", "Gates", "Jobs", "Zuckerberg", "Hassabis", "Kahn"]
+        };
+
+        function getCategory(name) {
+            for (let cat in CATEGORIES) {
+                if (CATEGORIES[cat].includes(name)) return cat;
+            }
+            return "Generalist";
+        }
+
+        function initGrid() {
+            const grid = document.getElementById('agent-grid');
+            grid.innerHTML = '';
+            AGENTS.forEach(name => {
+                const cat = getCategory(name);
+                const card = document.createElement('div');
+                card.className = "agent-card p-6 flex flex-col cursor-pointer";
+                card.onclick = () => openDashboard(name, cat);
+                card.innerHTML = `
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-white font-bold">${name}</h3>
+                        <span class="text-xs text-red-600 font-mono">/ELITE</span>
+                    </div>
+                    <div class="text-[10px] text-green-700 uppercase tracking-widest mb-4">${cat}</div>
+                    <div class="mt-auto flex justify-between items-center pt-4 border-t border-green-900/30">
+                        <span class="text-[10px] text-gray-500 font-mono">ID: ${btoa(name).substring(0,6).toUpperCase()}</span>
+                        <span class="text-[10px] text-white hover:text-red-600">/UPLINK_CHAT &rarr;</span>
+                    </div>
+                `;
+                grid.appendChild(card);
+            });
+        }
+
+        async function openDashboard(name, role) {
+            document.getElementById('active-agent-name').innerText = name.toUpperCase();
+            document.getElementById('active-agent-role').innerText = role;
+            document.getElementById('dashboard-overlay').classList.remove('hidden');
+            document.getElementById('chat-history').innerHTML = `<div class="text-gray-500">[SYSTEM] Establishing direct neural link with ${name}...</div>`;
+            
+            // Simulation of loading data
+            document.getElementById('active-agent-soul').innerText = "Establishing link to SOUL.md...";
+            document.getElementById('active-agent-tools').innerHTML = '<span class="text-[10px] text-gray-500">Querying tools...</span>';
+
+            try {
+                // In a real scenario, we'd fetch from raw.githubusercontent
+                const soulRes = await fetch(`https://raw.githubusercontent.com/atkaratas/AgentCraft/main/templates/elite-100/${encodeURIComponent(name)}/SOUL.md`);
+                const soulText = await soulRes.text();
+                document.getElementById('active-agent-soul').innerText = soulText.includes('404') ? "Operational Logic: [ENCRYPTED]" : soulText;
+
+                const identityRes = await fetch(`https://raw.githubusercontent.com/atkaratas/AgentCraft/main/templates/elite-100/${encodeURIComponent(name)}/IDENTITY.md`);
+                const identityText = await identityRes.text();
+                
+                // Extract tools from IDENTITY.md if present
+                const toolMatch = identityText.match(/Tools:\s*\[(.*?)\]/);
+                const tools = toolMatch ? toolMatch[1].split(',').map(t => t.replace(/['"\[\]]/g, '').trim()) : ['exec', 'read', 'sessions_send'];
+                
+                const toolsDiv = document.getElementById('active-agent-tools');
+                toolsDiv.innerHTML = '';
+                tools.forEach(tool => {
+                    const span = document.createElement('span');
+                    span.className = "px-2 py-1 border border-green-900 text-[10px] text-green-500 font-bold";
+                    span.innerText = tool.toUpperCase();
+                    toolsDiv.appendChild(span);
+                });
+
+                // Bot greeting
+                setTimeout(() => {
+                    const chat = document.getElementById('chat-history');
+                    chat.innerHTML += `<div class="text-green-500"><span class="text-white">${name.toUpperCase()}:</span> Greeting, Chief. Uplink secure. How shall we impact the Multiverse today?</div>`;
+                }, 1000);
+
+            } catch (e) {
+                document.getElementById('active-agent-soul').innerText = "Neural link established. SOUL data streaming.";
+            }
+        }
+
+        function closeDashboard() {
+            document.getElementById('dashboard-overlay').classList.add('hidden');
+        }
+
+        async function sendMessage() {
+            const input = document.getElementById('chat-input');
+            const chat = document.getElementById('chat-history');
+            const taskList = document.getElementById('task-list');
+            const internalLogs = document.getElementById('internal-logs');
+            const queueStatus = document.getElementById('queue-status');
+            
+            const name = document.getElementById('active-agent-name').innerText;
+            const msg = input.value;
+            if (!msg) return;
+
+            // Reset UI for new directive
+            chat.innerHTML += `<div class="text-red-600"><span class="text-white">CHIEF:</span> ${msg}</div>`;
+            input.value = '';
+            chat.scrollTop = chat.scrollHeight;
+            
+            queueStatus.innerText = "WORKING";
+            queueStatus.className = "text-yellow-500 animate-pulse";
+            taskList.innerHTML = "";
+            internalLogs.innerHTML = "";
+
+            // 1. Initial Steps
+            addLog("Uplink request received.");
+            addLog("Fetching SOUL.md operational constraints...");
+            addTask("establish_neural_uplink", "Establishing secure neural link", "active");
+
+            try {
+                const response = await fetch('http://localhost:8080', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ agent: name, message: msg })
+                });
+                
+                const data = await response.json();
+                
+                completeTask("establish_neural_uplink");
+                addTask("parse_directive", "Parsing Chief's directive", "active");
+                addLog(`Inference engine started for ${name}...`);
+
+                // Dynamic simulation of "Agentic Steps"
+                if (data.logs) {
+                    for (const log of data.logs) {
+                        await new Promise(r => setTimeout(r, 600));
+                        addLog(`Executing: ${log}`);
+                        if (log.includes("SCANNING")) addTask("scan_soul", "Analyzing SOUL.md logic", "active");
+                        if (log.includes("UPLINK")) completeTask("scan_soul");
+                    }
+                }
+
+                addTask("generate_response", "Formulating agentic response", "active");
+                await new Promise(r => setTimeout(r, 800));
+                
+                completeTask("parse_directive");
+                completeTask("generate_response");
+                
+                const replyHtml = `
+                    <div class="text-green-500 mb-2">
+                        <span class="text-white">${name.toUpperCase()}:</span> ${data.reply}
+                    </div>
+                    <div class="flex gap-4 text-[10px] opacity-50 ml-4 mb-4">
+                        <button onclick="distillFeedback('${name}', true)" class="hover:text-green-500">[+ DISTILL_SUCCESS]</button>
+                        <button onclick="distillFeedback('${name}', false)" class="hover:text-red-600">[- DISTILL_FAILURE]</button>
+                    </div>
+                `;
+                chat.innerHTML += replyHtml;
+                queueStatus.innerText = "IDLE";
+                queueStatus.className = "text-green-600";
+                addLog("Neural link standby. Ready for next directive.");
+
+            } catch (e) {
+                // Fallback
+                completeTask("establish_neural_uplink");
+                addTask("local_fallback", "Executing local-only logic", "active");
+                addLog("CAUTION: Neural Bridge offline. Falling back to local simulation.");
+                
+                setTimeout(() => {
+                    completeTask("local_fallback");
+                    chat.innerHTML += `<div class="text-yellow-600 text-[10px]">[OFFLINE] Neural link is in local-only mode.</div>`;
+                    chat.innerHTML += `<div class="text-green-500"><span class="text-white">${name.toUpperCase()}:</span> Directive acknowledged. Operating under standalone constraints.</div>`;
+                    queueStatus.innerText = "IDLE";
+                    chat.scrollTop = chat.scrollHeight;
+                }, 1000);
+            }
+            chat.scrollTop = chat.scrollHeight;
+        }
+
+        function addLog(text) {
+            const logs = document.getElementById('internal-logs');
+            const div = document.createElement('div');
+            div.className = "mb-1";
+            div.innerHTML = `<span class="text-gray-600">[${new Date().toLocaleTimeString()}]</span> > ${text}`;
+            logs.appendChild(div);
+            logs.scrollTop = logs.scrollHeight;
+
+            // Simple logic to detect "Artifact Creation" in logs for visual feedback
+            if (text.includes("PDF") || text.includes("EXCEL") || text.includes("DOC")) {
+                const name = text.split(' ').pop();
+                addArtifact(name, "https://example.com/mock-file", text.includes("PDF") ? "PDF" : "EXCEL");
+            }
+        }
+
+        function addArtifact(name, url, type) {
+            const list = document.getElementById('artifact-list');
+            if (list.querySelector('.italic')) list.innerHTML = ''; // Clear empty state
+            
+            const div = document.createElement('div');
+            div.className = "flex justify-between items-center p-1 border border-green-900/30 hover:bg-green-900/10 cursor-pointer";
+            div.onclick = () => openPreview(name, url, type);
+            div.innerHTML = `
+                <span class="text-[9px] text-white truncate w-32">${name}</span>
+                <span class="text-[8px] bg-green-900 text-black px-1 font-bold">${type}</span>
+            `;
+            list.appendChild(div);
+        }
+
+        function openPreview(name, url, type) {
+            const modal = document.getElementById('preview-modal');
+            const title = document.getElementById('preview-title');
+            const content = document.getElementById('preview-content');
+            
+            modal.classList.remove('hidden');
+            title.innerText = `PREVIEW: ${name}`;
+            
+            if (type === "PDF") {
+                content.innerHTML = `<iframe src="${url}" class="w-full h-full border-none"></iframe>`;
+            } else {
+                content.innerHTML = `
+                    <div class="p-8 text-center">
+                        <div class="text-4xl mb-4">📄</div>
+                        <h4 class="text-white font-bold mb-2">${name}</h4>
+                        <p class="text-xs text-gray-500 mb-6">Autonomous ${type} generation complete. Click below to download and use the file.</p>
+                        <a href="${url}" target="_blank" class="bg-red-600 text-black px-8 py-2 font-bold hover:bg-red-500 transition">DOWNLOAD_AND_USE</a>
+                    </div>
+                `;
+            }
+        }
+
+        function closePreview() {
+            document.getElementById('preview-modal').classList.add('hidden');
+        }
+
+        function addTask(id, label, status) {
+            const list = document.getElementById('task-list');
+            const div = document.createElement('div');
+            div.id = `task-${id}`;
+            div.className = "flex items-center gap-2 text-white border-l-2 border-yellow-500 pl-2 py-1 bg-yellow-500/5";
+            div.innerHTML = `
+                <span class="animate-spin text-[8px]">⚙️</span>
+                <span>${label}</span>
+            `;
+            list.appendChild(div);
+            list.scrollTop = list.scrollHeight;
+        }
+
+        function completeTask(id) {
+            const task = document.getElementById(`task-${id}`);
+            if (task) {
+                task.className = "flex items-center gap-2 text-gray-500 line-through border-l-2 border-green-900 pl-2 py-1 opacity-50";
+                task.innerHTML = `
+                    <span class="text-green-500">✓</span>
+                    <span>${task.innerText.replace('⚙️', '')}</span>
+                `;
+            }
+        }
+
+        initGrid();
+    </script>
+</body>
+</html>
