@@ -46,8 +46,8 @@
 
     <header class="max-w-7xl mx-auto mb-12 flex flex-col md:flex-row justify-between items-center gap-6">
         <div>
-            <h1 class="text-4xl font-black tracking-tighter text-white">AGENTCRAFT <span class="text-red-600 text-sm">v4.0_LEGACY</span></h1>
-            <p class="text-xs text-green-700 font-mono mt-1 uppercase tracking-widest">Warlock4 Architecture // Consolidated Platform</p>
+            <h1 class="text-4xl font-black tracking-tighter text-white">AGENTCRAFT <span class="text-red-600 text-sm">v4.0_ELITE</span></h1>
+            <p class="text-xs text-green-700 font-mono mt-1 uppercase tracking-widest">Warlock4 Architecture // Autonomous Agent Factory</p>
         </div>
         <div class="flex gap-4">
             <div class="px-4 py-2 border border-green-900 bg-black/50 text-[10px] flex flex-col">
@@ -190,12 +190,12 @@
             document.getElementById('active-agent-tools').innerHTML = '<span class="text-[10px] text-gray-500">Querying tools...</span>';
 
             try {
-                // In a real scenario, we'd fetch from raw.githubusercontent
-                const soulRes = await fetch(`https://raw.githubusercontent.com/atkaratas/warlock2/main/AgentCraft/templates/elite-100/${encodeURIComponent(name)}/SOUL.md`);
+                // Fetch from the local AgentCraft repo (which matches the URL)
+                const soulRes = await fetch(`https://raw.githubusercontent.com/atkaratas/AgentCraft/main/templates/elite-100/${encodeURIComponent(name)}/SOUL.md`);
                 const soulText = await soulRes.text();
                 document.getElementById('active-agent-soul').innerText = soulText.includes('404') ? "Operational Logic: [ENCRYPTED]" : soulText;
 
-                const identityRes = await fetch(`https://raw.githubusercontent.com/atkaratas/warlock2/main/AgentCraft/templates/elite-100/${encodeURIComponent(name)}/IDENTITY.md`);
+                const identityRes = await fetch(`https://raw.githubusercontent.com/atkaratas/AgentCraft/main/templates/elite-100/${encodeURIComponent(name)}/IDENTITY.md`);
                 const identityText = await identityRes.text();
                 
                 // Extract tools from IDENTITY.md if present
